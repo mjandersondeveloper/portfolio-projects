@@ -1347,14 +1347,14 @@ a{
 .bar {
   background-color: white;
   width: 100%;
-  height: 20px;
+  height: 35px;
 }
 
 .bar-block {
-  background-color: green;
+  background-color: gray;
   display: inline-block;
   width: 4%;
-  height: 20px;
+  height: 35px;
 }
 .bar-block:first-child {
   border-radius: 5px 0 0 5px;
