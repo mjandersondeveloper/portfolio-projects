@@ -1344,3 +1344,27 @@ a{
 .w3-border-pale-blue,.w3-hover-border-pale-blue:hover{
     border-color:#e7ffff!important
 }
+.bar {
+  background-color: white;
+  width: 100%;
+  height: 20px;
+}
+
+.bar-block {
+  background-color: green;
+  display: inline-block;
+  width: 4%;
+  height: 20px;
+}
+.bar-block:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.bar-block:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.bar-block:nth-last-child(-n+4) {
+  background-color: #ccc;
+}
+.bar-block:nth-last-child(-n+3) {
+  background-color: #eee;
+}
