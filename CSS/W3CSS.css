@@ -1350,21 +1350,135 @@ a{
   height: 35px;
 }
 
-.bar-block {
+.java-bar-block {
   background-color: gray;
   display: inline-block;
   width: 4%;
   height: 35px;
 }
-.bar-block:first-child {
+.java-bar-block:first-child {
   border-radius: 5px 0 0 5px;
 }
-.bar-block:last-child {
+.java-bar-block:last-child {
   border-radius: 0 5px 5px 0;
 }
-.bar-block:nth-last-child(-n+4) {
+.java-bar-block:nth-last-child(-n+6) {
   background-color: #ccc;
+} 
+.java-bar-block:nth-last-child(-n+5) {
+  background-color: #eee;
 }
-.bar-block:nth-last-child(-n+3) {
+
+.cpp-bar-block {
+  background-color: gray;
+  display: inline-block;
+  width: 4%;
+  height: 35px;
+}
+.cpp-bar-block:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.cpp-bar-block:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.cpp-bar-block:nth-last-child(-n+4) {
+  background-color: #ccc;
+} 
+.cpp-bar-block:nth-last-child(-n+3) {
+  background-color: #eee;
+}
+
+.sql-bar-block {
+  background-color: gray;
+  display: inline-block;
+  width: 4%;
+  height: 35px;
+}
+.sql-bar-block:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.sql-bar-block:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.sql-bar-block:nth-last-child(-n+3) {
+  background-color: #ccc;
+} 
+.sql-bar-block:nth-last-child(-n+2) {
+  background-color: #eee;
+}
+
+.vb-bar-block {
+  background-color: gray;
+  display: inline-block;
+  width: 4%;
+  height: 35px;
+}
+.vb-bar-block:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.vb-bar-block:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.vb-bar-block:nth-last-child(-n+4) {
+  background-color: #ccc;
+} 
+.vb-bar-block:nth-last-child(-n+3) {
+  background-color: #eee;
+}
+
+.html-bar-block {
+  background-color: gray;
+  display: inline-block;
+  width: 4%;
+  height: 35px;
+}
+.html-bar-block:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.html-bar-block:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.html-bar-block:nth-last-child(-n+3) {
+  background-color: #ccc;
+} 
+.html-bar-block:nth-last-child(-n+2) {
+  background-color: #eee;
+}
+
+.php-bar-block {
+  background-color: gray;
+  display: inline-block;
+  width: 4%;
+  height: 35px;
+}
+.php-bar-block:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.php-bar-block:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.php-bar-block:nth-last-child(-n+8) {
+  background-color: #ccc;
+} 
+.php-bar-block:nth-last-child(-n+7) {
+  background-color: #eee;
+}
+
+.js-bar-block {
+  background-color: gray;
+  display: inline-block;
+  width: 4%;
+  height: 35px;
+}
+.js-bar-block:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.js-bar-block:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.js-bar-block:nth-last-child(-n+8) {
+  background-color: #ccc;
+} 
+.js-bar-block:nth-last-child(-n+7) {
   background-color: #eee;
 }
