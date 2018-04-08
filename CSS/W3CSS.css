@@ -438,9 +438,11 @@ a{
     display:table;
     clear:both
 }
- .w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{
+.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{
     float:left;
+    position: relative;
     width:100%
+
 }
  .w3-col.s1{
     width:8.33333%
@@ -1482,3 +1484,44 @@ a{
 .js-bar-block:nth-last-child(-n+7) {
   background-color: #eee;
 }
+.text-algorithms {
+    position: absolute;
+    bottom: 70px;
+    right: 37px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: .8;
+}
+.text-c {
+    position: absolute;
+    bottom: 70px;
+    right: 50px;
+    background-color: black;
+    color: white;
+    padding-left: 60px;
+    padding-right: 60px;
+    opacity: .8;
+}
+.text-cplusplus {
+    position: absolute;
+    bottom: 70px;
+    right: 40px;
+    background-color: black;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    opacity: .8;
+}
+.text-php {
+    position: absolute;
+    bottom: 70px;
+    right: 40px;
+    background-color: black;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    opacity: .8;
+}
+
