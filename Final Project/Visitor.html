@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visitor Information Page</title>
+	<meta charset="utf-8">
+	<!-- External CSS -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+	<!-- JavaScript Script -->
+	
+	<script type="text/javascript">
+		function validate()
+		{
+			if( document.myform.first_name.value == "" ){
+				alert( "Please provide your First Name below!" );
+				document.myform.first_name.focus();
+				return false;
+			}
+			if( document.myform.last_name.value == "" ){
+				alert( "Please provide your Last Name below!" );
+				document.myform.last_name.focus();
+				return false;
+			}
+			if( document.myform.family.value == "" ){
+				alert( "Please provide your Family Members below!" );
+				document.myform.family.focus();
+				return false;
+			}
+			return true;
+		}		
+</script>
+</head>
+<body>
+	<!-- Images -->
+	<div class="banner"><img src="images/banner.jpg" width="500" height="198" alt="The Banner on top">
+	</div>
+	<h1>Vistor Information</h1>
+ <ul>
+	<li><a href="mjafinal.html">Home</a></li>
+	<li class="UT"><a href="UTHistory.html">University of Toledo</a></li>
+	<li class="NI"><a href="NationIns.html">Nationwide Insurance</a></li>
+	<li class="SAE"><a href="SAE.html">Sigma Alpha Epsilon</a></li>
+	<li class="ST"><a href="SportsTeams.html">Favorite Sports Teams</a></li>
+	<li><a href="Visitor.html">Visitors</a></li>
+  </ul>
+	<p>Please enter your information below.<p>
+	
+	<!-- Form -->
+	
+	<form action= "cgi-bin/hello_get.py" method ="get" name="myform" onsubmit="return validate()">
+		<fieldset>
+		<legend>Name</legend>
+	<div class="names">
+	<ul>
+		<li><label for="firstname">First Name:</label>
+			<input type="text" name="first_name"></li>
+		<li><label for="lastname">Last Name:</label>
+			<input type="text" name="last_name"></li>
+	</ul>
+	</div>
+		</fieldset>
+
+		<fieldset>
+		<legend>Gender</legend>
+	<div class="radio">
+	<ul>
+		<li><input type="radio" name="gender" value="Male"> Male</li>
+		<li><input type="radio" name="gender" value="Female"> Female</li>
+		<li><input type="radio" name="gender" value="Other"> Other </li>
+	</ul>
+	</div>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Major</legend>
+		<p>What's your major?
+		<select name="Major">
+			<option>Business</option>
+			<option>Communications</option>
+			<option>Criminal Justice</option>
+			<option>Education</option>
+			<option>Engineering</option>
+			<option>Law</option>
+			<option>Math & Science</option>
+			<option>Other</option>
+		</select>
+		</p>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Birthday & Family</legend>
+		<p>When's your birthday?
+			<label><input type="date" name="Birthday" value ="1995-01-01"></label>
+		</p>
+		<p>How many family members do you have?:
+			<label><input type="number" name="family" min ="0" max="10"></label>
+		</p>
+		</fieldset> 
+		
+		<p><input type="submit" value="Submit"></p>
+	
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video and Canvas</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Happy Death Day Movie Trailer HD</h1>
+	<video src="hddtrailer.mp4" width="700" height="400" poster="moviestill.png"controls>
+	</video>
+	
+	<h1>Canvas Drawing</h1>
+	<canvas width="300" height="200" id="csetcanvas" style="border: 1px solid #000000;">
+		Your browser doesn't support HTML5 canvas. Try using another browser.
+	</canvas>
+	<script>
+	var theCanvas = document.getElementById('csetcanvas');
+	var mar_canvas = theCanvas.getContext('2d');
+	
+	mar_canvas.beginPath();
+	mar_canvas.arc(150,80,50,0,2*Math.PI);
+	mar_canvas.stroke();
+	
+	mar_canvas.font = "25px Times New Roman";
+	mar_canvas.fillText("This is a circle!", 75, 170);
+	
+	</script>	
+</body>
+</html>
