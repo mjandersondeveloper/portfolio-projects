@@ -458,9 +458,24 @@ body, html {
 	<!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
 </footer>
 
-<!-- Add Google Maps -->
+<!-- Add Google Maps/Add Browser Alert -->
 <script>
-	function myMap()
+var isChromium = window.chrome;
+var winNav = window.navigator;
+var vendorName = winNav.vendor;
+var isOpera = typeof window.opr !== "undefined";
+var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+var isIOSChrome = winNav.userAgent.match("CriOS");
+
+if (isIOSChrome) {
+   // is Google Chrome on IOS
+} else if(isChromium !== null && typeof isChromium !== "undefined" && vendorName === "Google Inc." && isOpera === false && isIEedge === false) {
+   // is Google Chrome
+} else { 
+   alert("Please use Google Chrome for best functionality! \nSome key features and icons do not work properly in other browsers. Thank you!");
+}
+
+function myMap()
 	{
 		myCenter=new google.maps.LatLng(39.9680291, -83.00306799999998);
 		var mapOptions= {
@@ -513,6 +528,7 @@ function scrollTo(element) {
 		top: element.offsetTop
 	});
 }
+
 document.getElementById("homescroll").addEventListener('click', () => {
 	scrollTo(document.getElementById("home"));
 });
