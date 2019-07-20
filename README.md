@@ -1,4 +1,1 @@
-# UTProjects
-A collection of projects I've done at the University of Toledo
-
-Personal Website
+# Web Portfolio
