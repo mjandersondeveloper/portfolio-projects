@@ -1536,6 +1536,17 @@ a{
     opacity: .8;
 }
 
+.text-projeuler {
+    position: absolute;
+    bottom: 70px;
+    right: 34px;
+    background-color: black;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    opacity: .8;
+}
+
 .text-cs {
     position: absolute;
     bottom: 70px;
