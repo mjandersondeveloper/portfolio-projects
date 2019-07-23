@@ -465,14 +465,17 @@ var winNav = window.navigator;
 var vendorName = winNav.vendor;
 var isOpera = typeof window.opr !== "undefined";
 var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+var isFireFox = winNav.userAgent.indexOf("Firefox") > 0;
 var isIOSChrome = winNav.userAgent.match("CriOS");
 
 if (isIOSChrome) {
    // is Google Chrome on IOS
 } else if(isChromium !== null && typeof isChromium !== "undefined" && vendorName === "Google Inc." && isOpera === false && isIEedge === false) {
    // is Google Chrome
+} else if (isFireFox && isOpera === false && isIEedge === false) {
+   // is FireFox
 } else { 
-   alert("Please use Google Chrome for best functionality! \nSome key features and icons do not work properly in other browsers. Thank you!");
+   alert("Please use Google Chrome for best functionality! \nSome key features and icons may not work properly in other browsers (escpecially Internet Explorer). Thank you!");
 }
 
 function myMap()
@@ -529,19 +532,19 @@ function scrollTo(element) {
 	});
 }
 
-document.getElementById("homescroll").addEventListener('click', () => {
+document.getElementById("homescroll").addEventListener('click', function() {
 	scrollTo(document.getElementById("home"));
 });
-document.getElementById("aboutscroll").addEventListener('click', () => {
+document.getElementById("aboutscroll").addEventListener('click', function() {
 	scrollTo(document.getElementById("about"));
 });
-document.getElementById("portfolioscroll").addEventListener('click', () => {
+document.getElementById("portfolioscroll").addEventListener('click', function() {
 	scrollTo(document.getElementById("portfolio"));
 });
-document.getElementById("contactscroll").addEventListener('click', () => {
+document.getElementById("contactscroll").addEventListener('click', function() {
 	scrollTo(document.getElementById("contact"));
 });
-document.getElementById("bottomscroll").addEventListener('click', () => {
+document.getElementById("bottomscroll").addEventListener('click', function() {
 	scrollTo(document.getElementById("home"));
 });
 
