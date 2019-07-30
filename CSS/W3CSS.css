@@ -1364,10 +1364,10 @@ a{
 .java-bar-block:last-child {
   border-radius: 0 5px 5px 0;
 }
-.java-bar-block:nth-last-child(-n+6) {
+.java-bar-block:nth-last-child(-n+4) {
   background-color: #ccc;
 } 
-.java-bar-block:nth-last-child(-n+5) {
+.java-bar-block:nth-last-child(-n+3) {
   background-color: #eee;
 }
 
@@ -1383,10 +1383,10 @@ a{
 .cpp-bar-block:last-child {
   border-radius: 0 5px 5px 0;
 }
-.cpp-bar-block:nth-last-child(-n+4) {
+.cpp-bar-block:nth-last-child(-n+6) {
   background-color: #ccc;
 } 
-.cpp-bar-block:nth-last-child(-n+3) {
+.cpp-bar-block:nth-last-child(-n+5) {
   background-color: #eee;
 }
 
@@ -1402,10 +1402,10 @@ a{
 .sql-bar-block:last-child {
   border-radius: 0 5px 5px 0;
 }
-.sql-bar-block:nth-last-child(-n+3) {
+.sql-bar-block:nth-last-child(-n+6) {
   background-color: #ccc;
 } 
-.sql-bar-block:nth-last-child(-n+2) {
+.sql-bar-block:nth-last-child(-n+5) {
   background-color: #eee;
 }
 
@@ -1421,10 +1421,10 @@ a{
 .vb-bar-block:last-child {
   border-radius: 0 5px 5px 0;
 }
-.vb-bar-block:nth-last-child(-n+4) {
+.vb-bar-block:nth-last-child(-n+7) {
   background-color: #ccc;
 } 
-.vb-bar-block:nth-last-child(-n+3) {
+.vb-bar-block:nth-last-child(-n+6) {
   background-color: #eee;
 }
 
@@ -1478,10 +1478,10 @@ a{
 .js-bar-block:last-child {
   border-radius: 0 5px 5px 0;
 }
-.js-bar-block:nth-last-child(-n+8) {
+.js-bar-block:nth-last-child(-n+6) {
   background-color: #ccc;
 } 
-.js-bar-block:nth-last-child(-n+7) {
+.js-bar-block:nth-last-child(-n+5) {
   background-color: #eee;
 }
 .text-algorithms {
