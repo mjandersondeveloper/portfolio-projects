@@ -1547,6 +1547,17 @@ a{
     opacity: .8;
 }
 
+.text-angular {
+    position: absolute;
+    bottom: 70px;
+    right: 45px;
+    background-color: black;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: .8;
+}
+
 .text-cs {
     position: absolute;
     bottom: 70px;
