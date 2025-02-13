@@ -1,0 +1,413 @@
+Star Search
+-----------
+- Input: A graph G=(V,E) and a natural number k > 0.
+- Output: A set of k+1 vertices such that the induced subgraph is a star, or report NO if such set does not exist.
+
+- A star of size N has exactly N+1 vertices such that one vertex is connected to in I.S.
+
+NP Proof:
+- We can verify the solution, S, to Star-Search by first inducing the graph in O(n + m) time.
+- We then validate:
+	- If there is exactly one vertex with a degree of k in the induced graph.
+	- If every other vertex in the induced graph has a degree of 1.
+	- This takes O(n + m) time.
+- Finally we check if |S| = k + 1 in O(n) time.
+- Overall time is O(n + m), which is polynomial time.
+
+NP Complete Proof:
+
+Reduction: I.S. -> Star Search (S.S.)
+
+I.T.:
+- Given G=(V,E) and goal k.
+- Create G' by adding a new vertex, v', and connecting it to each vertex in G with an edge.
+	- This is done in O(n) time.
+- Pass G' and k to S.S. in O(1) time
+- Overall runtime is O(n) which is polynomial time.
+
+O.T.:
+- Return NO, if S.S. returns NO in O(1) time.
+- Return the solution to S.S., inducing the graph and removing the vertex with a degree of k, resulting in an independent set of vertices.
+	- Inducing the graph takes O(n + m) time.
+	- Removing v' takes O(n) time.
+- Overall runtime is O(n + m) which is polynomial time.
+
+Correctness:
+- If S.S. returns a solution, S, there is a solution to I.S. by removing the central vertex from S. Since the only edges came from the central vertex, the remaining vertices in G must be an independent set.
+- If I.S. returns a solution, S, there is a solution to S.S. by adding a central vertex and connecting it to each vertex in S with an edge. Resulting in a k+1 set of vertices in the form of a star.
+- S.S. has a solution IFF a central vertex is added with an edge to each vertex in an I.S.
+
+-----------------------------------------------------------------------------------
+
+SpiderVerse
+-----------
+- Input: G=(V,E) and g >= 1
+- Output: 2g vertices such that the induced subgraph is a spider, otherwise report NO
+
+- A spider graph is an even number of 2g vertices
+- g vertices for a clique, the other g vertices are connected to one distinct vertex in the clique
+
+NP Proof:
+- We can verify the solution to SpiderVerse by first inducing the graph in O(n + m) time.
+- We then validate:
+	- If g-vertices have a degree of g.
+	- If g-vertices have a degree of 1.
+	- This is done in O(n + m) time.
+- Finally, we check if |S| = 2g in O(n) time.
+- Overall runtime is O(n + m) which is polynomial time.
+
+NP Complete Proof: 
+
+Reduction: Clique -> SpiderVerse (S.V.)
+
+I.T.:
+- Given G=(V,E) and goal g.
+- Create G' by adding one vertex and edge to each existing vertex in G.
+	- Each new vertex/edge should connect to a distinct vertex in G.
+	- This is done in O(n) time.
+- Pass G' and g into S.V. in O(1) time.
+- Overall runtime is O(n) which is polynomial time.
+
+O.T.:
+- Return NO, is S.V. returns NO in O(1) time.
+- Return the solution to S.V., inducing the graph and removing each vertex with a degree of one, resulting in a clique of vertices.
+	- Inducing a graph takes O(n + m) time.
+	- Removing each vertex with a degree of one takes O(n) time.
+- Overall runtime is O(n + m) which is polynomial time.
+
+Correctness:
+- If S.V. returns a solution, S, there is a solution to Clique by removing each vertex with a degree of one from S. Since these vertices cannot participate in the clique, the remaining vertices in graph G must contain a clique.
+- If Clique returns a solution, S, there is a solution to S.V. by adding a new vertex and edge to each existing vertex in S. Resulting in a 2g set of vertices that form a spider.
+- S.V. has a solution IFF there is one vertex and edge connected to every vertex in a clique.
+
+-----------------------------------------------------------------------------------
+
+Sparse Graph
+------------
+
+Input: An undirected graph G = (V, E) and variables a, b.
+Output: A set S which is a subset of V where |S| = a and there are at most b edges between pairs of vertices in S. Report "NO", if no such set exists.
+
+NP Proof:
+- We can verify the solution to the SparseGraph problem as follows:
+	- Validate that the number of edges b/w each pair of vertices in the graph equals 'b'. This takes O(n^2) time.
+	- Validate that |S| = a in O(n) time.
+- Overall runtime is O(n^2) which is polynomial time.
+
+NP Complete Proof: 
+
+Reduction: I.S. -> Sparse Graph (S.G.)
+
+I.T.:
+- Given G=(V,E), a, and b
+- Set b = 0 in O(1) time.
+- Pass G', a, and b into S.G. in O(1) time.
+- Overall runtime is O(1) which is polynomial time.
+
+O.T.:
+- Return NO, if S.G. returns NO in O(1) time.
+- Return the solution of S.G., which should have 'a' number of vertices and zero edges, resulting in an I.S.
+	- This takes O(1) time.
+- Overall runtime is O(1) which is polynomial time.
+
+Correctness:
+- If S.G. has a solution, S, there's a solution to I.S. because there are at most zero edges in between each pair of vertices in S.
+- If I.S. has a solution, S, there's a solution to S.G. by setting b = 0, making it so there are 'a' number of vertices with at most zero edges b/w them in S. Since S would contain zero edges anyway, b/c it's an I.S., there would exist a valid solution for S.G. if b = 0.
+- S.G has a solution IFF there's a solution in I.S.
+
+-----------------------------------------------------------------------------------
+
+Hitting Set
+-----------
+
+Input: A family of sets, F = {S_1, S_2,..., S_n} and a budget, b.
+Output: A set H with a size not exceeding our budget, |H| <= b, such that it
+contains at least one element from every set.
+
+NP Proof:
+- We can verify the solution, H, to Hitting Set by doing the following:
+	- Validate that each element in H intersects with every element in each subset, {S_1...S_n} in O(nm) time.
+	- Verify that |H| <= b in O(n) time.
+- Overall runtime is O(nm) time, which is polynomial.
+
+NP Complete Proof: 
+
+Reduction: Vertex Cover -> Hitting Set (H.S.)
+
+I.T.:
+- Given G=(V,E) and a budget b.
+- For each vertex v in G, add its neighboring vertices in a unique subset, {S_1...S_n}. This takes O(n + m) time to accomplish.
+- Pass {S_1...S_n} and b into H.S. in O(1).
+- Overall transformation time is O(n + m), which is polynomial time.
+
+O.T.:
+- Return NO, if H.S. returns NO in O(1) time.
+- Return the solution to H.S., returning the vertices in H as the vertices in the Vertex Cover in O(1) time.
+
+Correctness:
+- If there's a solution, S, to H.S., there's solution to Vertex Cover by finding a set of vertices in H of at most size b such that all sets (edges) in S are covered.
+- If there's a solution, S, to Vertex Cover, there's a solution to H.S. by the neighboring vertices for each vertex in G in it's own unique subset {S_1...S_n}.
+- H.S. has a solution IFF H.S. has an equivalent solution.
+
+-----------------------------------------------------------------------------------
+
+KITE
+----
+
+Input: A graph G=(V,E) and a goal g.
+Output: A subgraph of G which is also a kite and contains 2g nodes.
+
+- The size of the clique is g-vertices
+- The size of the tails is g-vertices
+
+NP Proof:
+- We can verify the solution, S, for the KITE problem by doing the following:
+	- Validate that g-vertices make up a clique by traversing S and finding all vertices with >= g-1 neighbors and are connected to one another by an edge. This takes O(n^2) time. 
+	- Validate that g-vertices make up a simple tail by traversing the remaining vertices and finding all vertices with at most two neighbors. This takes O(n + m) time.
+	- Validate that there is an edge connecting the tail with one vertex in the clique in O(n + m) time.
+	- Validate that |S|=2g in O(n) time.
+- The overall runtime is O(n^2), which is polynomial time.
+
+NP Complete Proof: 
+
+Reduction: Clique -> KITE
+
+I.T.:
+- Given G=(V,E) and goal g.
+- A "tail" is a simple path of g-vertices that are connected by an edge.
+- Create G' by adding a unique tail to every vertex in G. This takes O(n^2).
+- Pass G' and g into KITE in O(1) time.
+- Overall transformation time is O(n^2), which is polynomial.
+
+O.T.:
+- Return NO, if KITE returns NO in O(1) time.
+- Return the solution to KITE, dropping the tail from the solution graph, resulting in a clique of size g. This takes O(n + m) time.
+- Overall transformation time takes O(n + m), which is polynomial.
+
+Correctness:
+- If there's a solution to KITE, there's a solution to Clique by dropping the tail, resulting in a g-sized clique. Since none of the vertices in the tail can participate in the clique, in order to form a KITE, the original graph, G, must have contained a clique.
+- If there's a solution to Clique, there's a solution to KITE by adding a tail to every vertex in the graph, resulting in 2g vertices that form a KITE.
+- KITE has a solution IFF we add a tail to every vertex in the Clique solution.
+
+-----------------------------------------------------------------------------------
+
+K-Honest SAT
+------------
+
+Input: A CNF formula, f, and natural number k >= 1
+Output: Assignment of the variables that satisfies f such that at least k-variables are set to true, or return NO otherwise
+
+NP Proof:
+- We can verify the solution to K-Honest SAT by traversing the CNF input, f, and doing as follows:
+	- Validate that at least k-variables is set to TRUE in O(n) time.
+	- Validate that f is satisfiable in O(nm) time, as we our traversing through m-clauses and n-literals.
+- Overall runtime is O(nm) which is polynomial time.
+
+NP Complete Proof:
+
+Reduction: SAT -> K-Honest SAT (KHSAT)
+
+I.T.:
+- Given the CNF formula, f.
+- Set k=1.
+- Create f' by adding one new variable, x, set to true, and an additional clause to f.
+	- Example: f' = (f) ^ (x)
+	- This takes O(1) time.
+- Pass f' and k to KHSAT in O(1) time.
+- Overall runtime is O(1), which is polynomial time.
+
+O.T.:
+- Return NO, if KHSAT returns NO in O(1) time.
+- Return the solution to KHSAT, dropping the new variable, x, and assigning the remaining truth assignments to f.
+	- This takes O(n) time.
+- Overall runtime is O(n), which is polynomial time.
+
+Correctness:
+- If KHSAT returns a solution, there's a solution to SAT by dropping the newly added x variable, resulting in the original truth assignments to f. Since x is set to true and k=1, if there's a solution to KHSAT, the original CNF formula must be satisfiable.
+- If SAT returns a solution, there's a solution to KHSAT by adding variable x, which is set to true, and setting k=1. Meaning there must be a solution to KHSAT with one variable set to true.
+- The solution to KHSAT is satisfiable IFF SAT is satisfiable.
+
+-----------------------------------------------------------------------------------
+
+Almost-SAT
+------------
+
+Input: CNF formula, f, of m clauses and n literals in Boolean formula
+Output: If exactly m-1 clauses are evaluated to TRUE, then assignment of literals is returned, otherwise NO.
+
+NP Proof:
+- We can verify the solution to the Almost-SAT problem by traversing the CNF formula, f, and doing as follows:
+	- Validating that f is satisfiable with exactly m-1 clauses evaluating to true in O(nm) time.
+- Overall runtime is O(nm) which is polynomial time.
+
+NP Complete Proof: 
+
+Reduction: SAT -> Almost-SAT (ASAT)
+
+I.T.:
+- Given the CNF input formula, f.
+- Create f' by adding a new variable, x, and two new clauses.
+	- One new clause will have x set to true, and the other will have x set to false.
+	- Example: f' = (f) ^ (x) ^ (!x)
+	- This takes O(1) time.
+- Pass f' into ASAT in O(1) time.
+- Overall runtime is O(1), which is polynomial time.
+
+O.T.:
+- Return NO, if ASAT returns NO in O(1) time.
+- Return the solution to ASAT, dropping the new x-variable, and assigning the remaining truth assignments to f.
+	- This takes O(n) time.
+- Overall runtime is O(n), which is polynomial time.
+
+Correctness:
+- If there's a solution to ASAT, there's a solution to SAT by dropping the newly added x-variable and clauses, resulting in the remaining truth assignments of f. Meaning, if ASAT has a solution, the original CNF must be satisfiable since there has to be an invalid assignment to x in one of the newly added clauses.
+- If there's a solution to SAT, there's a solution to ASAT by adding a new x-variable with two additional clauses (x) and (!x). Resulting in a formula which has exactly m-1 clauses that are true.
+- The solution to ASAT is satisfiable IFF SAT is satisfiable.
+
+-----------------------------------------------------------------------------------
+
+Double-SAT
+------------
+
+Input: CNF formula, f, of m clauses and n literals
+Output: Determine if f has two satisfying assignments.
+
+NP Proof:
+- We can verify the solution to the Double-SAT problem by traversing the CNF formula, f, and doing as follows:
+	- Validate that f has at least two satisfying assignments in O(n) time.
+	- Validate that f is satisfiable in O(nm) time since we traverse through m-clauses and n-literals.
+- Overall runtime is O(nm) time, which is polynomial time.
+
+NP Complete Proof: 
+
+Reduction: SAT -> Double-SAT (DSAT)
+
+I.T.:
+- Given the CNF input formula, f.
+- Create f' by adding one new variable, x, along with one tautology clause of x.
+	- Example: f' = (f) ^ (x V !x)
+	- This takes O(1) time.
+- Pass f' into DSAT in O(1) time.
+- Overall runtime is O(1), which is polynomial time.
+
+O.T.:
+- Return NO, if DSAT returns NO in O(1) time.
+- Return the solution of DSAT, dropping the newly added x-variable, and assigning the remaining truth assignments to f.
+	- This takes O(n) time.
+- Overall runtime is O(n), which is polynomial time.
+
+Correctness:
+- If there's a solution to DSAT, there's a solution to SAT by dropping the newly added x-variable and tautology clauses, resulting in the original boolean formula, f. Meaning if there's a solution to DSAT, the origin CNF formula must be satisfiable since x has two satisfiable truth assignments.
+- If there's a solution to SAT, there's a solution to DSAT by adding a new x-variable and tautology clause. Resulting in a modified boolean formula with at least two satisfying assignments for x.
+- DSAT has a satisfiable solution IFF SAT has a satisfiable solution.
+
+-----------------------------------------------------------------------------------
+
+Stingy-SAT
+------------
+
+Input: CNF formula, f, of m clauses and n literals, and integer k
+Output: Determine if f has a satisfying assignment where at most k variables are true
+
+NP Proof:
+- We can verify the solution Stringy-SAT problem by traversing the CNF boolean formula, f, and do as follows:
+	- Validate that f is satisfiable in O(nm) time since we traverse over m-clauses and n-literals.
+	- Validate that at most k variables are set to true in O(n) time.
+- Overall runtime is O(nm), which is polynomial time. 
+
+NP Complete Proof: 
+
+Reduction: SAT -> Stingy-SAT (SSAT)
+
+I.T.:
+- Given the CNF input formula, f.
+- Count the number of n-variables in f in O(nm) time.
+- Set k=n in O(1) time.
+- Pass f and k into SSAT in O(1) time.
+- Overall runtime is O(nm) time, which is polynomial time.
+
+O.T.:
+- Return NO, if SSAT returns NO in O(1) time.
+- Return the solution to SSAT, assigning the truth assignments to the original CNF formula, f, in O(n) time.
+- Overall runtime is O(n), which is polynomial time.
+
+Correctness:
+- If there's a solution to SSAT, there's a solution to SAT, because we don't modify the original CNF formula. Meaning that if there's a solution to SSAT, the original CNF formula must be satisfiable.
+- If there's a solution to SAT, there's a solution to SSAT, by setting k=n, where n is the number of variables in f. Since k is set to the number of variables in f, there should always be at most k variables set to true, even if every variable in f is set to true.
+- SSAT has a satisfiable solution IFF there's a satisfiable solution to SAT.
+
+-----------------------------------------------------------------------------------
+
+3-at-most-3-SAT
+-------------
+
+Input: CNF boolean formula such that all clauses have at most three literals, and every variable appears in at most three clauses.
+Output: An assignment of the variables such that the boolean formula returns True, or report NO.
+
+NP Proof:
+- We can verify a solution to the 3-at-most-3-SAT problem by traversing the CNF formula, f, and doing as follows:
+	- Validate that f is satisfiable in O(m) time, since we know there are at most three literals per m-clause.
+	- Validate that every variable appears is at most three clauses in O(nm) time.
+- Overall runtime is O(nm) time, which is polynomial.
+
+
+NP Complete Proof: 
+
+Reduction: 3SAT -> 3-at-most-3-SAT (3AM3SAT)
+
+I.T.:
+- Given the CNF input formula, f.
+- Create f' doing the following:
+	- For every repeat variable, x, replace it with a new variable, x_i, where i is incremented on each replacement.
+	- Example: (x_1 V !x_2) ^ (x_2 V !x_3).... ^(x_m V !x_1)
+	- This takes O(m) time.
+Pass f' in O(m) time.
+
+O.T.:
+- Return NO, if 3AM3SAT returns NO in O(1) time.
+- Return the solution to SAM3SAT, reassigning each x-variable in f' to the truth assignment for x_1 in f. Also reassign the remaining truth assignments to f. Both take O(n) time.
+- Overall runtime is O(n) which is polynomial time.
+
+Correctness:
+- If there's a solution to 3AM3SAT, there's a solution to 3SAT buy reassigning any x-variables created in f' with the truth assignment for x_1.
+- If there's a solution to 3SAT, there's a solution to 3AMSAT by replacing all repeating x-variables with x_i.
+- 3AM3SAT has a satisfiable solution IFF 3SAT has a satisfiable solution.
+
+
+-----------------------------------------------------------------------------------
+
+4Exact-SAT
+----------
+
+Input: CNF boolean formula such that all clauses have exactly four literals, and every variable appears in at most once in each clause.
+Output: An assignment of the variables such that the boolean formula returns True, or report NO.
+
+NP Proof:
+- We can verify the solution to the 4ESAT by traversing the NF input formula, f, and do as follows:
+	- Validate that f is satisfiable in O(m) as each m-clause has at most 4 literals.
+- Overall runtime is O(m), which is polynomial.
+
+NP Complete Proof: 
+
+Reduction: 3SAT -> 4Exact-SAT (4ESAT)
+
+I.T.:
+- Given the CNF input formula, f.
+- Create f' by traversing f and doing the following:
+	- If a clause contains three literals, add one new assignments and replace f with two clause:
+		- (a V b V c) -> (a V b V c V x) ^ (a V b V c V !x)
+	- If a clause contains two literals, add two new assignments and replace f with four new clauses:
+		- (a V b) -> (a V b V x V y) ^ (a V b V !x V y) ^ (a V b V x V !y) ^ (a V b V !x V !y)
+	- If a clause contains only one literal, add three new assignments along with eight clauses:
+		- (a) -> (a V x V y V z) ^ .... ^ (a V !x V !y V !z) 
+	- This takes O(m) time.
+- Overall runtime is O(m), which is polynomial time.
+
+O.T.:
+- Return NO, if 4ESAT returns NO.
+- Return the solution to 4ESAT, dropping the new variables and clauses, and assigning the remaining truth assignments back f in O(n) time.
+
+Correctness:
+- If there's a solution to 4ESAT, S, there's a solution to 3SAT by dropping the added variables and clauses from S. Since there is no guarantee that the newly added variables are satisfiable for each clause, the original CNF formula must be satisfiable.
+- If there's a solution to 3SAT, S, there's a solution to 4ESAT by modifying S so that it's a valid input to 4ESAT.
+- 4ESAT has a satisfiable solution IFF 3SAT has a satisfiable solution.

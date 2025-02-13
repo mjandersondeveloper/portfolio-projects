@@ -1,0 +1,29 @@
+3-at-most-3-SAT
+
+Input: A boolean formula in CNF such that all clauses have at most three literals, and every variable appears in at most three clauses.
+
+Output: An assignment of the variables such that the boolean formula returns True, or report NO if such assignment does not exist.
+
+NP Proof:
+We can verify the solution to 3-at-most-3-SAT by traversing each m-clause in the CNF formula and checking if each are satisfiable. This takes O(m) time, which is polynomial.
+
+NP Complete Proof:
+
+Reduction: 3SAT -> 3-at-most-3-SAT (3AMSAT)
+
+I.T.:
+- Given the CNF boolean formula input f.
+- If there are any repeat variables, x, we replace it with a new variable, x_i, incrementing i in each replacement in O(m) time. Call this f'.
+- Ex: (x1 V !x2), (x2 V !x3)...(x_m V !x1)
+- Pass f' to the 3AMSAT.
+- Overall transformation takes O(m) time, which is polynomial.
+
+O.T.:
+- Return NO, if 3AMSAT returns NO in O(1) time.
+- Return the solution (S) from 3AMSAT, reassigning all x variables in f to the truth assignment for x1. This takes O(n) time.
+- Overall transformation takes O(n) time, which is polynomial.
+
+Correctness:
+- If 3AMSAT returns a solution, we have a solution in 3SAT by assigning any x variables in f with the truth assignment for x1.
+- If 3SAT returns a solution, we have a solution in 3AMSAT by replacing any x variables in f with xi.
+- f' is satisfiable IFF f is satisfiable.

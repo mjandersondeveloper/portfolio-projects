@@ -1,0 +1,28 @@
+Exam 3 - Cheat Sheet
+
+Linear Programming Notes:
+Max (<=)
+Min (=>)
+
+Dual transformation:
+c.A.b 
+Ay=><=c
+
+UB -> I (Primal -> Dual)
+I <- UB (Primal <- Dual)
+
+
+NP Notes:
+
+SAT -> 3SAT -> IS -> Clique & VC
+            -> SS -> Knapsack
+
+A -> B reduction
+
+I.S. - (x, y) vertices pairs w/ no edges in b/w them - O(n^2)
+Clique - (x, y) vertices pairs w/ edges in b/w them - O(n^2)
+V.C. - (x, y) with edges where x in subset S, and y in subset S
+S.S. - Combination of integer values add up to a goal total, t - O(n log t)
+SAT - n-literal, m-clauses. O(nm) time for unknown # of literals, O(m) for known # of literals (3SAT).
+
+P, NP, NP-Complete, NP-Hard diagram

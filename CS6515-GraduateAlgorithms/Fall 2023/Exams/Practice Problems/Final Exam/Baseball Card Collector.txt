@@ -1,0 +1,25 @@
+Baseball Card Collector
+
+NP Proof:
+We can verify the solution to BCCP by checking whether the subset of packets contain at least one card for every player. We can do this by iterating through each packet in the subset and marking off each player as they are found. Finally, we check if |S| <= k. This takes O(mn) time as we have n packets and m players, which is polynomial.
+
+NP Complete Proof:
+
+Reduction: Set Cover -> BCCP
+
+I.T.:
+- The universe of elements in set cover maps to the set of this years players in the BCCP
+- The collection of sets in the set cover maps to the packets of baseball cards.
+- The goal of finding the smallest sub-collection of sets that covers all elements in set cover maps to buying at most k packets that include at least one card for every player
+- If we have m elements in the universe and n sets in the set cover problem, the conversion requires iterating over each set/element within it to create the corresponding packets. This would take O(mn) time.
+- Pass the packets and k into BCCP in O(1) time.
+- Overall transformation time is O(mn), which is polynomial.
+
+O.T.:
+- Return NO, if 3AMSAT returns NO in O(1) time.
+- Return the solution (S) from BCCP, mapping S back to the sets in the set cover problem, which involves checking each packet (set and players (elements) it contains. This is done is O(mn) time.
+- Overall transformation time is O(mn), which is polynomial.
+
+Correctness:
+- If there's a solution to BCCP, there's a sub collection of sets that covers all elements in the universe
+- If there's no solution to BCCP, it's not possible to cover all elements in the universe with the given sets in a set cover, since the packets (sets) and players (elements) directly correspond to each other

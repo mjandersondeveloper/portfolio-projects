@@ -1,0 +1,182 @@
+Gold-and-White Edges
+--------------------
+- G=(V,E) is an undirected graph
+- s and t are distinct vertices in G
+- Each edge is assigned either white or gold
+	- Can access this in constant time
+
+A.)
+---
+- Find if there's a path from s to t w/ edges of only one color (white or gold)
+
+Algorithm:
+- To find a path w/ edges of one color from s -> t, we will use the Explore algorithm.
+- Make a copy of G and remove all gold edges. Call this G_w.
+- Run Explore on G_w starting at s. 
+- Check the visited array output, visitied_w[]: 
+	- If visited_w[t] = true, return TRUE.
+	- If not, make another copy of G and remove the white edges. Call this G_g.
+- Run Explore on G_g starting at s.
+- Check the visited array output, visitied_g[]:
+	- If visited_g[t] = true, return TRUE.
+	- If not, return FALSE. 
+
+Correctness:
+- To find if there's a path from s -> t w/ edges of one color, we can use the Explore subroutine.
+- We first run Explore on G_w starting at s, a graph containing only white edges. Using the visited_w[], if visited_w[t] = true, we know there's a valid path from s -> t using only white edges and return TRUE.
+- If visited_w[t] = false, we run Explore on G_g starting at s, a graph containing only gold edges. Using the visited_g[] output, if visited_g[t] = true, we know there's a valid path from s -> t using only gold edges and return TRUE.
+- If visited_g[t] = false, we know there is no path from s -> t using only white/gold edges, and return FALSE.
+
+Runtime:
+- Making a copy of G and removing white/gold edges takes O(n + m) time.
+- Running Explore on G_w and G_g takes O(n + m) time.
+- Overall runtime is O(n + m).
+
+B.)
+---
+- Find a path from s -> t such that all white edges appear before gold edges
+
+Algorithm:
+- To find if there's a path from s -> t w/ all white edges before gold edges, we can use the Explore subroutine.
+- Using G_w and G_g from the previous part, run Explore on G_w starting at s resulting in a visited_w[].
+	- If visited_w[t] = true, return TRUE.
+	- If not, run Explore on G_g starting at t, resulting in a visited_g[].
+- Check if there exists a vertex x that has been visited in both G_w and G_g: visited_w[x] = true and visited_g[x] = true.
+	- If so, return TRUE.
+	- If not, return FALSE.
+
+Correctness:
+- To find if there's a path from s -> t w/ all white edges before gold edges, we can use the Explore subroutine.
+- We first run Explore on G_w starting s to get the visited_w[]
+- Check if visited_w[t] = true. If so, we know there exists a path from s -> t with all white edges before gold edges, and we return TRUE.
+- If not, we run Explore on G_g starting t to get the visited_g[]
+- Finally, using the visited_w[] and visited_g[] arrays, check if there is a vertex x that has been visited in both G_w and G_g.
+	- If so, we know there exists a path s -> t with all white edges before gold edges and return TRUE.
+	- If not, no such path exists and we return FALSE.
+
+Runtime:
+- Running Explore on G_w and G_g takes O(n + m) time.
+- Checking for a common vertex in visted_w[] and visited_g[] takes O(n) time.
+- Overall runtime is O(n + m).
+
+---------------------------------------------------------
+
+Multiplication Formula
+----------------------
+- G=(V,E) is a directed graph w/ positive edge weights
+- Given a vertex w.
+- Find a set of vertices that satisfy: d(x,w) >= 2023 * d(w,x)
+
+Algorithm:
+- To find a set of vertices that satisfy the given formula, we will utilize Dijkstra's algorithm.
+- Run Dijkstra's algorithm on G starting at vertex w, resulting in the dist[w] array.
+- Next, making a copy of G and reverse it. Call this G_r.
+- Run Dijkstra's algorithm on G_r starting at vertex w, resulting in the dist_r[w] array.
+- For each vertex in G:
+	- Check if dist_r[x] >= 2023 * dist[x].
+	- If valid, add vertex x to the candidate set of vertices.
+	- If not, continue to the next vertex.
+- Return candidate set of vertices.
+
+Correctness:
+- We can find the set of vertices that satisfy the given formula by using the dist[] output from Dijkstra's algorithm.
+- We run Dijkstra's algorithm on G to get the dist[w], or d(w, x).
+- We then make a copy of G and reverse it to get the dist_r[w], or d(x, w).
+- Next we plug in the distance value of each vertex within G into the formula and check it's validity.
+	- If valid, we add the vertex to our candidate set of vertices.
+- Finally, we return the candidate set. 
+
+Runtime:
+- Running Dijkstra's algorithm twice takes O((n + m) log n) time.
+- Making a copy of G and reversing it takes O(n + m) time.
+- Plugging each vertex into the formula to check for validity takes O(n) time.
+- Overall runtime is O((n + m) log n).
+
+---------------------------------------------------------
+
+Part-of-some-MST
+--------------------
+- G=(V,E) is an undirected, connected, and positively weighted graph
+- Give a linear time (O(n + m)) algorithm to decide if edge e = (u,v) is part of some MST of G or not.
+
+Algorithm:
+- To confirm if edge e = (u,v) is a part of some MST of G, we can use the Explore algorithm.
+- Make a copy of G and remove every edge with a weight >= edge e, including edge e itself. Call this G'.
+- Run Explore from u on G'.
+- If visited[v] = false, return TRUE. If not, return FALSE.
+
+Correctness:
+- To confirm if edge e is a part of some MST of G, we utilize The Cut Property. This states that an edge of minimum weight across a cut is a part of some MST.
+- By removing edges from G that have a weight >= edge e, including edge e, and running Explore starting at u in G', we can see if there still exists a path from u -> v in G'.
+- If there exists such a path, we know that edge e is not an edge of minimum weight in G and return FALSE.
+- If there does not exist such a path, we know edge e is an edge of minimum weight in G and return TRUE.
+
+Runtime:
+- Making a copy of G and removing all edges with weights >= edge e takes O(n + m) time.
+- Running Explore takes O(n + m) time.
+- Overall runtime is O(n + m).
+
+---------------------------------------------------------
+
+Safe Road
+---------
+- n-cities, m-roads
+- Undirected and connects exactly two cities
+- Dangerous roads have a positively weighted number
+	- Higher weight = safer road
+	- Lower weight = more dangerous
+- Safe roads have no weight
+- Find a subset of roads with the ranked priorities and return R
+
+Algorithm:
+- To find the best subset of roads in R, we will utilize Kruskal's algorithm.
+- First, construct a graph G with cities as vertices and roads as edges.
+- Next, add a weight of infinity for any edge with an unassigned weight.
+- Negate all edge weights in G by multiplying the original edge weights by -1.
+- Finally, run Kruskal's algorithm on G and return the resulting MST. 
+
+Correctness:
+- To find a subset of roads that fit the given priorities, we need to build an MST from graph G.
+- By adding infinity to the non weighted edges and negating each edge weight in G, we are essentially building a maximum spanning tree.
+- Running Kruskal's algorithm on the modified graph G gives us an MST as R that fulfills each ranked priority:
+	1.) Since an MST is a connected graph, it's possible to reach any vertex using only edges within R
+	2.) MSTs are made up of as many edges as possible that don't create a cycle and keeps the graph connected. Meaning any unnecessary edges will not be included.
+	3.) Kruskal's algorithm prioritizes the lowest weighted edges first when building an MST. Since the safe road edges are -inifnity, R will contain as many safe road edges as possible (as long as a cycle is not formed).
+	4.) Since we negated each edge weight in G, the higher weighted edges now become the lowest weighted edges. Since Kruskal's algorithm prioritizes the lowest weighted edges first, if a dangerous edge need to be added to R, it will be the higher weighted edges from G.
+
+Runtime:
+- Constructing graph G takes O(n + m) time.
+- Adding and modifying edge weights in G takes O(n + m) time.
+- Running Kruskal's algorithm takes O(m log n) time.
+- Overall runtime is O(m log n).
+
+---------------------------------------------------------
+
+Find All Centrums
+-----------------
+- G=(V,E) is a directed graph
+- A vertex v is a centrum if there's a path from v to every other vertex in G
+- Find all centrum vertices in G (could be an empty set)
+
+Algorithm:
+- To find all centurm vertices in G we will utilize the SCC and Explore algorithms.
+- Run the SCC algorithm on G, returning a topologically sorted metagraph. Call this G_m.
+	- Starting with a source SCC vertex, SCC_first, and ending in a sink SSC vertex, SCC_last.
+- Pick a single vertex v within SCC_first. Call it v'.
+- Run Explore on G starting at v'. 
+- Examine the visited[]:
+	- If every vertex in the visited[] is true, add each vertex within SCC_first into the candidate set, and return the candidate set.
+	- If at least one vertex in the visited[] is false, return an empty candidate set.
+
+Correctness:
+- To find all centrum vertices in G we first run the SCC algorithm to create a topologically sorted metagraph that starts with a source SCC, and ends with a sink SCC.
+- We can then check if any vertex within the first SCC vertex in G_m, which is a source, has a path to every other vertex in G.
+- We run Explore from any vertex within SCC_first to see if there exists a path from v to every other vertex in G.
+	- If every vertex in the visited[] equals true, we know there exists a path from v to every other vertex in G, and add each vertex within SCC_first to the candidate set and return it accordingly. 
+		- Since we know SCC vertices contain vertices that have a path from v -> u and u -> v, if one vertex from SCC_first has a path to every other vertex in G, so do the other vertices in SCC_first.
+	- If even one vertex in the visited array equals false, we know there exists no path from v to every other vertex in G, and we return an empty candidate set.
+
+Runtime:
+- It takes O(n + m) time to run the SCC algorithm.
+- It takes O(n + m) time to run the Explore algorithm.
+- Overall runtime is O(n + m).

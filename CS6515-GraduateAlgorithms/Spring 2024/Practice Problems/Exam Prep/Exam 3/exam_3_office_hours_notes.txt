@@ -1,0 +1,100 @@
+Notes
+-----
+
+- NP Theory
+	- Polynomial Runtime
+		- O(n^k) for constant k
+	- Exponential Runtime
+	 	- O(k^n) for k > 1
+	- Pseudo Polynomial Runtime
+		- Poly to the magnitude of the input, but exponential to the size of the input
+	- P: runs in poly time
+	- NP: can be verified in poly time
+	- P = NP
+		- If we can verify a problem in poly time, can we also solve it in poly time?
+- Pseudo Polynomial Runtimes
+	- Knapsack: O(nB)
+	- Ford-Fulkerson: O(mC)
+		- B and C are considered magnitudes
+			- B = budget
+			- C = capacity
+		- Single number that increases runtime w/o needing more space
+- Undecidable Problem
+	- Problems that some inputs cannot be solved
+	- Problem is considered computationally impossible w/ unlimited time and space
+	- Decision problem: "yes-no" questions of input values
+		- Undecidable problem cannot determine this
+			- Example: Halting problem
+- NP-Complete Reductions
+	- A (Known problem) -> B (Unknown problem)
+- SAT Reductions - Strategies
+	- 3SAT -> Exact 4SAT
+	- SAT -> Stingy SAT
+	- NP Proof:
+		- Make sure to verify assignments
+		- Make sure to count anything
+		- Make sure to verify any special conditions
+		- Don't need to verify the input
+	- Input:
+		- CNF boolean formula form
+		- Maintain equivalent logic
+		- Only add literals and clauses
+		- Never add T/F to the CNF, add a variable, x, and give it a T/F assignment
+		- Literals in the boolean formula, variables in the satisfying assignment
+	- Output:
+		- Remove added literals or variables before returning the original CNF formula
+		- Just remove the new literals, clauses will be removed automatically
+	- Correctness:
+		- Establish equivalency of the two SAT problems after transformation
+		- Argue IFF statement
+- Graph Reductions - Strategies
+	- IS -> Clique + IS
+	- Clique -> KITE
+	- NP Proof:
+		- Make sure to verify the graph carefully
+		- If graph contains a clique that's not separated, you must separate it first
+			- Finding a clique in an arbitrary graph is not polynomial
+		- Make sure to count anything or check the size of the solutions
+		- Try to avoid degree counting in most scenarios
+			- This DOES come in handy for induced subgraphs
+	- Input:
+		- Don't try to find what you're looking for before modifying the graph
+		- Force your unknown problem to find the solution
+		- Remember the goals/budgets: b, k, or g
+		- Don't accidentally add extra candidate vertices or edges
+			- Clique + IS as an example
+	- Output:
+		- Isolate the thing you are looking for from the unknown output
+		- Just removing added vertices or edges is not enough
+	- Correctness:
+		- Argue why the solution for the unknown can only be found in G' if the original G has a solution to your known
+- Set Reductions - Strategies
+	- Vertex Cover -> Hitting Set
+	- NP Proof:
+		- Make sure to verify each set and its contents or intersects
+		- Makes sire to check the size of the set
+		- Consider runtime in how large the largest set can be
+	- Input:
+		- Allowed previous Set problems (Hitting Set, Set Cover)
+		- Also go from graph or SAT (be careful with SAT though as literals are related)
+		- Usually a generalization problem. Create an equivalent problem to be solved
+		- Consider runtimes in how large the largest set can be
+	- Output:
+		- Be sure to covert back to the thing you were looking for
+	- Correctness:
+		- Argue why the problems are equivalent
+		- Argue IFF statement
+- Summation Reductions - Strategies
+	- Subset Sum -> Knapsack
+	- NP Proof:
+		- Validate the solution set adds up to what we are looking for (sum of v_i = goal t)
+		- Adding is O(n log t), where t is the sum of what you're adding
+	- Input:
+		- Force sums to represent the solution
+		- Consider bit or integer representations
+		- Force inequalities to converge on an equality
+	- Output:
+		- Convert back to what you're looking for
+	- Correctness:
+		- Argue why the summations are equivalent
+		- Argue IFF statement

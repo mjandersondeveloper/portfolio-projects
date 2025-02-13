@@ -1,0 +1,22 @@
+Part-of-some-MST (HW5)
+
+- G = (V, E) is an undirected, connected, weighted graph
+- Give a linear time algorithm O(n + m)
+- Decide if input edge e = (u, v) is a part of some MST of G or not.
+
+Algorithm:
+	- Copy graph G and remove all edges that are equal to or greater than edge e, including edge e itself, G'.
+	- Run Explore starting at u in G'.
+	- If visited(v) = false, return TRUE as edge e is a part of some MST.
+	- If visited(v) = true, return FALSE.
+	
+Correctness:
+	- The cut property states that for an edge to be a part of some MST, such edge must be an edge of minimum weight on a cut.
+	- Based on this, we can check if removing, or "cutting", edge e causes v to not be reachable by u.
+	- If removing edge e, along with other edges that have a weight >= to e, causes v to not be reachable by u, we can confirm that e is an edge of minimum weight, thus it is part of some MST based on the cut property.
+	- If v is still reachable by u in G', then e is not an edge of minimum weight, thus it is not a part of some MST based on the cut property.	
+
+Runtime:
+	- Copying and modifying graph G takes O(n + m) time.
+	- Running Explore takes O(n + m) time.
+	- Overall runtime is O(n + m).

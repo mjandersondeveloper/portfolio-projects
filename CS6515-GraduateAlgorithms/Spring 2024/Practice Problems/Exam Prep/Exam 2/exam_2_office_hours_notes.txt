@@ -1,0 +1,78 @@
+Graph Theory
+------------
+
+- Graph Algorithms
+	- Treat algorithm as black box
+	- Manipulate your graph so that a black box can solve your problem
+	- Select the right black box based on your input/output needs
+	- This is a form of reduction
+- DFS/Explore/SCC/Topological Sort/2SAT
+	- Runtime: O(n + m)
+	- DFS and Explore works on any graph
+	- SCC only works on directed graphs
+	- Topological sort only matter on DAGs
+		- Usually used on an SCC metagraph to give you information about the relationships
+		- First SCC is a source and last SCC is a sink, but may not be the only ones
+		- You do not need to provide details on finding the first source and first sink
+		- You do need to provide details on finding other sources and other sinks
+	- 2SAT lets you solve Boolean satisfiability problems
+	- Strategies:
+		- Remove an edge or certain and run Explore or DFS to determine what happens w/o the edge(s)
+		- Do graph reversals (directed graphs) and then run Explore or DFS to determine pathing to a vertex instead of from a vertex
+		- Get SCCs, and use it to get more information about your graph
+		- Get SCCs, and use it to determine pathing, connectivity, cycles, etc
+		- Get a DAG, sort it, go down the ordering and look for information
+		- Encode problem into a 2SAT CNF, run the 2SAT algorithm to determine the answer
+- BFS/Dijkstra's
+	- Finds shortest paths for graphs
+	- BFS
+		- Tells us how many edges from s
+		- Needs a source vertex
+		- O(n + m)
+		- See if s can reach a vertex v (dist[v] = infinity; if it's unreachable)
+	- Dijkstra's
+		- Considers edge weights
+		- Needs a source vertex
+		- O((n + m) log n)
+		- Can also see if s can reach a vertex v (dist[v] = infinity; if it's unreachable)
+		- Does NOT work w/ negative weights
+	- Strategies:
+		- Remove an edge or certain and run BFS or Dijkstra's to determine what happens w/o the edge(s)
+		- Do graph reversals (directed graphs) and then run BFS or Dijkstra's to determine pathing to a vertex instead of from a vertex
+		- Run Dijkstra's multiple times to get information about a graph from different sources (generally twice from different vertices or reversed)
+		- Do NOT run BFS/Dijkstra's from every vertex is probably a bad idea
+- Kruskal's/Prim's
+	- Finds an MST for an undirected, connected graph
+	- O(m log n)
+	- Kruskal's
+		- Sort edges by weight
+		- Grab the lightest available edge that will not create a cycle when added to the MST
+		- Keep doing this until all edges that will not create a cycle are added
+	- Prim's
+		- Start w/ an arbitrary vertex v and put it into a subtree S of included vertices
+		- In each iteration, grow S by adding the lightest edge b/w a vertex in S and a vertex outside of S
+		- Continue until all vertices are in S
+	- Strategies:
+		- Remove an edge, or certain edges and run Kruskal's or Prim's to determine what happens w/o the edge(s)
+		- Make changes to the weights to avoid some edges from being picked first
+		- Make changes to the weights to force some edges into being picked first
+		- Be careful changing weights
+		- Remember: Being picked last =! Not being picked at all
+		- Run Kruskal's/Prim's on a subset of G and build on the partial MST
+		- Use known MST properties (Cut, Cycle, n-1) for correctness
+		- Do NOT run Kruskal's/Prim's with each edge removal/update
+- Ford-Fulkerson/Edmonds-Karp
+	- Gets a max flow for a flow network
+	- Ford-Fulkerson
+		- Runtime: O(mC)
+		- Assumes integer capacities
+		- Path find not specified - DFS is assumed
+	- Edmonds-Karp
+		- O(nm^2)
+		- Works w/ non-integer capacities
+		- Path finding uses BFS
+	- Strategies:
+		- Turn the graph problem into a flow network (like bipartite)
+		- Update capacities to fit the problem
+		- Add nodes or edges to divert or add flow
+

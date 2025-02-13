@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="867dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/missiveText"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:text="Missive:"
+                android:textSize="18dp" />
+
+
+            <EditText
+                android:id="@+id/missiveID"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/paramAText"
+                android:layout_width="114dp"
+                android:layout_height="31dp"
+                android:layout_weight="1"
+                android:text="Parameter A:"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/aParamID"
+                android:layout_width="294dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/paramBText"
+                android:layout_width="42dp"
+                android:layout_height="31dp"
+                android:layout_weight="1"
+                android:textSize="18dp"
+                android:text="Parameter B:" />
+
+            <EditText
+                android:id="@+id/bParamID"
+                android:layout_width="302dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="1" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/encipherButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/darker_gray"
+            android:onClick="handleClick"
+            android:text="ENCIPHER"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/whitespaceId"
+            android:layout_width="match_parent"
+            android:layout_height="151dp" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Encrypted Missive:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/encryptedMissiveID"
+            android:layout_width="match_parent"
+            android:layout_height="636dp"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

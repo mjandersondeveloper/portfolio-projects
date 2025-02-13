@@ -1,0 +1,28 @@
+Instagram Advertisers [10] Entertainment Venues
+Instagram Advertisers [10] Influencers
+Instagram Advertisers [10] Music 
+Instagram Advertisers [10] News
+Instagram Advertisers [10] Shopping
+Instagram Advertisers [10] Sports
+Instagram Advertisers [10] Television/Movies
+
+Entertainment Venues [5] Relevant
+Entertainment Venues [1] Not Relevant
+Entertainment Venues [4] Way Off
+Influencers [3] Not Relevant
+Influencers [7] Way Off
+Music [3] Relevant
+Music [3] Not Relevant
+Music [4] Way Off
+News [3] Relevant
+News [1] Not Relevant
+News [6] Way Off
+Shopping [5] Relevant
+Shopping [1] Not Relevant
+Shopping [4] Way Off
+Sports [1] Relevant
+Sports [3] Not Relevant
+Sports [6] Way Off
+Television/Movies [4] Relevant
+Television/Movies [4] Not Relevant
+Television/Movies [2] Way Off

@@ -1,0 +1,31 @@
+Almost-SAT
+
+Input: Conjunctive normal forms of m clauses and n literals in Boolean formula
+
+Output: If exactly m-1 clauses are evaluated to TRUE, then assignment of literals is returned, otherwise NO.
+
+NP-Proof:
+
+We can verify the Almost-SAT problem by checking if each n-literal is TRUE/FALSE in each m-clause within the CNF input. We can check n-literals in m-clause in O(nm) time, which is also polynomial time.
+
+
+NP-Complete Proof:
+
+Reduction: SAT -> Almost-SAT (A-SAT)
+
+IT: 
+
+- We take the CNF input, f, as an SAT solution.
+- For each clause in the f, we add two new clauses, y and !y, in O(1) time. For example: (x) -> (x) ^ (y) ^ (!y).
+- Pass f' into A-SAT, in O(1) time.
+ 
+OT:
+
+- Return NO, if A-SAT returns NO in O(1) time.
+- Return S from A-SAT, dropping the new literal variables and assigning the T/F values to f, in O(n) time.
+
+Correctness:
+
+- If A-SAT has a solution, we have a solution for SAT by dropping the newly added literals, y and !y, resulting in satisfiable assignments to f.
+- If SAT has a solution, we have a solution for A-SAT by adding two new clasues, y and !y, to each clause in f. Making m-1 clauses in f' true.
+- A-SAT has a solution in f IFF SAT has a solution in f'.

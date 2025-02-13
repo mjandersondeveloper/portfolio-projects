@@ -1,0 +1,29 @@
+Double-SAT
+
+Input: CNF formula, f, of m clauses and n literals
+
+Output: Determine if f has two satisfying assignments.
+
+NP Proof:
+
+We can verify the Double-SAT solution by traversing each m-clause, with n-literals within them, in S, and checking the satisfiability of each in O(nm) time, which is also polynomial time.
+
+NP Complete:
+
+Reduction: SAT -> Double-SAT (D-SAT)
+
+IT:
+- Take CNF input, f, as a solution of SAT.
+- Transform f by adding a new literal, y, and its negation to f in O(n) time. Ex: (x) -> (x V y V !y).
+- Pass f' to D-SAT.
+- Overall runtime is O(n).
+
+OT:
+- Return NO if D-SAT returns NO.
+- Return solution, S, of D-SAT dropping the two newly added literals, y and !y.
+- Both returns take O(1) time.
+
+Correctness:
+- If there is a solution for D-SAT, there is a solution for SAT by dropping the two newly added literals, y and !y, that were used to satisfy the D-SAT input. Since the two new literals always evaluate to a truth assignment, we know f is also satifiable.
+- If there is a solution for SAT, there is a solution for D-SAT by adding a new literal and its negation (y and !y), which will always be satifiable, to f.
+- The solution for D-SAT is satisfiable IFF the solution for SAT is satisfiable.

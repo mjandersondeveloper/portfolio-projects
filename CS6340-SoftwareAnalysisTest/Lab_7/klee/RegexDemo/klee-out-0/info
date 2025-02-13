@@ -1,0 +1,21 @@
+klee --only-output-states-covering-new Regexp.bc
+PID: 21
+Started: 2021-11-28 01:26:43
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2021-11-28 01:27:00
+Elapsed: 00:00:17
+KLEE: done: explored paths = 5540
+KLEE: done: avg. constructs per query = 20
+KLEE: done: total queries = 214
+KLEE: done: valid queries = 36
+KLEE: done: invalid queries = 178
+KLEE: done: query cex = 214
+
+KLEE: done: total instructions = 2565532
+KLEE: done: completed paths = 5540
+KLEE: done: generated tests = 13

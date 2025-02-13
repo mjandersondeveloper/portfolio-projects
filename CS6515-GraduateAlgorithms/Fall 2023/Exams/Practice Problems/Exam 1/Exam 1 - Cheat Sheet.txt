@@ -1,0 +1,19 @@
+Exam 1 - Cheat Sheet
+
+DP Algorithms:
+- LIS
+- LCS
+- Knapsack
+- Chain Matrix
+
+D&C Algorithms:
+- Binary Search
+	- O(log n)
+- Fastselect
+	- O(n)
+- Median of Medians
+	- O(n)
+- Mergesort
+	- O(n log n)
+- FFT
+	- O(n log n)

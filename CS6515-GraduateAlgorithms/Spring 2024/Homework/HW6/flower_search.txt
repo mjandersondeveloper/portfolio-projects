@@ -1,0 +1,63 @@
+Homework 6 - Flower-Search
+--------------------------
+- Flower of size N has exactly N + 4 vertices such that N vertices form a clique and the other four form a star
+	- The star is connected to the clique by exactly one edge to the star's central vertex.
+
+- Input: A graph G=(V,E) and a natural number N > 0.
+- Output: A set of N + 4 vertices such that the induced subgraph is a flower, or report NO if such set does not exist.
+
+
+NP Proof:
+- Verify the solution, S, to the Flower-Search problem by first inducing the subgraph of S. This takes O(n + m) time.
+- Validate that N vertices make up a clique by finding all vertices with a degree >= N-1 and are connected to one another by an edge. This takes O(n^2) time.
+- Validate that the remaining vertices make up a star by verifying that three vertices have a degree of one and are connected to a common central vertex. This takes O(n + m) time.
+- Verify that there is a path from the central vertex in the star to a vertex in the clique. This takes O(n + m) time.
+- Finally, verify |S| = N + 4 in O(n) time.
+- Overall runtime is O(n^2), which is polynomial time.
+
+
+NP Complete Proof:
+
+Reduction: Clique -> Flower-Search (F.S.)
+
+I.T.:
+- Given G=(V,E) and N.
+- A star consists of four vertices, featuring a central vertex, v', which connects to three other vertices that do not share an edge with each other.
+- Create G' by adding a star to every vertex in G.
+	- Each star will be added by an edge from v'.
+	- This takes O(n^2) time.
+- Pass G' and N into F.S. in O(1) time.
+- Overall transformation time is O(n^2), which is polynomial.
+
+O.T.:
+- Return NO, if F.S. returns NO in O(1) time.
+- Return solution of F.S., removing the four vertices that make up the star, leaving a clique.
+	- To find the star, find the three vertices with a degree of one that are connected to a common vertex (the fourth vertex). These four vertices will be removed.
+	- This takes O(n + m) time.
+- Overall transformation time is O(n + m), which is polynomial.
+
+Correctness:
+- If Clique returns a solution, S, we have a solution for F.S. by adding a star, from its central vertex, to each vertex in S, resulting in N + 4 vertices that form a flower.
+- If F.S. returns a solution, S, we have a solution for Clique by removing the star from S, resulting in an N-sized clique.
+- F.S. has a solution IFF there is a star added, from its central vertex, to the Clique solution.
+
+------------------------------------------------------------------------
+
+Model Solution:
+---------------
+
+NP Proof:
+- Same as above except you didn't mention the central vertex has a degree of four.
+
+NP Complete Proof:
+
+Reduction: Clique -> Flower-Search (F.S.)
+
+I.T.:
+- Same as above except it takes O(n) not O(n^2) to add a star for size four to each vertex in G.
+
+O.T.:
+- Same as above.
+
+Correctness:
+- Same as above.

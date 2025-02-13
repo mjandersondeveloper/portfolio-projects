@@ -1,0 +1,27 @@
+Repeated Number (HW2)
+
+- Input: List, A, of numbers starting at 1
+- Exactly one number repeats
+- A is non decreasingly sorted
+- Output: Repeated number
+
+Algorithm: Modified Binary Search
+- Use a modified binary search
+- First, check if A[m] = m.
+	- If valid, search the right side of A
+	- If not, search the left side of A
+- Recurse the left or right side of A until a single element remains
+- Once achieved, compare the resulting element to its neighbors (the values to the left and right of it).
+	Ex: A[i] would check A[i - 1] and A[i + 1]
+- Return the repeated value.
+
+Correctness:
+- Using the a modified binary search, we can find the repeated number in A by recursively searching the left and right sides of A.
+- If A[m] = m, we know the left side is correct since the array is increasingly sorted, so we check the right side for the repeated number.
+- If A[m] != m, we know the right side is correct and check the left side for the repeated number.
+- Once the recursive search gets to one element, checking the values to the left and right of it will give us out repeated number.
+
+Runtime:
+- Running a binary search takes O(log n) time to run.
+- Modifying the checks within the binary search can be done in O(1) time.
+- Overall runtime is O(log n).

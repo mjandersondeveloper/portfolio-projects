@@ -1,0 +1,53 @@
+Homework 3 - Clever Thief
+-------------------------
+
+- n-houses
+- Thief will rob houses consecutively
+- Thief will earn profits from each house; p_1...p_n, where p_i > 0
+- Thief will never rob two adjacent houses
+- Find the maximum total profit the thief can achieve
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum total profit achievable from robbing houses p_1...p_i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = 0, T(1) = p_1
+- Recurrence: T(i) = max{T(i-1), T(i-2) + p_i}, where 2 <= i <= n
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+T(1) = p_1
+for i = 2 to n:
+	T(i) = max{T(i-1), T(i-2) + p_i}
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+
+- Running one for loop across n-houses takes O(n) time.
+- Overall runtime is O(n).
+
+----------------------------------------------------------------------
+
+Model Solution:
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum profit achievable for houses 1..i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = 0, T(1) = p_1
+- Recurrence: T(i) = max{T(i-1), T(i-2) + p_i}, where 2 <= i <= n
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+T(1) = p_1
+for i = 2 to n:
+	T(i) = max{T(i-1), T(i-2) + p_i}
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+- Running one for loop across n-houses takes O(n) time
+- Overall runtime is O(n)

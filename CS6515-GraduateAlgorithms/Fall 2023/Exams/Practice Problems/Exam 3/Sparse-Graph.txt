@@ -1,0 +1,27 @@
+Spare Graph
+
+Input: An undirected graph G = (V, E) and variables a, b.
+
+Output: A set S which is a subset of V where |S| = a  and there are at most b edges between pairs of vertices in S. Report "NO", if no such set exists.
+
+NP Proof:
+
+We can verify the Spare Graph solution by checking the number of edges between each pair of of vertices is at most b in G in O(n^2) time. Verifying the size of |S| = a takes O(n) time. Making the overall time O(n^2) which is also polynomial time.
+
+NP-Complete Proof:
+
+Reduction: Independent Set (I.S.) -> Sparse Graph (S.G.)
+
+IT:
+- Given G = (V, E), a, and b as a solution of I.S., we set a = g = k and b = 0.
+- Pass G, a, and b into S.G. in O(1) time.
+
+OT:
+- Return NO, if S.G. returns NO.
+- Return the solution to S.G., which should have a size of a (|S| = a) and at most zero edges between each pair of vertices.
+- Both occur in O(1) time.
+
+Correctness:
+- If S.G has a solution, we have a solution for I.S. because there are at most zero edges in between each pair of vertices and |S| = a = k.
+- If I.S. has a solution, we have a solution to S.G. because there are no edges between vertices since b = 0, and |S| = a = k
+- There's a solution to S.G. IFF there is a solution to I.S.

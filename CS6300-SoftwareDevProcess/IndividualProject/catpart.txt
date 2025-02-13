@@ -1,0 +1,61 @@
+# Input
+  Command-line input:
+	Missing filename.			[error]
+
+  String input:
+	Zero.				[property zerostring]
+	One.				[property onestring]
+	Two.				[property twostring] 
+  
+# Options
+  -f flag:
+	Active.		 		[property fflag]
+	Inactive.
+		
+  -n flag:
+	Active.	  		
+	Inactive.
+
+  -s flag:
+	Active.				[if zerostring || onestring][property sflag]		
+	Inactive.			[if twostring]
+	Missing input.		[error]
+
+	
+  -r flag:
+	Active.				[if twostring][property rflag]
+	Inactive.			[if !twostring]
+	Missing Input.		[error]
+		
+  -g flag:
+	Active.				[if rflag]
+	Inactive.			
+	Incorrect flags.	[error]
+		
+  -i flag:	
+	Active.				[if rflag || sflag]
+	Inactive.
+	Incorrect flags.	[error]
+
+  -p flag:
+	Active.				[if onestring]
+	Inactive.			[if !onestring]
+	Missing input.		[error]
+	
+  No flags:
+	True.				[single]									
+
+  Duplicate flags:
+	True.				[single]
+		
+
+# Combo 
+  String Inputs Combo:
+	-s -r.				[single]
+	-r -p.				[single]
+	-s -r -p.			[single]
+
+# Result
+  stdout:
+	Sent.				[if !fflag]
+	Not sent.			[if fflag]

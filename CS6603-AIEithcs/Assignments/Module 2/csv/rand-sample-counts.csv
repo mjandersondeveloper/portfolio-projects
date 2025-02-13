@@ -1,0 +1,21 @@
+Female,Accidental,23
+Female,Cannot be Determined,5
+Female,Homicide,27
+Female,Natural,140
+Female,Other,11
+Female,Suicide,26
+Male,Accidental,326
+Male,Cannot be Determined,51
+Male,Homicide,729
+Male,Natural,2328
+Male,Other,122
+Male,Suicide,399
+,,
+,,
+,Male,Female
+Accidental,326,23
+Cannot be Determined,51,5
+Homicide,729,27
+Natural,2328,140
+Other,122,11
+Suicide,399,26

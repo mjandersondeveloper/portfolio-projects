@@ -1,0 +1,124 @@
+Dynamic Programming
+
+- Writing DP Solutions
+	- Describe Table Entry in Words
+	- Define Recurrence of the Subproblem
+		- Base Case
+		- Include range
+		- 1-based indexing
+		- Use mathematical notation
+	- Pseudocode
+		- 1-based indexing
+	- Runtime Analysis
+		- Big O Notation
+		- All non trivial parts (slower O(1))
+- Tips and Approaches
+	- Figure out what kind of problem it is (LIS, LCS, Knapsack, Edit Distance, etc.)
+	- Start w/ generic solution from lectures, and apply any details specific to the problem
+- Longest Increasing Subsequence (LIS)
+	- Has single array
+	- Looks at one element
+	- 1-D table
+	- Two variations:
+		- With O(n) lookback
+			- Yuckdonalds, Hotel Stops, etc.
+		- With O(1) lookback
+			- Clever Thief, Contiguous Subsequence, etc.
+- Longest Common Subsequence (LCS)
+	- Compares two arrays
+	- Looking for common elements
+	- 2-D table
+	- Can result in O(n*m) or O(n^2) depending if the two arrays have different sizes or not
+	- Two variations:
+		- Substring:
+			- Matches must be consecutive
+			- 1 + T(i-1, j-1) if comparison succeeds
+			- Reset to 0 when a comparison fails
+		- Subsequence:
+			- Matches do not need to be consecutive
+			- 1 + T(i-1, j-1) if comparison succeeds
+			- max{T(i, j-1), T(i-1, j)} when a comparison fails
+- Edit Distance
+	- Comparing two arrays
+	- Looking to minimize differences
+	- Might assign penalties/points differences
+	- T(i,j) = min/max {T(i-1, j-1) + function(i,j), 
+						T(i-1, j) + function(i,j), 
+						T(i,j-1) + function(i,j)}
+- Knapsack
+	- Problem needs to check if something can fit or can add up to
+	- Problem need a maximum value for a specific budget
+	- Runs in O(nB)
+	- Two variations:
+		- Limited
+		- Unlimited
+- Windowing
+	- Problem is asking for the most efficient way to split an array
+	- Usually a 2D table
+	- Two variations:
+		- Windowing only - results in O(n^2)
+		- Windowing and break at midpoint - results in O(n^3)
+- Graphs
+	- Bellman-Ford
+		- Finds shortest path in a graph starting at a single source 
+		- Runs in O(nm) or O(|V||E|)
+		- D(i,z) = min{ D(i-1,z), min{D(i-1,y) + w(y,z)} (for each (y,z) in E) }
+		- To check if a negative weight cycle exists, check if D(n,z) < D(n-1,z) 
+	- Floyd-Warshall
+		- Find all pairs of shortest path in a graph
+		- Runs in O(n^3) or O(|V|^3)
+		- D(i,s,t) = min{ D(i-1,s,t) : if not on the path, D(i-1,s,i) + D(i-1,i,t) : if on the path }
+		- To check if a negative weight cycle exists, a diagonal entry in the final matrix will be negative. Check if no v of V : D(n,v,v) < 0
+
+---------------------------------------------------------------------
+
+Divide and Conquer
+
+- Approach:
+	- Break input into several parts
+	- Solve each pat independently
+	- Eliminate, merge, or cancel out work
+	- Uses recursion
+- Effectiveness:
+	- Reducing work through elimination portions of an input (binary search)
+	- Reducing work through eliminating redundant work (merge sort)
+	- Reducing work through math (FFT)
+- Classic Algorithms
+	- Binary Search - O(log n)
+	- Fastselect - O(n)
+	- Median of Medians - O(n)
+	- Mergesort - O(n log n)
+	- FFT - O(n log n)
+	- Quickselect - O(n^2) - Don't use
+	- Quicksort - O(n^2)- Don't use
+- How to write:
+	- Describe algorithm in words
+	- Explain why algorithm is correct (correctness)
+	- Analyze runtime
+- Tips and Approaches:
+	- Is the input sorted?
+		- Consider binary search
+		- Consider modifying the target
+		- Consider modifying the branching logic
+	- Is the input unsorted?
+		- Consider sorting first (not in all cases)
+		- Consider Fastselect
+		- Consider modifying merge logic to Mergesort
+		- Consider modifying partitioning logic to Fastselect
+	- Is math needed?
+		- Use FFT
+	- BEAT THE BRUTE FORCE SOLUTION!
+		- Don't tie or lose to it
+- Solving Recurrences
+	- Know how to establish T(n) = a*T(n/b) + O(n^d)
+		- a = number of recursive calls
+		- b = size of partition in each recursive call
+		- n^d = effort at each recursion
+	- Master Theorem
+		- O(n^d) : if d > logb(a)
+		- O(n^d*log n) : if d = logb(a)
+		- O(n^logb(a)) : if d < logb(a)
+- FFT
+	- Does NOT use multiplication
+	- Converts an array of polynomial coefficients
+	- Converts this array into an array of values (Inverse FFT)

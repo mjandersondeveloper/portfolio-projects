@@ -1,0 +1,51 @@
+K-Almost SAT
+------------
+NP Proof:
+- Given candidate solution, S
+	- Go through the clauses of f making sure that exactly m - k clauses are satisfied in O(mn) time.
+
+NP Complete Proof:
+
+Reduction: SAT -> K-Almost SAT (KASAT)
+
+I.T.:
+- Given formula f as input to SAT.
+- Create f' = (f) ^ (a) ^ (!a) and set k=1 in O(1) time.
+- Pass f' and k into KASAT in O(1) time.
+
+O.T.:
+- Given solution, S, remove the truth assignment for the added variable in O(n) time.
+- Given NO solution, return NO in O(1) time.
+
+Correctness:
+- If KASAT finds a solution, then f must be satisfiable b/c exactly one clause is allowed to be false and we added it.
+- If KASAT reports NO, then > 1 clause must be false and that has to come from the original f boolean formula.
+
+---------------------------------------------------------
+
+Pinwheel
+--------
+NP Proof:
+- Given a set of vertices, S
+	- Check that |S| = k + 1 in O(n) time
+	- Check in G that one vertex in S connects to all other vertices in S
+	- Check that no other pair in S has an edge b/w them
+	- Both take O(n^2) time
+		- (Inducing/degree checks works here too btw)
+
+NP Complete Proof:
+
+Reduction: I.S. -> Pinwheel
+
+I.T.:
+- Given graph G from I.S.
+- Create G' by adding one vertex, v, and an edge from v to every vertex in G in O(n) time.
+- Pass G' and k into Pinwheel in O(1) time.
+
+O.T.:
+- Given NO solution to Pinwheel, report NO.
+- Given a solution to Pinwheel, find and remove the center vertex which connects to all other vertices, resulting in an independent set of vertices in O(n + m).
+
+Correctness:
+- We have added one vertex with a connection to all others. If a Pinwheel exists, the outer vertices must come from the original graph. Since they have no common edges, they define the independent set of |S| = k.
+- If there's no solution to Pinwheel, since we added the required center vertex, there can't be k-vertices in G w/o common edges.

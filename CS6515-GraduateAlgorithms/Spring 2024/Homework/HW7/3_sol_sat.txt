@@ -1,0 +1,59 @@
+Homework 6 - 3-Sol-SAT
+----------------------
+- Input: A CNF formula, f, with m-clauses and n-variables
+- Output: Three distinct assignments of the variables such that f is satisfiable, otherwise return NO
+
+- Assignments are considered distinct if at least ONE variable is assigned a different boolean value.
+- Example: f(x,y,z,w) = (x V y) ^ (x V !z) ^ (y V w)
+	- Valid assignments: (x,y,z,w)=(T,T,T,T), (T,F,F,T), (F,T,F,F)
+
+NP Proof:
+- We can verify the 3-Sol-SAT problem by traversing the CNF input formula, f, and verifying that three distinct assignments of n-variables satisfy f.
+	- This is done by traversing the literals within each m-clause in O(nm) time.
+- Validating that three distinct assignments of n-variables exist takes O(n) time.
+- Overall runtime is O(nm), which is also polynomial.
+
+NP Complete Proof:
+
+Reduction: SAT -> 3-Sol-SAT (3SolSAT)
+
+I.T.:
+- Given the CNF input formula, f.
+- Create f' by adding two new variables, x and y, and two additional tautology clauses to f. 
+	- One of the new clauses will contain a true and false literal of x, and the other with y.
+		- Example: (f) ^ (x V !x) ^ (y V !y).
+	- This takes O(1) time.
+- Pass f' to 3SolSAT in O(1) time.
+- Overall runtime is O(1), which is polynomial.
+
+O.T.:
+- Return NO, if 3SolSAT returns NO in O(1) time.
+- Return the solution of 3SolSAT, dropping the newly added x and y variables, returning one of the distinct truth assignments for the original variables in f.
+	- This takes O(n) time.
+- Overall runtime is O(n), which is polynomial.
+
+Correctness:
+- If 3SolSAT returns a solution, we have a solution for SAT by dropping the newly added x and y variables, resulting in satisfiable assignments to f.
+- If SAT returns a solution, we have a solution for 3SolSAT by adding two new variables, x and y, and two tautology clauses, (x V !x) and (y V !y), to f. Making it so 3SolSAT generates at least three distinct variable assignments from the new x and y variables alone.
+- 3SolSAT has a satisfiable solution IFF the solution for SAT is satisfiable.
+
+------------------------------------------------------------------------
+
+Model Solution:
+---------------
+
+NP Proof:
+- Same points as above
+
+NP Complete Proof:
+
+Reduction: SAT -> 3-Sol-SAT (3SolSAT)
+
+I.T.:
+- Same points as above
+
+O.T.:
+- Same points as above
+
+Correctness:
+- Same points as above

@@ -1,0 +1,36 @@
+Cursed Chests (Exam 1)
+
+- Input: Array of n-chests where some are cursed
+- Output: Maximum amount of gold
+- Input array G has all positive integers
+- i represents the amount of coins in chest i
+- g_i = 0 means chest is cursed
+- Cursed chest must pair w/ one of its neighbors, making them both disappear
+- It's always possible to get rid of all cursed chests
+- LIS problem
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is ...
+
+- Let T(i) = the maximum amount of gold from chests 1...i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(-1) = -infinity, T(0) = 0
+- Recurrence: T(i) = {T(i - 2): if g_i = 0, max{T(i - 2), T(i - 1) + g_i}: otherwise} | 1 <= i <= n
+
+3.) Write pseudocode for your algorithm to solve this problem.
+
+T[-1] = -infinity
+T[0] = 0
+for i = 1 -> n:
+	if g[i] = 0:
+		T[i] = T[i - 2]
+	else:
+		max{T[i - 2], T[i - 1] + g[i]}
+
+return T[n]
+
+4.) State and analyze the running time of your algorithm
+
+- Running one for loop across n chests takes O(n) time
+- Overall runtime is O(n)

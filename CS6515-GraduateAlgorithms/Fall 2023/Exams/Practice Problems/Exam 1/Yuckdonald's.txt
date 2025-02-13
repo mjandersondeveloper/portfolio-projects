@@ -1,0 +1,31 @@
+Yuckdonald's
+
+- n possible restaurant locations along a straight line
+- Distances b/w each restaurant is m1, m2,...,m_n
+- Each location may open on restaurant. Expected profit at location i is represented as p_i, where p_i > 0 and i is 1, 2,....,n
+- Any two restaurants are k miles apart, where k is a positive number.
+- LIS problem
+- Find maximum expected total profit
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is ...
+
+- Let T(i, j) = the maximum expected total profit for restaurant locations 1....i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = 0
+- Recurrence: T(i) = max{p_i, T(i-1), T(j) + p_i}: if m_i >= m_j + k  | 1 <= i <= n, 1 <= j <= i-1
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+for i = 1 -> n:
+	T(i) = max{p[i], T[i-1]}
+	for j = 1 -> i-1
+		if (m[i] >= m[j] + k):
+			T(i) = max{T[i], T[j] + p[i]}
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+
+- The nested for loops to find the maximum profit at each location takes O(n^2) time.
+- Overall runtime is O(n^2)

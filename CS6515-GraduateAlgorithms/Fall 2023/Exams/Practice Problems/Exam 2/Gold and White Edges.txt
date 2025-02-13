@@ -1,0 +1,43 @@
+Gold and White Edges (HW4)
+
+- G is an undirected graph, s and t are distinct vertices.
+- Each edge in G are assigned the color white or gold.
+- Color of an edge is accessed in O(1) time.
+
+A.)
+Algorithm:
+	- Make a copy of G and remove all gold edges from it, G_w.
+	- Run the Explore subroutine starting at vertex s to t.
+	- If visited(t) = true, return TRUE.
+	- If visited(t) = false, make another copy of graph G and remove all white edges from it, G_g.
+	- If visited(t) = true, return TRUE.
+	- If visited(t) = false again, return FALSE.
+
+Correctness:
+	- Running the Explore subroutine as a blackbox from vertex s will tell us if there is a connected path b/w vertex s and t.
+	- Checking the status of visited(t), which is provided by Explore, tells us if there is a path that exists b/w s and t.
+	- Running Explore on G_w will check if there is a path of white edges b/w s and t, as those are the only edges within this modified graph.
+	- The same logic applies when running Explore on G_g, expect it will check if there is a path b/w s and t made up of only gold edges, as those are the only edges within this modified graph.
+
+Runtime:
+	- Making copies of graph G and removing edges takes O(n + m) time.
+	- Running Explore takes O(n + m) time.
+	- Overall runtime is O(n + m).
+
+B.)
+Algorithm:
+	- Using graphs G_w and G_g from part A, run Explore on G_w starting at vertex s, and G_g starting at vertex t.
+	- Once complete check if visited(t) = true in G_w, if so, return TRUE.
+	- If not, check if there is a common vertex, x, where visited(x) = true in both G_w and G_g.
+	- If so, return TRUE, else return FALSE.
+
+Correctness:
+	- Running the Explore subroutine as a blackbox from vertex s will tell us if there is a connected path b/w vertex s and t.
+	- If vertex t is visited in G_w where we run the Explore routine from s, we know there's already a path that exists b/w s and t that uses white edges before gold automatically.
+	- If not, by running Explore starting at s in G_w and starting at t in G_g, we can use the output to check if there is a common vertex, x, that's visited in both graphs.
+	- If there is, that tells us that there is a path from s -> x using only white paths, and x -> t using only gold paths.
+
+Runtime:
+	- Running Explore takes O(n + m) time.
+	- Checking for a common visited vertex for both graphs takes O(n) time.
+	- Overall runtime is O(n + m).

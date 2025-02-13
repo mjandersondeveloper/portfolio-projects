@@ -1,0 +1,27 @@
+Shifted Array (Exam 1)
+
+- Input: Sorted array A of length n, shifted by an unknown 0 < k < n
+- Output: Largest element in the array
+- k determines the number of elements from the end that shifted towards the beginning.
+- All numbers in a are distinct integer values
+- A is sorted increasingly
+- Brute Force: O(n) time
+
+Algorithm: Modified Binary Search
+- Using a modified binary search
+- Check if S_k(A)[m] > S_k(A)[m + 1]. If valid, S_k(A)[m] is the largest number and return it.
+- Recursive search:
+	- Find midpoint to compare to S_k(A)[1]
+	- If S_k(A)[m] < S_k(A)[1], we recursively search the left side of the array
+	- If S_k(A)[m] > S_k(A)[1], we recursively search the right side of the array
+
+Correctness:
+- If the value S_k(A)[m] < S_k(A)[1], we know to check the left side since everything to the right will be less than value in S_k(A)[1]
+- If the value S_k(A)[m] > S_k(A)[1], we know to check the right side since everything to the left will be less than value in S_k(A)[m]
+- Once S_k(A)[m] > S_k(A)[m + 1] is valid, we know the largest number had been found.
+- This is b/c the array is increasingly sorted.
+
+Runtime:
+- Binary search runs in O(log n) time.
+- The modified conditions are ran in O(1) time.
+- Overall run time is O(log n).

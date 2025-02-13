@@ -1,0 +1,29 @@
+Star-Search Graph
+
+Input: A graph G=(V,E) and a natural number k>0. 
+
+Output: a set of k+1 vertices such that the induced subgraph is a star, or report NO if such set does not exist.
+
+NP Proof:
+We can verify the solution to the S.S. problem by first inducing the graph in O(n + m) time. Then checking if every vertices, but one, had a degree of 1, and if exactly one vertex has a degree of k in O(n + m) time. Finally, checking the size of |S| = k+1 takes O(n) time. Overall runtime of this is O(n + m), which polynomial time.
+
+NP Complete Proof:
+
+Reduction: I.S. -> Star-Search (S.S.)
+
+I.T.:
+- Given G = (V,E) and k.
+- Add a new vertex, v', and connect it to every existing vertex in G, new graph will be called G'. This takes O(n) time.
+- Pass G' and k into S.S in O(1) time.
+- Overall transformation time is O(n), which is polynomial.
+
+O.T.:
+- Return NO, if S.S. returns NO in O(1) time.
+- Return solution (S) from S.S., removing the center vertex from S, leaving an I.S. of vertices in O(n + m) time.
+- Overall transformation time is O(n + m), which is polynomial.
+
+Correctness:
+- If S.S. returns a solution, we have a solution for I.S. by removing the center vertex in S, returning an I.S., since the only edges in S would be connected to the center vertex.
+- If I.S. returns a solution, we have a solution for S.S. by adding a center vertex in G, making S.S. return a k+1 set of vertices in the form of a star.
+- S.S. has a solution IFF we add a new center vertex that connects to every vertex in an I.S.
+

@@ -1,0 +1,32 @@
+Exam 2 - Cheat Sheet
+
+Algorithms:
+- DFS w/ Explore subroutine
+	- DFS runs through entire graph and returns which components are connected. All vertices are set to visited = true.
+	- Explore can run from a specified vertex and will return if the goal vertex was visited or not.
+	- O(n + m)
+- BFS
+	- Finds the shortest distance b/w vertices. Returns an array of distances for the start to end vertices.
+	- O(n + m)
+- SCC:
+	- Checks for strongly connected components within a graph as well as the meta-graph of connected components.
+	- O((n + m) log n)
+- Dijsktra's:
+	- Finds the shortest distance b/w vertices in an only positive weighted graph. Outputs an array of distances from the start to end vertices.
+	- O((n + m) log n)
+- Bellman-Ford and Floyd-Warshall
+	- Finds the shortest path in a graph, weight can be negative as well. Also able to find negative cycles.
+	- BF runs in O(nm) time
+	- FW runs in O(n^3) time
+- Kruskal and Prim
+	- Greedy algorithms that output the MST of a graph.
+	- Kruskal will removes lowest edges first. Ran in O(m log n) time
+	- Prim always tries to maintain a subtree, does not target lowest edges first. Uses Dijsktra's algorithm during execution. Ran in O((n + m) log n) time.
+- Ford-Fulkerson and Edmonds-Karp
+	- Used to identify the max flow of a bipartite graph.
+	- FF runs in (OmC). Only works on integers.
+	- EK runs in O(nm^2). Utilizes BFS during execution.
+- 2SAT
+	- Takes a CNF boolean formula with a max of two arguments and evaluates its satisfiability.
+	- O(n + m)
+

@@ -1,0 +1,229 @@
+Dynamic Programming - Practice Problems
+----------------------------------------------------
+
+DPV 6.1 - Longest Contiguous Subsequence
+
+- Contiguous subsequence of consecutive elements of S
+- I: List of numbers a_1, a_2,....., a_n
+- O: Contiguous subsequence of maximum sum (a subsequence of length zero has a sum of zero)
+
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum sum of the contiguous subsequence a_1.... a_i, ending at a_i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = 0
+- Recurrence: T(i) = a_i + max{0, T(i-1)}, 1 <= i <= n
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+for i = 1 to n:
+	T(i) = a_i + max{0, T(i - 1)}
+return max{T(.)}
+
+
+4.) State and analyze the running time of your algorithm
+
+- Running one for loop across n-numbers takes O(n) time
+- It takes O(n) time to return the max sum in T
+- Overall runtime is O(n)
+
+----------------------------------------------------
+DPV 6.2 - Hotel Stops
+
+- n-hotels are mile posts a_1, a_2,....., a_n, where a_i is measured from staring point
+- Must stop at final hotel at a_n
+- Daily penalty: (200 - x)^2
+- Minimize the total penalty which is the sum over all travel days of daily penalties
+- Find the optimal hotels to stop at
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the minimum total penalty achieved of a_1....a_i, ending at a_i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = 0
+- Recurrence: T(i) = min{(200 - a_i)^2, T(j) + (200 - (a_i - a_j))^2}, 1 <= i <= n and 1 <= j <= i-1
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+for i = 1 to n:
+	T(i) = (200 - a_i)^2
+	for j = 1 to i-1:
+		T(i) = min{T(i), T(j) + (200-(a_i-a_j))^2}
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+
+- Running the nested for loops across n-hotels takes O(n^2)
+- Overall runtime is O(n^2)
+
+----------------------------------------------------
+
+DPV 6.3 - Yuckdonald's
+
+- n-restaurant locations
+- m-distance b/w each location m_1....m_n
+- Constraints:
+	- At most one restaurant per location. Expected profit for opening a restaurant is p_i, where p_i > 0 and p_1....p_n
+	- Any two restaurants should be at least k-miles apart, where k > 0
+- Find maximum expected total profit
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum expected profit of locations 1...i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = 0
+- Recurrence: T(i) = max{p_i, T(i-1), T(j) + p_i} if m_i - m_j >= k, 1 <= i <= n and 1 <= j <= i-1
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+for i = 1 to n:
+	T(i) = max{p_i, T(i-1)}
+	for j = 1 to i-1:
+		if m_i - m_j >= k
+			T(i) = max{T(i), T(j) + p_i}
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+
+- Running the nested for loops across n-locations takes O(n^2)
+- Overall runtime is O(n^2)
+
+----------------------------------------------------
+
+DPV 6.4 - String of Words
+
+- Given a string a n-characters s_1...s_n
+- No punctuation: "it was the best of times" -> "itwasthebestoftimes"
+- Use dict(w) to check if w is a valid word
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be a sequence of valid words from characters 1...i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = TRUE
+- Recurrence: T(i) = { TRUE: if dict(s_j...s_i) and T(j-1), FALSE: otherwise }, 1 <= i <= n, 1 <= j <= i
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = TRUE
+for i = 1 to n:
+	T(i) = FALSE
+	for j = 1 to i:
+		if dict(s_j...s_i) = TRUE and T(j-1) = TRUE:
+			T(i) = TRUE
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+
+- Running nested for loops across n-characters takes O(n^2) time
+- Overall runtime is O(n^2)
+
+----------------------------------------------------
+
+DPV 6.8 - Longest Increasing Substring
+
+- Two strings x = x_1...x_n and y = y_1...y_n
+- Find length of the longest common substring
+- O(mn) time
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i, j) = be the length of the longest common substring of x_1..x_i and y_1...y_j
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(i, 0) = 0, T(0, j) = 0
+- Recurrence: T(i,j) = { 1 + T(i-1, j-1): if x_i = y_j, 0: otherwise }, 1 <= i <= n and 1 <= j <= m
+
+3.) Write pseudocode for your algorithm to solve this problem.
+for i = 0 to n:
+	T(i, 0) = 0
+for j = 0 to m:
+	T(0, j) = 0
+for i = 1 to n:
+	for j = 1 to m:
+		if x_i = y_j:
+			T(i, j) = 1 + T(i-1, j-1)
+		else:
+			0
+return max{T(.,.)}
+
+4.) State and analyze the running time of your algorithm
+
+- Running the two single for loops to set the base cases each take O(n) time
+- Running the nested for loop for x_1..x_n and y_1...y_m takes O(mn) time
+- Returning the max length in T takes O(n) time
+- Overall runtime is O(mn)
+
+----------------------------------------------------
+
+Clever Thief
+
+- Burglarize a subset of n-houses consecutively
+- Will address them sequentially
+- Estimate profit earned per house is p_1...p_n, where p_i > 0
+- Avoids stealing from two adjacent houses
+- Find maximum achievable profit
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum achievable profit from robbing houses 1...i, while avoiding robbing two adjacent houses.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = 0, T(1) = p_1
+- Recurrence: T(i) = max{T(i-1), T(i-2) + p_i}, 2 <= i <= n
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+T(1) = p_1
+for i = 2 to n:
+	T(i) = max{T(i-1), T(i-2) + p_i}
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+
+- Running a for loop across n-houses takes O(n) time
+- Overall runtime is O(n)
+
+----------------------------------------------------
+
+Cursed Chests
+
+- List of non-negative integers g_1...g_n
+- If g_i = 0, the chest is cursed
+	- Cursed chest must be paired with one of its neighbors
+	- Non cursed chests can only be paired with one cured chest
+- Return the maximum amount of gold coins achievable
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum amount of gold coins achieved from chests 1...i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(-1) = -infinity, T(0) = 0
+- Recurrence: T(i) = { T(i-2): if g_i = 0, max{g_i + T(i-1), T(i-2)}: otherwise }, where 1 <= i <= n
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(-1) = -infinity
+T(0) = 0
+for i = 1 to n:
+	if g_i = 0:
+		T(i) = T(i-2)
+	else:
+		T(i) = max{g_i + T(i-1), T(i-2)}
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+
+- Running a for loop across n-chests takes O(n) time
+- Overall runtime is O(n)

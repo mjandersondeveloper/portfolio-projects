@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test": "mocha -r ts-node/register *test.ts"
+  },
+  "dependencies": {
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.3.4",
+    "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.4.4"
+  }
+}

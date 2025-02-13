@@ -1,0 +1,22 @@
+Multiplication Formula (Exam 2)
+
+- G=(V, E) is a directed, positively weighted graph.
+- Given a vertex w, make an algorithm that satisfies the equation.
+
+Algorithm:
+	- First, run Dijsktra's algorithm in G starting at vertex w, outputting dist[].
+	- Next, make a copy of graph G and reverse it, G_r.
+	- Run Dijsktra's algorithm on G_r starting at vertex w, outputting dist_r[].
+	- For every vertex x of V, if dist_r[x] >= 2023 * dist[x], add x into the solution set.
+	- Return the solution set.
+	
+Correctness:
+	- Dijsktra's algorithm can be used to find the distance b/w w and every other vertex in G. This is represented by a dist[] array output.
+	- By running Dijsktra's algorithm on G, we can find the dist[] array for d(w, x). As for G_r, running Dijskra's algorithm would give us the dist_r[] array for d(x, w) because the graph is reversed.
+	-  Once we have the dist[] array of both G and G_r, we can find the set of x-vertices that satisfy the given formula.
+
+Runtime:
+	- Running Dijsktra's twice takes O((m + n) log n) time.
+	- Copying and reversing the graph takes O(m + n) time.
+	- Finding the set of vertices that satisfy the formula takes O(n^2).
+	- Overall runtime will be O((m + n) log n).

@@ -1,0 +1,20 @@
+SpiderVerse (Exam 3)
+
+NP Proof:
+Given a solution (S) of SV, induce the subgraph from G using the vertices in S in O(n + m) time. Check each vertex in the induced subgraph where there should be g w/ degree of 1, and g vertices with a degree of g in O(n + m) time. Check if |S| = 2g.
+
+NP Complete Proof:
+
+Reduction: Clique -> SpiderVerse (SV)
+
+I.T.:
+- Given G=(V, E) and goal of g from clique
+- Create G' by adding a new vertex/edge to each vertex in G in O(n) time.
+- Pass G' and g into SV
+
+O.T.:
+- Return NO, if SV returns NO
+- Return S of SV, remove the vertices with a degree of 1 (the ones which form the legs). Resulting in a clique in O(n) time.
+
+Correctness:
+- The transformation adds just a leg to each vertex. If SV finds a solution, the clique must come from G. If SV finds no solution, we know the legs exists so there must be no clique.

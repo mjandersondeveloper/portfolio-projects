@@ -1,0 +1,36 @@
+One Edge SCC
+------------
+
+Algorithm:
+- Run SCC, returning metagrpah og G, G_m.
+- Find the sinks of G and sources of G_m.
+- If there are more than one sink or source, report NO.
+- If there is a single SCC, the graph is already storngly connected.
+- Otherwise, add one edge from a vertex in the sink SCC to a vertex in the source SCC to make G strongly connected.
+
+Correctness:
+- Graph must contain a single sink and single source.
+- Adding an edge from the sink to the source makes G an SCC.
+
+Runtime:
+- Overall runtime is O(n + m).
+
+---------------------------------------------------------
+
+Central Highway
+---------------
+
+Algorithm:
+- Call the modified edge, e.
+- If the new toll cost(e) is less than the current toll, there are no changes to the Central Highway (C.H).
+- If the new toll cost(e) is higher:
+	- Remove e from C.H. MST.
+	- Run DFS on the modified MST, yielding two connected components.
+	- Traverse the edges of G and find the edge of minimum weight which spans the cut. (u,v) such that ccnum[u] != ccnum[v].
+	- Add that edge highway to the C.H.
+
+Correctness:
+- Assert the Cut Property.
+
+Runtime:
+- Overall runtime is O(n + m).

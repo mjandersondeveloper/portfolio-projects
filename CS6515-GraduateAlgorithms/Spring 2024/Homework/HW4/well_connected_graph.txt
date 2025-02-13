@@ -1,0 +1,34 @@
+Homework 4 - Well-Connected Graph
+---------------------------------
+
+- Input: A directed graph G=(V,E)
+- A well-connected graph exists if:
+	- Every pair of distinct vertices {u, v} in V, there exists a path from u -> v OR a path from v -> u
+	- Both may exists, but at least one must be present
+- Determine if a directed graph G is well-connected
+
+Algorithm:
+- To find if graph G is well-connected, we will use the strongly-connected component (SCC) algorithm.
+- Pass graph G into the SCC algorithm, returning a metagraph DAG in topological order, with a source SCC vertex first and sink SCC vertex last. Call it G_meta.
+- Next, examine G_meta:
+	- If only one SCC vertex exists in the graph, return TRUE.
+	- If more than one SCC vertex exists, from left to right, check if each SCC vertex connects to the vertex adjacent to it (vertex to its immediate right). If so, return TRUE, otherwise return FALSE. 
+
+Correctness:
+- By running the SCC algorithm for graph G, we can generate a metagraph DAG (G_meta) with SCCs as its vertices in topological order, with a  source SCC first and sink SCC last. SCCs are only valid if there exists a path from u -> v AND v -> u. So we know the vertices that make up an SCC are already well-connected by its definition: a path from u -> v OR v -> u.
+- If only one SCC vertex exists in G_meta, we know graph G is an SCC and is well-connected so we return TRUE.
+- If there are multiple SCC vertices, we check if each SCC vertex in G_meta is connected to the vertex adjacent to it.
+	- If so, return TRUE as there is a complete path from the source SCC vertex to the sink SCC vertex in G_meta. This means there exists a path from u -> v OR v -> u for each pair of distinct u and v vertices in graph G, making it well-connected.
+	- If at least one SCC vertex does not connect to the vertex adjacent to it, return FALSE as we know graph G is not well-connected since there is no complete path from the source SCC vertex to the sink SCC vertex in G_meta.
+
+Runtime:
+- Running the SCC algorithm as a blackbox takes O(n + m) time.
+- Examining the SCC vertices within the metagraph takes O(n + m) time.
+- Overall runtime is O(n + m).
+
+------------------------------------------------------------------------
+
+Model Solution:
+---------------
+
+Refer to solution above.

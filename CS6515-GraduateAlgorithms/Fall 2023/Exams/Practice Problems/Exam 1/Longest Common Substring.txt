@@ -1,0 +1,35 @@
+Longest common substring
+
+- I: Two strings x = x1, x2,...xn and y1, y2,...ym
+- O: The length of their longest common substring
+- Find an algorithm in O(nm)
+- LCS problem
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is ...
+
+- Let T(i, j) = the length of the longest common substring between x[1....n] and y[1....m].
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(i,0) = 0, T(0,j) = 0
+- Recurrence: T(i, j) = {1 + T(i-1,j-1): if x_i = y_j; 0: otherwise} | 1 <= i <= n and 1 <= j <= m
+
+3.) Write pseudocode for your algorithm to solve this problem.
+for i = 0 -> n:
+	T(i,0) = 0
+for j = 0 -> m:
+	T(0,j) = 0
+for i = 1 -> n:
+	for j = 1 -> n:
+		if x[i] = y[j]:
+			T(i,j) = 1 + T(i-1,j-1)
+		else:
+			T(i,j) = 0
+return max{T(.,.)}
+
+4.) State and analyze the running time of your algorithm
+
+- The two for loops for the base cases are ran in O(n) time each
+- The nested for loops which iterate over the x and y string inputs are ran in O(nm)
+- Finding the max length count in the return takes O(n) time
+- Overall runtime is O(nm)

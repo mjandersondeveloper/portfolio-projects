@@ -1,0 +1,50 @@
+Homework 5 - New MST
+--------------------
+- Given: 
+	- Graph G=(V,E), original graph that's undirected, connected,and weighted
+	- An MST, T, which is an MST of G
+	- An edge, e=(u,v), which is an edge within both G and T
+	- A connected graph G'=(V,E) where edge e is removed
+- Find the MST of G' where edge e is not present in G'
+	- Build the MST of G' from scratch is not sufficient (No Kruskal or Prim algorithms)
+
+Algorithm:
+- To find the MST of G' we will utilize the DFS algorithm and the graph of G'.
+- First, make a copy of MST T and remove edge e from it. Call this T'.
+- Pass T' into DFS, identifying the connected components in the graph using ccnum[].
+- Next, traverse graph G' and find candidate edges that will connect the connected components in T'.
+	- Meaning we only consider edges that form a path between vertices (u,v) that are in different connected components in T'.
+- Add the lowest weighted edge from the list of candidate edges to T', and return T'.
+
+Correctness:
+- To find the MST of G', we can utilize the existing MST T with edge e removed so that it does not need to be built from scratch.
+- We pass T' through DFS to identify the two connected components within the graph.
+	- Since T' is an MST, removing one edge from the graph will give us two connected components.
+- We can then traverse G' and create a candidate list of edges that would form a path between the two connected components in T'.
+	- We only care about the edges from G' that connect the two connected components in T' so we can form a valid MST.
+- We know from the Cut Property that any minimum edge across a cut is a part of some MST. So, we add the lowest weighted edge from our candidate list to T' and return T' as the MST of G'.
+
+Runtime:
+- Making a copy of T, running DFS as a blackbox on T', and traversing G' takes O(n + m) time each.
+- Removing exactly one edge in T' takes O(m) time.
+- Overall runtime is O(n + m), which gets reduced to O(m) because we're running the algorithm on a connected graph.
+
+------------------------------------------------------------------------
+
+Model Solution:
+---------------
+
+Algorithm:
+- Remove edge e from T.
+- Then run DFS on T to find the cut of T based on ccnum[] of each vertex.
+- Iterate through the edges in G', looking for the lightest edge (u,v) where the ccnum[u] != ccnum[v].
+- Add that edge to T yielding T', the MST of G'.
+
+Correctness:
+- We know from the Cut Property that any minimum edge across a cut is a part of some MST. So, we add the lowest weighted edge from our candidate list to T' and return T' as the MST of G'.
+
+Runtime:
+- Removing e from T - O(m)
+- DFS - O(n + m)
+- Finding candidate edges - O(n + m)
+- Overall O(n + m)

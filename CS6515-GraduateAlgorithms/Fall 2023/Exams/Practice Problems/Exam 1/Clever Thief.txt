@@ -1,0 +1,32 @@
+Clever Thief (HW1)
+
+- Thief will address houses sequentially
+- Estimate profit of p_i from each house i = 1 -> n where p_i > 0
+- Never obs two adjacent houses.
+- Input: p=[p1, p2,...,p_n]
+- Output: Maximum achievable profit
+- LIS problem
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is ...
+
+- Let T(i) = the maximum profit achievable from robbing houses 1...i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+- B.C.: T(0) = 0, T(1) = p[1]
+- Recurrence: T(i) = max{T(i - 1), T(i - 2) + p_i} | 2 <= i <= n
+
+
+3.) Write pseudocode for your algorithm to solve this problem.
+
+T[0] = 0
+T[1] = p[1]
+for i = 2 -> n do:
+	T[i] = max{T[i - 1], T[i - 2] + p[i]}
+
+return T[n]
+
+4.) State and analyze the running time of your algorithm
+
+- Takes O(n) time to run one for loop over n-houses
+- Overall time is O(n)

@@ -1,0 +1,22 @@
+K-Honest SAT (Exam 3)
+
+NP Proof:
+We can verify the solution to KHSAT by traversing the CNF formula input and verifying if at least k amount of variables are set to true, as well as, if f is satisfiable. This can be done in O(nm) time as we need to traverse n-literals within m-clauses, which is in polynomial time.
+
+NP Complete Proof:
+
+Reduction: SAT -> K-Honest-SAT (KHSAT)
+
+I.T.:
+- Given CNF input f
+- Add one variable, x, set to true and an additional clause. Set k = 1, f'.
+	- Ex: (f) ^ (x)
+- Pass f' and k into KHSAT
+
+O.T.:
+- Return NO, if KHSAT returns NO
+- Return S of KHSAT, dropping the newly added x-variable and assigning the renaming variable assignments to f.
+
+Correctness:
+- Adding one clause that can only be satisfied if the variable is set to true. Therefore, if KHSAT returns a solution, the original CNF must be satisfiable.
+- If the original CNF is satisfiable, there must be a solution to KHSAT with at least one variable equal to true.

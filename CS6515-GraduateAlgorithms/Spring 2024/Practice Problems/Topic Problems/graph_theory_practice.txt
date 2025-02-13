@@ -1,0 +1,124 @@
+Graph Theory - Practice Problems
+--------------------------------
+
+DPV 3.5 - Reverse of Directed Graph
+-----------------------------------
+- Reverse of directed graph G=(V,E) is G_r = (V,E_r)
+- E_r = {(v,u) : (u,v) of E}
+- Compute the reverse graph in adjacency list format in linear time.
+
+Algorithm:
+- We will start this algorithm with the adjacency list, G_list, for graph G. As well as, an adjacency list, G_r_list, for graph G_r which contains the same vertex set as G_list.
+- For each vertex v in G_list:
+	- Add vertex v as an edge to the G_r_list, where the edge(s) for v in G_list are vertices in G_r_list.
+- Once complete return G_r_list as the adjacency list for G_r.
+
+Correctness:
+- Graph G and G_r have the same vertex sets in both adjacency lists, the only difference are the edges associated with each vertex.
+- Since the edges are reversed in G_r_list, we only need to add each vertex v in G_list as an edge in G_r_list where the edges in G_list represent vertex v in G_r_list.
+
+Runtime:
+- Creating a new adjacency list for G_r takes O(n) time.
+- Traversing through the G_list adjacency list and adding edges to G_r_list takes O(n + m) time.
+- Overall runtime is O(n + m).
+
+----------------------------------------------------------
+
+DPV 3.15 - Computopia
+---------------------
+
+- All streets are one-way
+- Mayor claims: There is still a way to drive legally form any intersection to any other intersection in the city
+	- u -> v and v -> u
+
+Part A:
+-------
+
+- Prove the mayor's claim in linear time
+- SCC algorithm
+
+Algorithm:
+- To prove the mayor's claim, we use the SCC algorithm.
+- Create a directed G=(V,E) where v represents intersections and e represents roads, pass G into the SCC algorithm.
+- Examine the returned metagraph:
+	- If only one SCC vertex exists, return TRUE, otherwise return FALSE. 
+
+Correctness:
+- The mayor is claiming that for each pair of vertices (u,v) in V, there's a path from u -> v and v -> u. This can be proven using the SCC algorithm as a blackbox.
+- If only one vertex is present in the returned metagraph, this means graph G is a single strongly-connected component and proves the claim, thus we return TRUE.
+- If more than one vertex is present in the metagraph, we return FALSE since the claim would not be proven as graph G is not a single strongly-connected component. There would exist at least one source SCC and sink SCC, meaning the sink SCC would not have a path back to the source SCC.
+
+Runtime:
+- Create graph G takes O(n + m).
+- Running SCC as a blackbox takes O(n + m) time.
+- Examining the metagraph takes O(n + m) time.
+- Overall runtime is O(n + m).
+
+Part B:
+-------
+
+- Mayor's claim is false
+- New claim: Using one way streets, if you drive from town hall, no matter where you reach, there's always a way to drive legally back to town hall.
+- Prove the mayor's new claim in linear time
+- SCC algorithm
+
+Algorithm:
+- To prove the mayor's new claim, we use the SCC algorithm.
+- Using graph G in Part A, pass G into the SCC algorithm, returning a metagraph with a source SCC vertex first and sink SCC vertex last.
+- Examine the metagraph:
+	- If there is a single SCC sink and town hall resides in it, return TRUE, otherwise return FALSE.
+
+Correctness:
+- The mayor's new claim is stating that there's a path from any intersection back to town hall. This can also be proven using the SCC algorithm.
+- If town hall resides within the single SCC sink in the metagraph, we know there's a path from each SCC vertex to the sink SCC. Meaning there exits a path from any intersection to town hall, proving the mayor's new claim and returning TRUE.
+- If there are multiple sink SCCs or town hall does not reside in a sink SCC, there is no path from every intersection to town hall and we return FLASE.
+
+Runtime:
+- Running SCC as a blackbox takes O(n + m) time.
+- Examining the metagraph takes O(n + m) time.
+- Overall runtime is O(n + m).
+
+----------------------------------------------------------
+
+DPV 4.14 - Shortest path through a given vertex
+-----------------------------------------------
+
+- Given: An SCC directed graph G=(V,E) with positive edge weights with a vertex v_0 in V.
+- Find the shortest paths b/w all pairs of nodes that pass through v_0.
+- Dijkstra's algorithm
+
+Algorithm:
+- To find the shortest path for all pairs passing through v_0, we can use Dijkstra's algorithm.
+- Run Dijkstra's algorithm starting at v_0 in graph G which will return a distance array, dist[v_0].
+- Next, make a copy of G and reverse it, making G_r.
+- Run Dijkstra's algorithm again starting at v_0 in graph G_r which will return a distance array, dist_r[v_0]
+- For each distance value in dist[v_0]:
+	- Add it to each distance value in dist_r[v_0].
+	- Once complete, return the vertex pairs with the lowest sum using the prev[] arrays.
+
+Correctness:
+- To find the shortest path for all pairs passing through v_0, we can use Dijkstra's algorithm starting at vertex v_0.
+- Running Dijkstra's algorithm starting at vertex v_0 in G gives us the distances between all pairs from v_0 -> t.
+- Then, running Dijkstra's algorithm starting at vertex v_0 in G_r gives us the distances between all pairs from v_0 -> s.
+- Finally we add the distance values for both runs to find the shortest path for s -> v_0 -> t, and return the path(s) with the lowest sum.
+
+Runtime:
+- Running Dijkstra's algorithm takes O((n + m) log n) time.
+- Making a copy of G and reversing it takes O(n + m) time.
+- Adding the values in both distance array outputs takes O(n^2) time.
+- Overall runtime is O(n^2 * (n + m) log n).
+
+----------------------------------------------------------
+
+DPV 5.9 - MST True/False
+------------------------
+
+a.) If graph G has more than n-1 edges, and there is a unique heaviest edge, then this edge
+cannot be part of a minimum spanning tree.
+	- False; consider a graph where a vertex is adjacent to a single edge
+b.) If G has a cycle with a unique heaviest edge e, then e cannot be part of any MST.
+	- True; this is proven by the Cycle Property
+c.) Let e be any edge of minimum weight in G. Then e must be part of some MST.
+	- True; this is proven by the Cut Property
+d.) If the lightest edge in a graph is unique, then it must be part of every MST.
+	- True; this is proven by the Cut Property

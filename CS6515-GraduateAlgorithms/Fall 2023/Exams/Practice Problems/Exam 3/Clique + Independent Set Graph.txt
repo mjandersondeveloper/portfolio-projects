@@ -1,0 +1,28 @@
+Clique + Independent Set Graph
+
+Input: Graph G=(V, E) and integer K
+Output: Clique and Independent Set of size K
+
+NP Proof:
+
+We can verify the Clique + I.S. solution by first checking for an I.S. within the graph. This is done by traversing the graph and checking if there are pairs of (x,y) vertices with no edges in between them. We then check if there is a clique by traversing the graph and checking if there are pairs of (x,y) vertices with edges in between them. Both checks take O(n^2) time to run. Finally we check if the sizes of: |Clique| = |I.S| = k in O(1) time. Overall runtime is O(n^2), which is polynomial time.
+
+NP-Complete:
+
+Reduction: I.S. -> Clique + I.S. (C + I.S.)
+
+I.T.:
+- Given G = (V, E) and goal of k
+- Add a k+1-sized clique to G, new graph will be G'. This takes O(n^2) time
+- Pass G' and k into C + I.S.
+- Overall tranformation takes O(n^2) time, which is polynomial time
+
+O.T.:
+- Return NO if C + I.S. returns NO in O(1) time
+- Return solution of C + I.S., removing the k+1 sized clique from S, in O(n) time
+- Overall transformation takes O(n), which is polynomial time
+
+Correctness:
+- If C + I.S. reutrns a solution, we know there is a solution for I.S. by removing the k+1 clique we've added from the S.
+- If I.S. has a solution, we know there is a solution for C + I.S. by adding a k+1-sized clique to G.
+- C + I.S. has a solution IFF there is a k+1 sized clique added to I.S. solution.

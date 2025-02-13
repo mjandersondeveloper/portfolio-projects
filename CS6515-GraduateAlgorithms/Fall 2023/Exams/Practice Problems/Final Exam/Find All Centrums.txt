@@ -1,0 +1,20 @@
+Find All Centrums (HW4)
+
+Algorithm:
+	- Given G = (V, E)
+	- Run G through the SCC algorithm
+	- Once complete, using the DAG metagraph out, G_m, form the SCC algorithm:
+		- Using the strongly connected component with the highest ccnum (source SCC), run the Explore algorithm from a vertex, v, within that strongly connected component.
+		- For each u in G, if all visted(u)=true, add all verticies that have the same ccnum to the candidate set.
+	- Return the candidate set
+
+Correctness:
+	- By using the SCC algorithm as a blackbox, we can use the resulting DAG metagraph to see which set of verticies are within strongly connected components
+	- The vertex with the highest ccnum is guarenteed to be a source SCC
+	- Finally, running Explore from a vertex w/ the source SCC to check if all verticies within G are visited proves that all vertices in the source SCC are centrums
+
+Runtime:
+	- Running the SCC algorithm takes O(n + m) time
+	- Running Explore from a vertex, v, within the source SC takes O(n + m) time
+	- Overall runtime is O(m +n)
+

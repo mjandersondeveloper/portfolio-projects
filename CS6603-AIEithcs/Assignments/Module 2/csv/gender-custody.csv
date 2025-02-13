@@ -1,0 +1,17 @@
+Female,Awaiting Booking,15
+Female,Booked - Awaiting Trial,106
+Female,Booked - No Charges Filed,32
+Female,Other,84
+Female,Sentenced,234
+Male,Awaiting Booking,82
+Male,Booked - Awaiting Trial,925
+Male,Booked - No Charges Filed,171
+Male,Other,1763
+Male,Sentenced,4961
+,,
+,Male,Female
+Awaiting Booking,82,15
+Booked - Awaiting Trial,925,106
+Booked - No Charges Filed,171,32
+Other,1763,84
+Sentenced,4961,234

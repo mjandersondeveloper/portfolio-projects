@@ -1,0 +1,556 @@
+
+Test Case 1  		<error>
+   Command-line input :  Missing filename
+
+
+Test Case 2  		<error>
+   -s flag :  Missing input
+
+
+Test Case 3  		<error>
+   -r flag :  Missing Input
+
+
+Test Case 4  		<error>
+   -g flag :  Incorrect flags
+
+
+Test Case 5  		<error>
+   -i flag :  Incorrect flags
+
+
+Test Case 6  		<error>
+   -p flag :  Missing input
+
+
+Test Case 7  		<single>
+   No flags :  True
+
+
+Test Case 8  		<single>
+   Duplicate flags :  True
+
+
+Test Case 9  		<single>
+   String Inputs Combo :  -s -r
+
+
+Test Case 10 		<single>
+   String Inputs Combo :  -r -p
+
+
+Test Case 11 		<single>
+   String Inputs Combo :  -s -r -p
+
+
+Test Case 12 		(Key = 0.1.1.1.1.2.2.1.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Zero
+   -f flag             :  Active
+   -n flag             :  Active
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 13 		(Key = 0.1.1.1.1.2.2.2.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Zero
+   -f flag             :  Active
+   -n flag             :  Active
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 14 		(Key = 0.1.1.2.1.2.2.1.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Zero
+   -f flag             :  Active
+   -n flag             :  Inactive
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 15 		(Key = 0.1.1.2.1.2.2.2.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Zero
+   -f flag             :  Active
+   -n flag             :  Inactive
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 16 		(Key = 0.1.2.1.1.2.2.1.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Zero
+   -f flag             :  Inactive
+   -n flag             :  Active
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 17 		(Key = 0.1.2.1.1.2.2.2.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Zero
+   -f flag             :  Inactive
+   -n flag             :  Active
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 18 		(Key = 0.1.2.2.1.2.2.1.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Zero
+   -f flag             :  Inactive
+   -n flag             :  Inactive
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 19 		(Key = 0.1.2.2.1.2.2.2.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Zero
+   -f flag             :  Inactive
+   -n flag             :  Inactive
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 20 		(Key = 0.2.1.1.1.2.2.1.1.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  One
+   -f flag             :  Active
+   -n flag             :  Active
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Active
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 21 		(Key = 0.2.1.1.1.2.2.2.1.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  One
+   -f flag             :  Active
+   -n flag             :  Active
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Active
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 22 		(Key = 0.2.1.2.1.2.2.1.1.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  One
+   -f flag             :  Active
+   -n flag             :  Inactive
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Active
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 23 		(Key = 0.2.1.2.1.2.2.2.1.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  One
+   -f flag             :  Active
+   -n flag             :  Inactive
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Active
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 24 		(Key = 0.2.2.1.1.2.2.1.1.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  One
+   -f flag             :  Inactive
+   -n flag             :  Active
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Active
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 25 		(Key = 0.2.2.1.1.2.2.2.1.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  One
+   -f flag             :  Inactive
+   -n flag             :  Active
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Active
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 26 		(Key = 0.2.2.2.1.2.2.1.1.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  One
+   -f flag             :  Inactive
+   -n flag             :  Inactive
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Active
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 27 		(Key = 0.2.2.2.1.2.2.2.1.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  One
+   -f flag             :  Inactive
+   -n flag             :  Inactive
+   -s flag             :  Active
+   -r flag             :  Inactive
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Active
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 28 		(Key = 0.3.1.1.2.1.1.1.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Active
+   -n flag             :  Active
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Active
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 29 		(Key = 0.3.1.1.2.1.1.2.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Active
+   -n flag             :  Active
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Active
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 30 		(Key = 0.3.1.1.2.1.2.1.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Active
+   -n flag             :  Active
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 31 		(Key = 0.3.1.1.2.1.2.2.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Active
+   -n flag             :  Active
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 32 		(Key = 0.3.1.2.2.1.1.1.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Active
+   -n flag             :  Inactive
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Active
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 33 		(Key = 0.3.1.2.2.1.1.2.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Active
+   -n flag             :  Inactive
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Active
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 34 		(Key = 0.3.1.2.2.1.2.1.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Active
+   -n flag             :  Inactive
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 35 		(Key = 0.3.1.2.2.1.2.2.2.0.0.0.2.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Active
+   -n flag             :  Inactive
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Not sent
+
+
+Test Case 36 		(Key = 0.3.2.1.2.1.1.1.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Inactive
+   -n flag             :  Active
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Active
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 37 		(Key = 0.3.2.1.2.1.1.2.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Inactive
+   -n flag             :  Active
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Active
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 38 		(Key = 0.3.2.1.2.1.2.1.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Inactive
+   -n flag             :  Active
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 39 		(Key = 0.3.2.1.2.1.2.2.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Inactive
+   -n flag             :  Active
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 40 		(Key = 0.3.2.2.2.1.1.1.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Inactive
+   -n flag             :  Inactive
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Active
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 41 		(Key = 0.3.2.2.2.1.1.2.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Inactive
+   -n flag             :  Inactive
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Active
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 42 		(Key = 0.3.2.2.2.1.2.1.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Inactive
+   -n flag             :  Inactive
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Inactive
+   -i flag             :  Active
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+
+
+Test Case 43 		(Key = 0.3.2.2.2.1.2.2.2.0.0.0.1.)
+   Command-line input  :  <n/a>
+   String input        :  Two
+   -f flag             :  Inactive
+   -n flag             :  Inactive
+   -s flag             :  Inactive
+   -r flag             :  Active
+   -g flag             :  Inactive
+   -i flag             :  Inactive
+   -p flag             :  Inactive
+   No flags            :  <n/a>
+   Duplicate flags     :  <n/a>
+   String Inputs Combo :  <n/a>
+   stdout              :  Sent
+

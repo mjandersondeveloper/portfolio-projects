@@ -1,0 +1,22 @@
+Divide and Conquer - Practice Problems
+----------------------------------------------------
+
+Binary search modified
+
+Algorithm: Modified Binary Search
+- We use a modified binary search
+- During the recursive search:
+	- If A[m] = m, recursively search on the right side of A, otherwise, recursively search the left side.
+		- This continues until one element is remaining, our base case.
+	- Once our base case is achieved, if A[i] = i then return i + 1 as the missing value, otherwise return i as the missing value.
+
+Correctness:
+- We use a modified binary search to recursively search the left and right sides of A for the missing value.
+- If A[m] = m, we know that the left side of A is correct because the elements in A are increasingly sorted, so we recursively search the right side.
+- If A[m] != m, we know the right side of A is correct, so we recursively search the left side. 
+- Once the base case is achieved, one element remaining, we check if A[i] = i. If valid, we know the lowest missing number should be i + 1 and return that accordingly. If invalid, we know i is our missing value and return that accordingly.
+
+Runtime:
+- The known runtime of binary search is O(log n)
+- The modifications made are ran in O(1) time.
+- The overall runtime is O(log n). We can confirm this with the recurrence relation: T(n) = T(n/2) + O(1), where a = 1, b = 2, d = 0. Using the Master Theorem, this results in a runtime of O(log n).

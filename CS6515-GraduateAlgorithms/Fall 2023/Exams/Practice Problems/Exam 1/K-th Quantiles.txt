@@ -1,0 +1,24 @@
+K-th Quantiles (HW3)
+
+- Input: Set S of distance numbers and value of k
+- k is a power of 2
+- Split set S into k subsets of the same size
+- S is NOT sorted
+- Output: The k-th quantiles (k-1) of a set S of n numbers
+
+Algorithm: Fastselect
+- Let i = n/k
+- Find the median of S using Fastselect (S, n/2). Add number to the result set
+- Partition S into S_l and S_r side using the median.
+- Repeat step number 1 against S_l and S_r, finding the median of each subset, adding those numbers to the result set.
+- Repeat steps 2 and 3 until the size of the subset = i.
+- Return result set
+
+Correctness:
+- Fastselect as a blackbox finds the median value of the set.
+- Each partition can be divided by its median and b/c k is a power of 2 and n is a multiple of k, we can strictly partition until we get to the base case.
+
+Runtime:
+- Fastselect takes O(n) time.
+- Partitioning takes O(log k) time.
+- Overall runtime is O (n log k).

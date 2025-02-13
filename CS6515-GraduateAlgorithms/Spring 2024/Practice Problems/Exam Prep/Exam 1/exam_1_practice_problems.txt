@@ -1,0 +1,429 @@
+Dynamic Programming
+
+DPV 6.1 - Longest Contiguous Subsequence
+
+- Contiguous subsequence of consecutive elements
+- Input: List of numbers, a_1, a_2,...,a_n
+- Output: The contiguous subsequence of maximum sum (a subsequence of length zero
+has sum zero)
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum sum of a continuous subsequence of number a_1...a_i, ending a_i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+Base Case: T(0) = 0
+Recurrence: T(i) = max{0, T(i-1) + a_i} OR T(i) = a_i + max{0, T(i-1)}, where 1 <= i <= n
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+for i = 1 to n:
+	T(i) = max{0, T(i-1) + a_i}
+return max{T(.)}
+
+4.) State and analyze the running time of your algorithm
+- Running a for loop across n-numbers takes O(n) time
+- Finding the max number in T takes O(n) time
+- Overall runtime is O(n)
+
+-------------------------------------------------------------------
+
+DPV 6.8 - Longest Increasing Substring
+
+- Given two strings: x = x_1, x_2,...,x_n and y = y_1, y_2,...,y_n
+- Find the longest common substring
+- O(mn) solution
+- Substring: terms must be consecutive
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i, j) = be the longest common substring from strings x_1....x_n and y_1....y_n
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+Base Case: T(i,0) = 0, T(0,j) = 0
+Recurrence: T(i,j) = 1 + T(i-1, j-1) : if x_i = y_j
+				   = 0 : otherwise, where 1 <= i <= n and 1 <= j <= m
+
+3.) Write pseudocode for your algorithm to solve this problem.
+for i = 0 to n:
+	T(i,0) = 0
+for j = 0 to m:
+	T(0,j) = 0
+for i = 1 to n:
+	for j = 1 to m:
+		if x_i = y_j:
+			T(i,j) = 1 + T(i-1, j-1)
+		else:
+			T(i,j) = 0
+return max{T(.,.)}
+
+4.) State and analyze the running time of your algorithm
+- Running a for loop to set our base case at T(i,0) takes O(n) time
+- Running a for loop to set our base case at T(0,j) takes O(n) time
+- Running a the nested for loops across the x and y strings takes O(nm) time
+- Finding the max value of T takes O(n) time
+- Overall runtime is O(nm)
+
+-------------------------------------------------------------------
+
+DPV 6.11 - Longest Increasing Subsequence
+
+- Given two strings: x = x_1, x_2,...,x_n and y = y_1, y_2,...,y_n
+- Find the longest common subsequence
+- O(mn) solution
+- Subsequence: terms do not need to be consecutive
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i, j) = be the longest common subsequence from strings x_1....x_n and y_1....y_n
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+Base Case: T(i,0) = 0, T(0,j) = 0
+Recurrence: T(i,j) =  1 + T(i-1,j-1): if x_i = y_j
+				   =  max{T(i,j-1), T(i-1,j)}: otherwise, where 1 <= i <= n and 1 <= j <= m
+
+3.) Write pseudocode for your algorithm to solve this problem.
+for i = 0 to n:
+	T(i,0) = 0
+for j = 0 to m:
+	T(0,j) = 0
+for i = 1 to n:
+	for j = 1 to m:
+		if x_i = y_j:
+			T(i,j) = 1 + T(i-1,j-1)
+		else:
+			T(i,j) = max{T(i,j-1), T(i-1,j)}
+return max{T(n,m)}
+
+4.) State and analyze the running time of your algorithm
+- Running a for loop to set our base case at T(i,0) takes O(n) time
+- Running a for loop to set our base case at T(0,j) takes O(n) time
+- Running a the nested for loops across the x and y strings takes O(nm) time
+- Overall runtime is O(nm)
+
+-------------------------------------------------------------------
+
+Clever Thief
+
+- Robber is robbing n-houses consecutively
+- Robber will get an estimated profit per house, p_i; p_1,...,p_n, where p_i > 0
+- Robber will never rob 2 adjacent houses (two right next to each other)
+- Find the maximum total profit the robber can achieve
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum total profit achieved from robbing houses p_1...p_i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+Base Case: T(0) = 0, T(1) = p_1
+Recurrence: T(i) = max{T(i-1), T(i-2) + p_i}, where 2 <= i <= n
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(0) = 0
+T(1) = p_1
+for i = 2 to n:
+	T(i) = max{T(i-1), T(i-2) + p_i}
+return T(n)
+
+4.) State and analyze the running time of your algorithm
+- Running a for loop across n-houses takes O(n) time
+- Overall runtime is O(n)
+
+-------------------------------------------------------------------
+
+Cursed Chests
+
+- n-chests with gold, g_i; g_1....g_n
+- If g_i = 0, it's a cursed chest and must be paired with exactly one of its neighbors
+	- A non-cursed chest (g_i != 0) can only be paired with one adjacent cursed chest
+- Find the maximum amount of gold coins the pirate can get
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the maximum amount of gold coins achievable at chests a_1...a_i.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+Base Case: T(-1) = -infinity, T(0) = 0
+Recurrence: T(i) = { T(i-2): if g_i = 0
+ 				 = max{T(i-1) + g_i, T(i-2)} : otherwise }, where 1 <= i <= n
+3.) Write pseudocode for your algorithm to solve this problem.
+T(-1) = -infinity
+T(0) = 0
+for i = 1 to n:
+	if g_i = 0:
+		T(i) = T(i-2)
+	else:
+		T(i) = max{T(i-1) + g_i, T(i-2)}
+
+4.) State and analyze the running time of your algorithm
+- Running a for loop across n-chests takes O(n) time
+- Overall runtime is O(n)
+
+-------------------------------------------------------------------
+
+Alternate Parity
+
+- n-integers; a_1...a_n
+- Find longest increasing subsequence where the parity of numbers alternates between even/odd
+- You can access parity w/ parity(x) in O(1) time
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i) = be the longest subsequence from a_1...a_i where each number has an alternate parity.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+Base Case: T(1) = 1
+Recurrence: T(i) = max{1 + T(j)} : if a_i > a_j and parity(a_i) != parity(a_j)}, where 2 <= i <= n and 1 <= j <= i-1
+
+3.) Write pseudocode for your algorithm to solve this problem.
+T(1) = 1
+for i = 2 to n:
+	T(i) = 1
+	for j = 1 to i-1:
+		if (a_i > a_j) and (parity(a_i) != parity(a_j)):
+			T(i) = max{T(i), T(j) + 1}
+return max{T(.)}
+
+4.) State and analyze the running time of your algorithm
+- Running nested for loops across n-numbers takes O(n^2) time
+- Finding the max length in T takes O(n) time
+- Overall runtime is O(n^2)
+
+
+-------------------------------------------------------------------
+
+Bumpy Subsequence
+
+- Bumpy sequence occurs when the calculated difference of two consecutive terms in the sequence alternate b/w +/-
+- A difference of zero can never be a part of a bumpy sequence
+- Sequence is either a_1 > a_2 < a_3 >....a_n OR a_1 < a_2 > a_3 <....a_n 
+- Find the longest bumpy subsequence in A
+- Subsequence: terms do not need to be consecutive
+
+1.) Define the entries of your table in words. E.g. T(i) or T(i, j) is...
+
+- Let T(i, 0) = be the length of the longest bumpy sequence from terms a_1...a_i where a_i < a_i-1.
+- Let T(i, 1) = be the length of the longest bumpy sequence from terms a_1...a_i where a_i > a_i-1.
+
+2.) State a recurrence for the entries of your table in terms of smaller subproblems.  Don't forget your base case(s).
+
+Base Case: T(1,0) = 1, T(1,1) = 1
+Recurrence: T(i,0) = T(i-1,1) + 1 : if a_i < a_i-1
+				   = T(i-1,0) : otherwise, where 2 <= i <= n
+			T(i,1) = T(i-1,0) + 1 : if a_i > a_i-1
+				   = T(i-1,1) : otherwise, where 2 <= i <= n 
+
+3.) Write pseudocode for your algorithm to solve this problem.
+
+T(1,0) = 1
+T(1,1) = 1
+for i = 2 to n:
+	T(i,0) = T(i-1,0)
+	T(i,1) = T(i-1,1)
+	if a_i < a_i-1:
+		T(i,0) = 1 + T(i,1)
+	if a_i > a_i-1:
+		T(i,1) = 1 + T(i,0)
+return max{T(n,.)}
+
+
+4.) State and analyze the running time of your algorithm
+- Running a for loop across n-terms takes O(n) time.
+- Find the maximum value at T(n) takes O(n) time.
+- Overall runtime is O(n).
+
+-------------------------------------------------------------------
+
+Divide and Conquer
+
+Repeated Number
+
+- List of natural numbers starting at 1 in array A
+- One number gets repeated
+- A is increasingly sorted
+- Find the repeated number
+
+Algorithm:
+- We will use a modified binary search algorithm
+- During the recursive search:
+	- If A[m] = m, recursively search the right side of A
+	- If A[m] != m, recursively search the left side of A
+	- This continues until one element remains, our base case
+- Once the base case is achieved, check to see if A[i] is equal to it's neighboring elements, A[i + 1] or A[i - 1].
+- If either is valid, return A[i] as the repeated number.
+
+Correctness:
+- Since A is an increasingly sorted array, we are able to use a modified binary search algorithm to recursively search the left and right side of A.
+- If A[m] = m, we know there are no repeating numbers on the left side of A, so we recursively search the right side.
+- If A[m] != m, we know there are no repeating numbers on the right side of A, so we recursively search the left side.
+- Once our base case, a single element, is achieved, we check the neighbors of A[i] to confirm A[i] is the repeated number and return it accordingly.
+
+Runtime:
+- The known runtime for binary search is O(log n).
+- Modifying the checks within the binary search can be done in O(1) time.
+- The overall runtime is O(log n).
+
+-------------------------------------------------------------------
+
+Smallest Missing Number
+
+- Find the smallest given missing number in a given sorted array, A
+
+Algorithm:
+- We will use a modified binary search algorithm
+- During the recursive search:
+	- If A[m] = m, recursively search the right side of A
+	- If not, recursively search the left side of A
+	- Do this until one element remains, our base case
+- Once the base case is achieved, check if A[i] = i
+	- If valid, return i + 1 as the missing value
+	- If not, return i as the missing value
+
+Correctness:
+- Since A is increasingly sorted, we can use a modified binary search algorithm to recursively search the left and ride side of A.
+- If A[m] = m, we know that there are no missing values on the left side of A, so we recursively search the right side.
+- If A[m] != m, we know that there are no missing values on the right side of A, so we recursively search the left side.
+- Once a single element remains, our base case, we check if A[i] = i.
+	- If valid, we know A[i] is the smallest number in A, and return i + 1 as the smallest missing number.
+	- If not, we return i as the smallest missing number.
+
+Runtime:
+- The known runtime of the binary search algorithm is O(log n).
+- The modifications used in this binary search algorithm are ran in O(1) time.
+- The overall runtime is O(log n)
+
+-------------------------------------------------------------------
+
+Shifted Array
+
+- S_k(A) is a shifted sorted array that have k-elements shifted from the back of the array to the front
+- k -> 0 < k < n
+- Find the largest element in S_k(A)
+- Array A (pre-shifted) is increasingly sorted with distinct integer values
+- Brute force solution: O(n)
+
+Algorithm:
+- We will use a modified binary search.
+- During the recursive search:
+	- At the start of each search, check if S_k(A)[m] > S_k(A)[m + 1]:
+		- If valid, return S_k(A)[m] as the largest element.
+	- If S_k(A)[1] < S_k(A)[m], recursively search the right side of A.
+	- If not, recursively search the left side of A.
+	- This continues until the largest element is returned.
+
+Correctness:
+- Since A is an increasingly sorted array, even though it transforms to S_k(A), we can use a modified binary search to recursively search the left and right side of S_k(A)
+- If S_k(A)[1] < S_k(A)[m], we know that the largest element does not exist on the left side of S_k(A), so we recursively search the right side.
+- If S_k(A)[1] > S_k(A)[m], we know that the largest element does not exist on the right side of S_k(A), so we recursively search the left side.
+- At the start of each recursive search, we check if S_k(A)[m] > S_k(A)[m + 1]:
+	- If valid, we know that S_k(A)[m] is the largest element in the array and return it accordingly. This is because in S_k(A), the largest element is the only element greater than the element to the right of it.
+Runtime:
+- The known runtime for the binary search algorithm in O(log n).
+- The modifications made in this binary search algorithm are ran in O(1) time.
+- The overall runtime is O(log n).
+
+-------------------------------------------------------------------
+
+Kth Quantiles
+
+- Let S be a set of real numbers
+- k-th quantiles of S is a subset of k-1, s_1' <..< s_k-1', such that the numbers split into k subsets of equal size
+- k is a power of 2
+- Inputs: S set of numbers, and k
+- S is NOT sorted
+- Brute force solution: O(nk)
+
+Algorithm:
+- We will utilize the Fastselect algorithm.
+- Let i = n/k, representing the size of each subset.
+- Algorithm steps:
+	- Step 1: Find the median of S using Fastselect(S, n/2), and add it to the result set.
+	- Step 2: Partition S into S_L and S_R using the median.
+	- Step 3: Repeat step 1 against S_L and S_R, finding the median of each subset and add each median value to the result set.
+	- Step 4: Continue steps 2 & 3 until the size of the subset = i, our base case.
+	- Step 5: Return the result set.
+
+Correctness:
+- Fastselect can be used to find the median of a set of numbers.
+- Each partition can be further divided by it's median.
+- Since k is a power of 2, we can strictly partition until we reach the base case.
+- Once the base case is achieved, we return the result set.
+
+Runtime:
+- Partitioning the set of numbers takes (log k) to run.
+- The known runtime of Fastselect takes O(n) time.
+- Overall runtime is O(n log k).
+
+-------------------------------------------------------------------
+
+DPV 2.14 - Removing Duplicates
+
+- Given an array of n elements
+- Some are duplicates
+- Write a divide and conquer algorithm to remove all duplicates from the array in O(n log n) time.
+- Brute force runtime: O(n^2)
+
+Algorithm:
+- We will use a modified mergesort algorithm.
+- During each merge step, check if the left and right elements are the same.
+	- If so, remove the right element and continue the merge step.
+	- If not, continue the merge step.
+- Continue this until the array is fully sorted, our base case.
+- Return the sorted array.
+
+Correctness:
+- Since the given array is not guaranteed to be sorted, we can use a modified mergesort algorithm.
+- For each step in mergesort, it must compare the left and right elements of an array to determine the order.
+- By checking if the elements being compared are equal to one another, allows us to identify and remove any duplicates.
+- Once the base case is achieved, the fully sorted array, we return the array which will not contain any duplicate elements.  
+
+Runtime:
+- The known runtime for the mergesort algorithm in O(n log n).
+- The modification made to the algorithm is ran in O(1) time.
+- The overall runtime is O(n log n).
+
+-------------------------------------------------------------------
+
+DPV 2.15 - Split Operation (Informative - Median of Median)
+
+- Implement the split operation for the median of medians algorithm in place
+- The split operation takes an array S and a value v, then divides S into three sets: the elements less than v, the elements grater than v, and the elements equal to v.
+
+Psuedocode:
+t = 1
+for i = 1 -> n:
+	if S[i] < v
+		temp = S[t]
+		S[t] = S[i]
+		S[i] = temp
+		t = t + 1
+for i = t -> n:
+	if S[i] = v:
+		temp = S[t]
+		S[t] = S[i]
+		S[i] = temp
+		t = t + 1
+
+Runtime:
+- O(n) + O(n) = O(n)
+
+-------------------------------------------------------------------
+
+DPV 2.19 - k-way merge operation (Informative - Mergesort)
+
+- Mergesort does n merges, log n times for a runtime of O(n log n)
+
+- What is the time complexity of mergesort in terms k and n?
+	- If there are k*n merges, done k times, this gives us O(kn) * O(k) = O(nk^2)
+
+- Provide a divide and conquer algorithm for this:
+	- We divide the k arrays into k/2 pairs and merge them similar to how we do a merge in mergesort.
+	- Since they are sorted, the merging behaves in the same way
+	- We continue to merge the combined arrays in pairs until we have one single sorted array
+	- There are k*n merges, done in O(log k) times, similar to mergesort. The overall runtime is O(nk log k)

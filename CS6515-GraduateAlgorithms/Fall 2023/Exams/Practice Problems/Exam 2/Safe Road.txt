@@ -1,0 +1,28 @@
+Safe Road (Exam 2)
+
+- n-cities, m-roads
+- Each road is bidirectional and connects exactly two cities together
+- Dangerous roads are assigned with a positive number
+	- The higher the score, the safer the road
+- Safe roads have no assigned score. 
+- Must accomplish priorities in order.
+
+Algorithm:
+	- Given G = (V, E), where V are cites and E are roads
+	- Modify G by assigning all safe roads with a weight of negative infinity. As well as setting the dangerous roads to their negative score.
+	- Pass G' through Kruskal's algorithm which will output an MST
+	- Return the resulting MST as R.
+	
+Correctness:
+	- We can use Kruskal's algorithm as a blackbox to create an MST that's made up of the lowest scored edges, or roads that make up the tree.
+	- Since the safest roads don't have a score, we assign all unweighted edges with a score of negative, the lowest possible weight. And b/c the higher scored dangerous roads are deemed safer, we negate all dangerous road scores so they become lower scored. 
+	- Running G' through Kruskal's algorithm will output an MST, or R, that fits all given priorities:
+		- Each vertex, or city, in R will have an edge, or road, that connects to another city since R is an MST. Making it possible to travel b/w any two cities using only roads in R.
+		- MSTs use the fewest edges possible. So R should be made up of the fewest number of roads possible.
+		- Kruskal's algorithm also finds the lowest weighted edges when outputting an MST. Since safer roads have the lowest possible score of negative infinity in G', they will be the first roads included in R.
+		- Like the previous point, since Kruskal's algorithm finds the lowest weighted edges, if dangerous roads need to be included, the lowest scored will be chosen first since we negated their original positive scores. So the higher scored roads, are now the lower scored roads.
+
+Runtime:
+	- Running Kruskal's algorithm takes O(m log n) time.
+	- Add and changing edge weights takes O(m + n) time.
+	- Overall runtime is O(m log n).

@@ -1,0 +1,8 @@
+Error: ASSERTION FAIL: 0
+File: /home/klee/klee/PasswordDemo/Password.c
+Line: 52
+assembly.ll line: 412
+Stack: 
+	#000000412 in __user_main (a1=3, a2=25836880, a3=25836912) at /home/klee/klee/PasswordDemo/Password.c:52
+	#100001950 in __uClibc_main (main=25650784, argc=3, argv=25836880, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/klee/klee_build/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#200003461 in main (=3, =25836880)
